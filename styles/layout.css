@@ -159,7 +159,7 @@ div.wrapper {
 #head p {
     display: block;
     position: absolute;
-    top: 65px;
+    top: 55px;
     left: 0;
     color: #F5F5F5;
     background-color: #294E79;
@@ -201,15 +201,25 @@ div.wrapper {
     padding: 40px 0;
 }
 
-#container h1, #container h2, #container h3, #container h4, #container h5, #container h6 {
+#container h1,#container h3, #container h4, #container h5, #container h6 {
     margin: 0 0 15px 0;
+    padding: 0 0 15px 0;
+    line-height: normal;
+    font-weight: normal;
+    font-size: 26px;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    border-bottom: 1px dashed #666666;
+}
+ #container h2
+ {
+     margin: 0 0 15px 0;
     padding: 0 0 15px 0;
     line-height: normal;
     font-weight: normal;
     font-size: 20px;
     font-family: Georgia, "Times New Roman", Times, serif;
     border-bottom: 1px dashed #666666;
-}
+ }
 
 #container h1 {
     margin: 40px 0 12px !important;
