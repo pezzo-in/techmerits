@@ -201,7 +201,7 @@ div.wrapper {
     padding: 40px 0;
 }
 
-#container h1,#container h3, #container h4, #container h5, #container h6 {
+#container h1, #container h4, #container h5, #container h6 {
     margin: 0 0 15px 0;
     padding: 0 0 15px 0;
     line-height: normal;
@@ -220,6 +220,14 @@ div.wrapper {
     font-family: Georgia, "Times New Roman", Times, serif;
     border-bottom: 1px dashed #666666;
  }
+ #container h3
+ {margin: 0 0 15px 0;
+    padding: 0 0 15px 0;
+    line-height: normal;
+    font-weight: normal;
+    font-size: 25px;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    border-bottom: 1px dashed #666666;}
 
 #container h1 {
     margin: 40px 0 12px !important;
