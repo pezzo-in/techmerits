@@ -8,7 +8,7 @@
     $sub=addslashes(strip_tags($_POST["subject"]));
     $message=addslashes(strip_tags($_POST["message"]));
     
-    $recipient  	= "info@techmerits.com";
+    $recipient  	= "pavan.sry@gmail.com";
     $object 			= "Response from Techmerits website visitor";
     $htmlmessage 	= <<<MESSAGE
     <html>
@@ -34,3 +34,4 @@ MESSAGE;
     }
   }
   echo json_encode($send);
+  echo "Thanks for your feedback";
