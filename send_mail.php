@@ -2,14 +2,14 @@
 	$send = false;
 	
   if (count($_POST)>0) {
-    $name=addslashes(strip_tags($_POST["fullname"]));
-    $email=addslashes(strip_tags($_POST["emailaddress"]));
+    $name=addslashes(strip_tags($_POST["name"]));
+    $email=addslashes(strip_tags($_POST["email"]));
     $phone=addslashes(strip_tags($_POST["phone"]));
-    $sub=addslashes(strip_tags($_POST["subject"]));
+    $subject=addslashes(strip_tags($_POST["subject"]));
     $message=addslashes(strip_tags($_POST["message"]));
     
-    $recipient  	= "harikrishna1989k@gmail.com";
-    $object 			= "Response from Techmerits website visitor";
+    $recipient  	= "harikrishna1989k.com";
+    $object 			= "Response from Neeladhri ceramics website visitor";
     $htmlmessage 	= <<<MESSAGE
     <html>
     	<head>
@@ -19,7 +19,6 @@
 	      <style>body {font: 12px/1.2em Verdana}</style>
 	      <strong>User: </strong>$name<br />
 	      <strong>Phone: </strong>$phone<br />
-        <strong>Subject: </strong>$sub<br />
 	      <strong>Email: </strong>$email<br />
 	      <p><strong>Message: </strong>$message</p>
 	    </body>
@@ -33,6 +32,4 @@ MESSAGE;
       $send = true;
     }
   }
-  echo "Thanks for your feedback";
   echo json_encode($send);
- 
