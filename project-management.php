@@ -2,10 +2,10 @@
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="EN" lang="EN" dir="ltr">
 <head profile="http://gmpg.org/xfn/11">
-    <title>Technology Consulting Services | Testing Services | Techmerits</title>
+    <title>Technology Consulting Services | Project Management | Techmerits</title>
     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
     <meta http-equiv="imagetoolbar" content="no"/>
-     <meta name="description" content="Learn about the Techmerits’ technology testing services to ensure the safety and efficiency of your databases, mobile apps, SAP and SAS software."/>
+    <meta name="description" content="Are you frustrated with your technology solutions? We can help. Let Techmerits manage your systems to minimize your technological frustrations. "/>
     <link rel="stylesheet" href="styles/layout.css" type="text/css"/>
 </head>
 <body id="top">
@@ -13,11 +13,10 @@
     <div id="head">
        <h1><a href="#"><img src="./images/demo/logo-bluebg.png" width="300" border="2" style="margin-top:50px"></a></h1>
 
-
-        <div id="topnav">
+<div id="topnav">
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="about-us.html">About Us</a>
+                  <li><a href="about-us.html">About Us</a>
 
                     <ul>
                          <li><a href="
@@ -30,9 +29,9 @@ about-us.html#mission-vision">Mission And Vission</a></li>
                 <li><a href="services.html">Services</a>
           <ul>
           <li><a href="consulting.html">Consulting</a></li>
-             <li><a class="active" href="testing-services.html">Testing Services</a></li>
+             <li><a href="testing-services.html">Testing Services</a></li>
                 <li><a href="software-development-services.html">Development Services</a></li>
-                <li><a href="project-management.html">Project Management</a></li>
+                <li><a class="active" href="project-management.html">Project Management</a></li>
 
           </ul>
                 </li>
@@ -59,45 +58,43 @@ about-us.html#mission-vision">Mission And Vission</a></li>
             <li>&#187;</li>
             <li><a href="index.html">Home</a></li>
             <li>&#187;</li>
-            <li>Testing Services</li>
+            <li>Project Management</li>
         </ul>
     </div>
 </div>
 <div class="wrapper col4">
     <div id="container">
         <img src="http://dummyimage.com/960x200/cccccc/ffffff.jpg" alt=""/>
-        <h1>Testing Services</h1>
-        <p style="font-weight: bold; font-style:italic;">Developing Fully Tested, Perfectly Implemented Technology Solutions</p>
-        <p>Considering our clients’ requirements for quality assurance, we strive to test every technology solution, software, and system according to the most stringent industry standards. Supervised by a team of expert analysts, our testing procedures are designed to check every dimension, aspect, and element of the product. </p>
-        <p style="font-weight: bold; ">Techmerits-Ready to become your centralize technology testing resource.</p>
-        <h3>Our Key Services</h3>
-        <p>The core elements of our technology testing services are:</p>
-        <h2>Functional, Regression and End-to-End Testing</h2>
-<p>Including a combination of performance, financial, and quality metrics, these services are used for compliance testing, product testing, lifecycle testing, and maintenance testing.</p>
-<h2>Automated Testing</h2>
-<p>Techmerits can design and create comprehensive test automation frameworks for its clients. With automated testing facilities, we minimize manual testing and help organizations save on time and money.</p>
-<h2>Load and Performance Testing</h2>
-<p>With this testing service, we can identify any website’s traffic capacity, bottlenecks, and the overall performance. We evaluate their response and functionality under varied load levels.  </p>
-<h2>Mobile Application Testing </h2>
-<p>Techmerits brings top of the line testing services for mobile applications. Our analysts invest their time and expertise to help you identify the defects and issues that are likely to affect your mobile apps. Test your mobile apps with Techmerits to launch a successful product.</p>
-<h2>Browser Compatibility Testing</h2>
-<p>With our testing tools, we ensure your website is compatible with the browsers commonly used.</p> 
-<h2>SAP, Siebel and SAS Testing</h2>
-<p>Testing SAP, Siebel, and SAS solutions, we help you reduce development and testing expenses. While working with us, you can comply with quality assurance standards with ease.</p>
-<h2>Web Testing </h2>
-<p>Techmerits makes it convenient for its clients to test their web apps for different devices and browsers. Ensure your users’ web experience by testing your app with Techmerits.</p>
-<h2>Database Testing</h2>
-<p>The dedicated analysts of Techmerits can validate the consistency, integrity, performance, and security of your database. </p>
-<p style="font-weight: bold; ">Techmerits will never let you compromise on the security or efficiency of your technology systems.</p>
 
+        <h1>Project Management</h1>
+        <p  style="font-weight: bold; font-style:italic;">Managing Technology, Optimizing Solutions</p>
+
+        <p>Leading the technology consulting industry with its innovative methodologies, pioneering solutions, and dedicated services, Techmerits bridges the gap between performance-driven organizations and well-managed, perfectly executed technology projects. We provide our clients with unlimited support and management facilities whenever, wherever they need our expertise. With our automated tools, state of the art systems, and trained project managers, we can manage diverse IT projects solutions conveniently, efficiently, and flawlessly.</p>
+        <p style="font-weight: bold;">Techmerits-Managing technology systems and solutions automatically.</p>
+
+<h3>Our Key Management Services</h3>
+<p>The core elements of our technology project management services are:</p>
+
+<h2>Agile Project Management</h2>
+<p>Being a value-driven methodology, agile project management enables organizations to deliver high quality results. While managing your unique project, we consider your business operations, requirements, priorities, and beyond. Our project managers work closely with our clients to track the project’s progress, issues, and results. </p>
+<p>While using the agile management approach, we divide responsibility among different team members. And this is how we combine individual efforts to get you what you expect from our side-successful technology solutions.</p>
+<h2>Waterfall Project Management </h2>
+<p>Since waterfall approach is a sequential design procedure, each of its stages has to be completed in order. This methodology doesn’t allow errors or mistakes, so developers have to work carefully while preparing a plan. This is where the dedicated, expert managers, developers, and analysts of Techmerits prove their value. </p>
+<p>From specifying project requirements to implementing different units and from integrating multiple units into a single system to testing the entire design, every step has to be executed professionally, efficiently to avoid costly errors. Techmerits employs specialized project managers who excel in waterfall model development and application. </p>
+
+<p style="font-weight: bold;">Consult Techmerits today to look into our proven project management approaches.</p>
     </div>
 </div>
 <div class="wrapper col5 footer-master">
     <div id="footer">
         <div id="contactform">
             <h2>Why Not Contact Us Today !</h2>
-
-            <form action="#" method="post">
+            <?php
+// display form if user has not clicked submit
+if (!isset($_POST["submit"]))
+  {
+  ?>
+          <form method="post" action="<?php echo $_SERVER["PHP_SELF"];?>">
                 <fieldset>
                     <legend>Contact Form</legend>
                     <label for="fullname">Name:
@@ -117,12 +114,33 @@ about-us.html#mission-vision">Mission And Vission</a></li>
                     </label>
 
                     <p>
-                        <input id="submitform" name="submitform" type="submit" value="Submit"/>
+                        <input id="submitform" name="submit" type="submit" value="Submit"/>
                         &nbsp;
                         <input id="resetform" name="resetform" type="reset" value="Reset"/>
                     </p>
                 </fieldset>
             </form>
+            <?php
+  }
+else
+  // the user has submitted the form
+  {
+  // Check if the "from" input field is filled out
+  if (isset($_POST["emailaddress"]))
+    {
+    $fullname=$_POST["fullname"];
+    $from = $_POST["emailaddress"]; // sender
+    $phone=$_POST["phone"];
+    $subject = $_POST["subject"];
+    $message = $_POST["message"];
+    // message lines should not exceed 70 characters (PHP rule), so wrap it
+    $message = wordwrap($message, 70);
+    // send mail
+    mail("harikrishna1989k@gmail.com",$subject,$message,"From: $from\n");
+    echo "Your Message send successfully";
+    }
+  }
+?>
         </div>
         <!-- End Contact Form -->
         <div id="compdetails">

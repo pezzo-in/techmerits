@@ -116,8 +116,12 @@ about-us.html#mission-vision">Mission And Vission</a></li>
     <div id="footer">
         <div id="contactform">
             <h2>Why Not Contact Us Today !</h2>
-
-            <form action="#" method="post">
+            <?php
+// display form if user has not clicked submit
+if (!isset($_POST["submit"]))
+  {
+  ?>
+          <form method="post" action="<?php echo $_SERVER["PHP_SELF"];?>">
                 <fieldset>
                     <legend>Contact Form</legend>
                     <label for="fullname">Name:
@@ -137,12 +141,33 @@ about-us.html#mission-vision">Mission And Vission</a></li>
                     </label>
 
                     <p>
-                        <input id="submitform" name="submitform" type="submit" value="Submit"/>
+                        <input id="submitform" name="submit" type="submit" value="Submit"/>
                         &nbsp;
                         <input id="resetform" name="resetform" type="reset" value="Reset"/>
                     </p>
                 </fieldset>
             </form>
+            <?php
+  }
+else
+  // the user has submitted the form
+  {
+  // Check if the "from" input field is filled out
+  if (isset($_POST["emailaddress"]))
+    {
+    $fullname=$_POST["fullname"];
+    $from = $_POST["emailaddress"]; // sender
+    $phone=$_POST["phone"];
+    $subject = $_POST["subject"];
+    $message = $_POST["message"];
+    // message lines should not exceed 70 characters (PHP rule), so wrap it
+    $message = wordwrap($message, 70);
+    // send mail
+    mail("harikrishna1989k@gmail.com",$subject,$message,"From: $from\n");
+    echo "Your Message send successfully";
+    }
+  }
+?>
         </div>
         <!-- End Contact Form -->
         <div id="compdetails">
