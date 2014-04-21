@@ -11,7 +11,7 @@
 <body id="top">
 <div class="wrapper col1 header-master">
     <div id="head">
-        <h1><a href="#"><img src="./images/demo/logo-bluebg.png" width="300" style="margin-top:50px"></a></h1>
+        <h1><a href="#"><img src="../images/demo/logo-bluebg.png" width="300" style="margin-top:50px"></a></h1>
 
         <div id="topnav">
             <ul>
