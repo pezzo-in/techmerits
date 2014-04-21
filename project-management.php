@@ -15,23 +15,23 @@
 
 <div id="topnav">
             <ul>
-                <li><a href="index.html">Home</a></li>
-                  <li><a href="about-us.html">About Us</a>
+                <li><a href="index.php">Home</a></li>
+                  <li><a href="about-us.php">About Us</a>
 
                     <ul>
                          <li><a href="
-about-us.html#mission-vision">Mission And Vission</a></li>
+about-us.php#mission-vision">Mission And Vission</a></li>
                     </ul>
                 </li>
-                <li><a href="management.html">Management</a>
+                <li><a href="management.php">Management</a>
           
                 </li>
-                <li><a href="services.html">Services</a>
+                <li><a href="services.php">Services</a>
           <ul>
-          <li><a href="consulting.html">Consulting</a></li>
-             <li><a href="testing-services.html">Testing Services</a></li>
-                <li><a href="software-development-services.html">Development Services</a></li>
-                <li><a class="active" href="project-management.html">Project Management</a></li>
+          <li><a href="consulting.php">Consulting</a></li>
+             <li><a href="testing-services.php">Testing Services</a></li>
+                <li><a href="software-development-services.php">Development Services</a></li>
+                <li><a class="active" href="project-management.php">Project Management</a></li>
 
           </ul>
                 </li>
@@ -46,7 +46,7 @@ about-us.html#mission-vision">Mission And Vission</a></li>
         <ul>
             <li class="first">You Are Here</li>
             <li>&#187;</li>
-            <li><a href="index.html">Home</a></li>
+            <li><a href="index.php">Home</a></li>
             <li>&#187;</li>
             <li>Project Management</li>
         </ul>
