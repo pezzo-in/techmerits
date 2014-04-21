@@ -11,7 +11,7 @@
 <body id="top">
 <div class="wrapper col1 header-master">
     <div id="head">
-       <h1><a href="#"><img src="./images/demo/logo-bluebg.png" width="300" border="2" style="margin-top:50px"></a></h1>
+       <h1><a href="#"><img src="images/demo/logo-bluebg.png" width="300" border="2" style="margin-top:50px"></a></h1>
 
 <div id="topnav">
             <ul>
@@ -146,16 +146,17 @@ else
 
                 <p><a href="#">Get Our E-Newsletter</a> | <a href="#">Grab The RSS Feed</a></p>
             </div>
-            <div id="contactdetails">
+           <div id="contactdetails">
                 <h2>Our Contact Details !</h2>
                 <ul>
-                    <li>Tech Merits</li>
-                    <li>Street Name &amp; Number</li>
-                    <li>Town</li>
-                    <li>Postcode/Zip</li>
-                    <li>Tel: xxxxx xxxxxxxxxx</li>
-                    <li>Fax: xxxxx xxxxxxxxxx</li>
-                    <li>Email: info@domain.com</li>
+                    <li>Techmerits software solutions</li>
+                    <li><u>ADDRESS</u></li>
+                    <li><p>Regus Business centre ,4th Floor, </p>
+                    <p>Gumidelli Towers,1-10-39 to 44,</p>
+                    <p> Old Airport road</p></li>
+                    <li>Town:Begumpet</li>
+                    <li>Postcode/Zip:500016</li>
+                    <li>Email: info@techmerits.com</li>
                     <li class="last">LinkedIn: <a href="#">Company Profile</a></li>
                 </ul>
             </div>
