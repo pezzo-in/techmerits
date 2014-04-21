@@ -146,9 +146,6 @@ div.wrapper {
 }
 
 #head h1 a {
-    position: absolute;
-    top: 20px;
-    left: 0;
     font-size: 38px;
     font-weight: normal;
     color: #FFFFFF;
