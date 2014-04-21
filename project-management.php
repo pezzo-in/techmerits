@@ -39,16 +39,6 @@ about-us.html#mission-vision">Mission And Vission</a></li>
              <li><a href="#contactform">Contact</a></li>
             </ul>
         </div>
-        <div id="search">
-            <form action="#" method="post">
-                <fieldset>
-                    <legend>Site Search</legend>
-                    <input type="submit" name="go" id="go" value="GO"/>
-                    <input type="text" value="Search the site&hellip;"
-                           onfocus="this.value=(this.value=='Search the site&hellip;')? '' : this.value ;"/>
-                </fieldset>
-            </form>
-        </div>
     </div>
 </div>
 <div class="wrapper col2">

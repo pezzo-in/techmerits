@@ -39,7 +39,7 @@
                 <li><a href="#contactform">Contact</a></li>
             </ul>
         </div>
-        <div id="search">
+        <!--<div id="search">
             <form action="#" method="post">
                 <fieldset>
                     <legend>Site Search</legend>
@@ -48,7 +48,7 @@
                            onfocus="this.value=(this.value=='Search the site&hellip;')? '' : this.value ;"/>
                 </fieldset>
             </form>
-        </div>
+        </div>-->
     </div>
 </div>
 <div class="wrapper col2">
