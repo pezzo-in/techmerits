@@ -152,7 +152,7 @@ div.wrapper {
     font-size: 38px;
     font-weight: normal;
     color: #FFFFFF;
-    background-color: #294E79;
+   
     font-family: Georgia, "Times New Roman", Times, serif;
 }
 
@@ -433,7 +433,7 @@ div.wrapper {
 
 #footer a {
     color: #98B7DC;
-    background-color: #1C3451;
+   
 }
 
 #footer h2 {
@@ -443,7 +443,6 @@ div.wrapper {
     font-weight: normal;
     font-family: Georgia, "Times New Roman", Times, serif;
     color: #CCCCCC;
-    background-color: #1C3451;
     line-height: normal;
     border-bottom: 1px dashed #CCCCCC;
 }
