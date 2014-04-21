@@ -123,7 +123,7 @@
                     <li>
                         <h2>Software Srvices</h2>
 
-                        <p class="imgholder"><img src="images/demo/240x90.gif" alt=""/></p>
+                        <p class="imgholder"><img src="images/demo/software.jpg" alt=""/></p>
 
                         <p>We offer software development services to our clients, as part of our software development
                             services, we make ...</p>
@@ -137,7 +137,7 @@
                     <li>
                         <h2>Testing services</h2>
 
-                        <p class="imgholder"><img src="images/demo/240x90.gif" alt=""/></p>
+                        <p class="imgholder"><img src="images/demo/testing-services.jpg" alt=""/></p>
 
                         <p>Our goal is to provide unique software testing services to our customers and we offer
                             complete end-to-end ...</p>

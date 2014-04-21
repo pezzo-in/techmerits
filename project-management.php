@@ -54,7 +54,7 @@ about-us.php#mission-vision">Mission And Vission</a></li>
 </div>
 <div class="wrapper col4">
     <div id="container">
-        <img src="http://dummyimage.com/960x200/cccccc/ffffff.jpg" alt=""/>
+        <img src="images/demo/project-management.jpg" alt=""/>
 
         <h1>Project Management</h1>
         <p  style="font-weight: bold; font-style:italic;">Managing Technology, Optimizing Solutions</p>

@@ -56,7 +56,7 @@
 </div>
 <div class="wrapper col4">
     <div id="container">
-        <img src="http://dummyimage.com/960x200/cccccc/ffffff.jpg" alt=""/>
+        <img src="images/demo/consulting.jpg" alt=""/>
         <h1>Consulting</h1>
         <p  style="font-weight: bold; font-style:italic;">Helping Organizations Develop Confidence on Their Technology Solutions</p>
         <h1>Services-Consulting</h1>

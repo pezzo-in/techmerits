@@ -55,7 +55,7 @@ about-us.php#mission-vision">Mission And Vission</a></li>
 </div>
 <div class="wrapper col4">
     <div id="container">
-        <img src="http://dummyimage.com/960x200/cccccc/ffffff.jpg" alt=""/>
+        <img src="images/demo/testing.jpg" alt=""/>
         <h1>Testing Services</h1>
         <p style="font-weight: bold; font-style:italic;">Developing Fully Tested, Perfectly Implemented Technology Solutions</p>
         <p>Considering our clients’ requirements for quality assurance, we strive to test every technology solution, software, and system according to the most stringent industry standards. Supervised by a team of expert analysts, our testing procedures are designed to check every dimension, aspect, and element of the product. </p>

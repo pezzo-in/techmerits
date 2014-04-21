@@ -54,7 +54,7 @@ about-us.php#mission-vision">Mission And Vission</a></li>
 </div>
 <div class="wrapper col4">
     <div id="container">
-        <img src="http://dummyimage.com/960x200/cccccc/ffffff.jpg" alt=""/>
+        <img src="images/demo/development-services.jpg" alt=""/>
         <h1>Software Devleopment Services</h1>
         <p style="font-weight: bold; font-style:italic;">Constantly Innovating for Your Development Edge!</p>
         <p>Techmerits is your ultimate partner for innovative, advanced, and functional technological solutions. With our experienced, multi-disciplinary experts, we work closely with our clients to design, develop, and implement customized solutions. Having access to the best technologies, resources, and tools, we utilize the latest strategies and practices to meet individual requirements and deliver the best possible services.</p>

@@ -70,7 +70,7 @@ about-us.php#mission-vision">Mission And Vission</a></li>
                     <li>
                         <h2>Agile Project Management</h2>
 
-                        <p class="imgholder"><img src="images/demo/240x90.gif" alt=""/></p>
+                        <p class="imgholder"><img src="images/demo/agile.jpg" alt=""/></p>
 
                         <p>Being a value-driven methodology, agile project management enables organizations to deliver high quality results...</p>
 
@@ -83,7 +83,7 @@ about-us.php#mission-vision">Mission And Vission</a></li>
                     <li>
                         <h2>Waterfall Project Management </h2>
 
-                        <p class="imgholder"><img src="images/demo/240x90.gif" alt=""/></p>
+                        <p class="imgholder"><img src="images/demo/waterfall.jpg" alt=""/></p>
 
                         <p>Since waterfall approach is a sequential design procedure, each of its stages has to be completed in order...</p>
 

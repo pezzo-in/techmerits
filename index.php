@@ -122,7 +122,7 @@ about-us.php#mission-vision">Mission And Vission</a></li>
                     <li>
                         <h2>Project Based Consulting</h2>
 
-                        <p class="imgholder"><img src="images/demo/240x90.gif" alt=""/></p>
+                        <p class="imgholder"><img src="images/demo/project-based-consulting.jpg" alt=""/></p>
 
                         <p>We draw on our experienced staff, valuable resources, flexible strategies, and functional...</p>
 
@@ -135,7 +135,7 @@ about-us.php#mission-vision">Mission And Vission</a></li>
                     <li>
                         <h2>Product Based Consulting</h2>
 
-                        <p class="imgholder"><img src="images/demo/240x90.gif" alt=""/></p>
+                        <p class="imgholder"><img src="images/demo/product-based-consulting.jpg" alt=""/></p>
 
                         <p>Our consulting services can optimize your specific business products and solutions according...</p>
 

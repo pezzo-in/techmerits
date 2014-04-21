@@ -51,7 +51,7 @@ about-us.php#mission-vision">Mission And Vission</a></li>
 </div>
 <div class="wrapper col4">
     <div id="container">
-        <img src="http://dummyimage.com/960x200/cccccc/ffffff.jpg" alt=""/>
+        <img src="images/demo/services.jpg" alt=""/>
         <h1>Services</h1>
         <h3>Software development services</h3>
         <p>We offer software development services to our clients, as part of our software development services, we make sure that we understand our client business and assess system and provide appropriate solutions which support and maintain your future growth and success.</p>
