@@ -11,30 +11,45 @@
 	<body id="top">
 		<?php include 'header.php'; ?>
 		<div class="wrapper col2">
-			<div id="gallery">
-				<ul>
-					<li class="placeholder" style="background-image:url(images/demo/gallery_11.jpg);">
-						Image Holder
-					</li>
-					<li>
-						<a class="swap" style="background-image:url(images/demo/slide1.jpg);"
-						href="#gallery"><strong>Services</strong><span><img src="images/demo/gallery_11.
-							jpg"
-							alt=""/></span></a>
-					</li>
-					<li>
-						<a class="swap" style="background-image:url(images/demo/slide2.jpg);"
-						href="#gallery"><strong>Products</strong><span><img src="images/demo/gallery_22.jpg"
-							alt=""/></span></a>
-					</li>
-					<li class="last">
-						<a class="swap" style="background-image:url(images/demo/slide3.jpg);"
-						href="#gallery"><strong>Company</strong><span><img src="images/demo/gallery_33.jpg"
-							alt=""/></span></a>
-					</li>
-				</ul>
-				<div class="clear"></div>
-			</div>
+		<div id="gallery">
+		<script language="javascript">
+
+var delay=2500 //set delay in miliseconds
+var curindex=0
+
+var randomimages=new Array()
+
+	randomimages[0]="images/demo/gallery_11.jpg"
+	randomimages[1]="images/demo/gallery_22.jpg"
+	randomimages[2]="images/demo/gallery_33.jpg"
+	
+var preload=new Array()
+
+for (n=0;n<randomimages.length;n++)
+{
+	preload[n]=new Image()
+	preload[n].src=randomimages[n]
+}
+
+document.write('<img name="defaultimage" src="'+randomimages[Math.floor(Math.random()*(randomimages.length))]+'">')
+
+function rotateimage()
+{
+
+if (curindex==(tempindex=Math.floor(Math.random()*(randomimages.length)))){
+curindex=curindex==0? 1 : curindex-1
+}
+else
+curindex=tempindex
+
+	document.images.defaultimage.src=randomimages[curindex]
+}
+
+setInterval("rotateimage()",delay)
+
+</script>
+</div>
+			
 		</div>
 		<div class="wrapper col4">
 			<div id="container">

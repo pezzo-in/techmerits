@@ -40,6 +40,39 @@
 		</div>
 		<div class="wrapper col4">
 			<div id="container">
+				
+				<!-- End Contact Form -->
+				<div id="compdetails">
+					<div class="footerfont" id="contactdetails">
+						<h2>Global Development Centre</h2>
+						<p>
+							Techmerits Software Solutions
+						</p>
+						<div>
+							Regus Business centre, 4th Floor,
+						</div>
+						<div>
+							1-10-39 to 44, Gumidelli Towers,
+						</div>
+						<div>
+							Old Airport road, Begumpet
+						</div>
+						<div>
+							Hyderabad - 500016
+						</div>
+						<div>
+							India
+						</div>
+						<div>
+							Email: info@techmerits.com
+						</div>
+						<div>
+							Tel: +91 40 60507879
+						</div>
+
+					</div>
+					<div class="clear"></div>
+				</div>
 				<div id="contactform">
 					<h2>Why not contact us today </h2>
 					<?php
@@ -97,38 +130,6 @@
 					}
 					}
 				?>
-				</div>
-				<!-- End Contact Form -->
-				<div id="compdetails">
-					<div class="footerfont" id="contactdetails">
-						<h2>Global Development Centre</h2>
-						<p>
-							Techmerits Software Solutions
-						</p>
-						<div>
-							Regus Business centre, 4th Floor,
-						</div>
-						<div>
-							1-10-39 to 44, Gumidelli Towers,
-						</div>
-						<div>
-							Old Airport road, Begumpet
-						</div>
-						<div>
-							Hyderabad - 500016
-						</div>
-						<div>
-							India
-						</div>
-						<div>
-							Email: info@techmerits.com
-						</div>
-						<div>
-							Tel: +91 40 60507879
-						</div>
-
-					</div>
-					<div class="clear"></div>
 				</div>
 			</div>
 		</div>

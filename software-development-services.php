@@ -26,7 +26,7 @@
 						&#187;
 					</li>
 					<li>
-						Services-Development Services
+						Development Services
 					</li>
 				</ul>
 			</div>
