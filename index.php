@@ -11,24 +11,25 @@
 	<body id="top">
 		<?php include 'header.php'; ?>
 		<div class="wrapper col2">
-		<div id="gallery">
-		<script language="javascript">
+    <div id="gallery">
+            <div class="placeholder">
+                <script language="javascript">
 
 var delay=2500 //set delay in miliseconds
 var curindex=0
 
 var randomimages=new Array()
 
-	randomimages[0]="images/demo/gallery_11.jpg"
-	randomimages[1]="images/demo/gallery_22.jpg"
-	randomimages[2]="images/demo/gallery_33.jpg"
-	
+    randomimages[0]="images/demo/gallery_11.jpg"
+    randomimages[1]="images/demo/gallery_22.jpg"
+    randomimages[2]="images/demo/gallery_33.jpg"
+    
 var preload=new Array()
 
 for (n=0;n<randomimages.length;n++)
 {
-	preload[n]=new Image()
-	preload[n].src=randomimages[n]
+    preload[n]=new Image()
+    preload[n].src=randomimages[n]
 }
 
 document.write('<img name="defaultimage" src="'+randomimages[Math.floor(Math.random()*(randomimages.length))]+'">')
@@ -42,15 +43,16 @@ curindex=curindex==0? 1 : curindex-1
 else
 curindex=tempindex
 
-	document.images.defaultimage.src=randomimages[curindex]
+    document.images.defaultimage.src=randomimages[curindex]
 }
 
 setInterval("rotateimage()",delay)
 
 </script>
+          </div>
+        <div class="clear"></div>
+    </div>
 </div>
-			
-		</div>
 		<div class="wrapper col4">
 			<div id="container">
 				<div id="content">

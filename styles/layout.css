@@ -453,19 +453,28 @@ div.wrapper {
     /*border-bottom: 1px dashed #CCCCCC; */
 }
 
+
 #container #contactform {
     display: block;
     float: right;
+    margin-top: 75px;
     width: 350px;
     color: #FFFFFF;
 }
-
+#container  #contactform h2{
+    
+    color: #FFFFFF;
+}
 /* ------Company Details------*/
 
 #container #compdetails {
     display: block;
     float: left;
+    margin-top: 75px;
     width: 350px;
+}
+#container #compdetails h2{
+    color: #FFFFFF;
 }
 
 #container #compdetails ul {
@@ -486,10 +495,6 @@ div.wrapper {
 .footerfont {
     color: #F8F8FF;
 }
-
-
-
-
 #container #compdetails #officialdetails {
     float: left
 }

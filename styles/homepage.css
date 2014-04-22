@@ -8,18 +8,7 @@ Licence: <a href="http://www.os-templates.com/template-terms">Website Template L
 
 #gallery {
     padding: 40px 0;
-}
-#gallery img {
-   background-color: #F5F5F5;
-    border: 1px solid #DADADA;
-    color: #666666;
-    display: block;
-    float: left;
-    height: 349px;
-    margin: 0 auto;
-    padding: 4px;
-    text-indent: -9999px;
-    width: 950px;
+
 }
 
 #gallery h1, #gallery p, #gallery ul, #gallery a {
@@ -33,17 +22,17 @@ Licence: <a href="http://www.os-templates.com/template-terms">Website Template L
     display: inline;
 }
 
-#gallery .placeholder {
+#gallery .placeholder img{
+   background-color: #F5F5F5;
+    border: 1px solid #DADADA;
+    color: #666666;
     display: block;
     float: left;
-    width: 640px;
     height: 349px;
-    margin: 0;
+    margin: 0 auto;
     padding: 4px;
-    color: #666666;
-    background-color: #F5F5F5;
-    border: 1px solid #DADADA;
     text-indent: -9999px;
+    width: 950px;
 }
 
 #gallery a.swap:link, #gallery a.swap:visited, #gallery a.swap:hover {
