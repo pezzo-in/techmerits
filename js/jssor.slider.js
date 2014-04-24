@@ -624,15 +624,12 @@ new function () {
                         _SlideshowTransition.$Blocks[wh][r + ',' + col] = { $Top: r * height, $Right: col * width + width, $Bottom: r * height + height, $Left: col * width };
                 }
             }
-
             return _SlideshowTransition.$Blocks[wh];
         };
-
         if (_SlideshowTransition.$Brother) {
             _SlideshowTransition.$Brother = EnsureTransitionInstance(_SlideshowTransition.$Brother, slideshowInterval);
             _SlideshowTransition.$SlideOut = true;
         }
-
         return _SlideshowTransition;
     }
 
@@ -667,7 +664,6 @@ new function () {
                         easingFunctionCache[round][t] = easingFunction(tRound);
                     }
                 }
-
                 cache[easingName] = easingFunctionCache;
 
             });
