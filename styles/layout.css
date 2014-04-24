@@ -10,13 +10,14 @@ Licence: <a href="http://www.os-templates.com/template-terms">Website Template L
 @import url(forms.css);
 @import url(tables.css);
 
-body {
-    margin: 0;
+#top{
+    margin-bottom:0px;
     padding: 0;
     font-size: 13px;
     font-family: verdana, Arial, Helvetica, sans-serif;
     color: #FFFFFF;
-    background-color: #4F473A;
+    height: auto;
+   
 }
 
 img {
@@ -459,11 +460,11 @@ div.wrapper {
     float: right;
     margin-top: 75px;
     width: 350px;
-    color: #FFFFFF;
+    color: #000;
 }
 #container  #contactform h2{
     
-    color: #FFFFFF;
+    color: #000;
 }
 /* ------Company Details------*/
 
@@ -472,9 +473,10 @@ div.wrapper {
     float: left;
     margin-top: 75px;
     width: 350px;
+    color: #000;
 }
 #container #compdetails h2{
-    color: #FFFFFF;
+    color: #000;
 }
 
 #container #compdetails ul {
@@ -493,7 +495,7 @@ div.wrapper {
 
 
 .footerfont {
-    color: #F8F8FF;
+    color: #000;
 }
 #container #compdetails #officialdetails {
     float: left
@@ -513,14 +515,17 @@ div.wrapper {
     display: block;
     float: left;
     width: 100%;
-    margin: 1px 0 25px 0;
-    padding:2px 0 0 0;
+    margin: 20px 0 0px 0;
+    padding:10px 0 40px 0;
     font-size: 12px;
     border-top: 1px dashed #CCCCCC;
+    background-color: #4F473A;
 
 }
 
 #copyright p {
     margin: 0;
     padding: 0;
+    color: #FFFFFF;
+
 }
