@@ -14,13 +14,11 @@
 
 <div id="gallery">
     <img src="images/demo/mission-vission.jpg" alt=""/>
-
     <div class="clear"></div>
 </div>
 <div class="wrapper col4">
     <div id="container">
-    </div>
-    <div id="content">
+        <div id="content">
         <h1>Mission and Vision </h1>
 
         <p style="font-weight: bold;font-style:italic;">
@@ -52,8 +50,8 @@
         <p>
             Our values define the essence and form the culture of our company.
         </p>
-        <ul>
-            <li>
+        <div>
+            <div>
                 <p style="font-weight: bold">
                     Our Workforce, Our Asset
                 </p>
@@ -63,8 +61,8 @@
                     growth. At Techmerits, they challenge their abilities, ensure their development, and realize
                     their potential.
                 </p>
-            </li>
-            <li>
+            </div>
+            <div>
                 <p style="font-weight: bold">
                     Client Value Recognition
                 </p>
@@ -73,8 +71,8 @@
                     We develop long-term relationships with our clients and help them accomplish their business
                     targets.
                 </p>
-            </li>
-            <li>
+            </div>
+            <div>
                 <p style="font-weight: bold">
                     Effective Network
                 </p>
@@ -87,45 +85,11 @@
                 <p style="font-weight: bold">
                     Get in touch with Techmerits to explore and avail our technical expertise.
                 </p>
-            </li>
-            <ul>
-    </div>
-    <div id="column">
-        <div class="featured">
-
-            <ul>
-                <li>
-                    <h2>Indonectetus facilis leonib</h2>
-
-                    <p class="imgholder"><img src="images/demo/240x90.gif" alt=""/>
-                    </p>
-
-                    <p>
-                        Nullamlacus dui ipsum conseque loborttis non euisque morbi penas dapibulum orna.
-                        Urnaultrices
-                        quis curabitur phasellentesque congue magnis vestibulum quismodo nulla et feugiat.
-                        Adipisciniapellentum leo ut consequam ris felit elit id nibh sociis malesuada.
-                    </p>
-
-                    <p class="more">
-                        <a href="#">Read More &raquo;</a>
-                    </p>
-                </li>
-            </ul>
-        </div>
-        <div class="holder">
-            <div class="imgholder"><img src="images/demo/290x100.gif" alt=""/>
             </div>
-            <p>
-                Nullamlacus dui ipsum conseque loborttis non euisque morbi penas dapibulum orna.
-            </p>
-
-            <p class="readmore">
-                <a href="#">Read More &raquo;</a>
-            </p>
-        </div>
+            <div>
     </div>
-    <div class="clear"></div>
+</div>
+</div>
 </div>
 </div>
 <?php include 'footer.php'; ?>

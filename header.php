@@ -9,6 +9,9 @@
                     <a href="#">COMPANY</a>
 
                     <ul>
+                    <li>
+                            <a href="mission-vission.php">Mission-Vission</a>
+                        </li>
 
                         <li>
                             <a href="management.php">MANAGEMENT</a>
