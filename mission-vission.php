@@ -11,13 +11,34 @@
 </head>
 <body id="top">
 <?php include 'header.php'; ?>
+<div class="wrapper col2">
+    <div id="breadcrumb">
+        <ul>
+            <li class="first">
+                You Are Here
+            </li>
+            <li>
+                &#187;
+            </li>
+            <li>
+                <a href="index.php">Home</a>
+            </li>
+            <li>
+                &#187;
+            </li>
+            <li>
+                Vission-Mission
+            </li>
+        </ul>
+    </div>
+</div>
 
 <div id="gallery">
     <img src="images/demo/mission-vission.jpg" alt=""/>
     <div class="clear"></div>
 </div>
 <div class="wrapper col4">
-    <div id="container">
+v
         <div id="content">
         <h1>Mission and Vision </h1>
 

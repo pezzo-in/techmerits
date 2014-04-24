@@ -28,7 +28,7 @@
                 &#187;
             </li>
             <li>
-                Overview
+                Management
             </li>
         </ul>
     </div>
