@@ -33,11 +33,11 @@
             </li>
         </ul>
     </div>
-    <div id="gallery">
-        <img src="images/demo/management.jpg" alt=""/>
+</div>
+<div id="gallery">
+    <img src="images/demo/management.jpg" alt=""/>
 
-        <div class="clear"></div>
-    </div>
+    <div class="clear"></div>
 </div>
 <div class="wrapper col4">
     <div id="container">

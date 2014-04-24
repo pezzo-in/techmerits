@@ -34,13 +34,13 @@
     </div>
 </div>
 
-<div class="wrapper col4">
-    <div id="container">
 <div id="gallery">
     <img src="images/demo/management.jpg" alt=""/>
 
     <div class="clear"></div>
 </div>
+<div class="wrapper col4">
+    <div id="container">
         <div id="content">
             <h1>Overview</h1>
 

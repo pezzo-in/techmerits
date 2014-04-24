@@ -33,65 +33,66 @@
             </li>
         </ul>
     </div>
-    <div class="wrapper col4">
-    <div id="container">
     <div id="gallery">
         <img src="images/demo/about-us.jpg" alt=""/>
-        <div class="clear"></div>
-        </div>
 
         <div class="clear"></div>
     </div>
+    <div class="wrapper col4">
+        <div id="container">
+
+            <div class="clear"></div>
+        </div>
+    </div>
+
+    <div id="content">
+        <p> TODO</p>
+    </div>
+    </li>
+    </ul>
+
+    <div id="column">
+        <div class="featured">
+            <ul>
+                <li>
+                    <h2>Software Services</h2>
+
+                    <p class="imgholder"><img src="images/demo/software.jpg" alt=""/>
+                    </p>
+
+                    <p>
+                        We offer software development services to our clients, as part of our software development
+                        services, we make ...
+                    </p>
+
+                    <p class="more">
+                        <a href="services.php">Read More &raquo;</a>
+                    </p>
+                </li>
+            </ul>
+        </div>
+        <div class="featured">
+            <ul>
+                <li>
+                    <h2>Testing Services</h2>
+
+                    <p class="imgholder"><img src="images/demo/testing-services.jpg" alt=""/>
+                    </p>
+
+                    <p>
+                        Our goal is to provide unique software testing services to our customers and we offer
+                        complete end-to-end ...
+                    </p>
+
+                    <p class="more">
+                        <a href="services.php">Read More &raquo;</a>
+                    </p>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="clear"></div>
 </div>
-
-        <div id="content">
-            <p> TODO</p>
-        </div>
-        </li>
-        </ul>
-
-        <div id="column">
-            <div class="featured">
-                <ul>
-                    <li>
-                        <h2>Software Services</h2>
-
-                        <p class="imgholder"><img src="images/demo/software.jpg" alt=""/>
-                        </p>
-
-                        <p>
-                            We offer software development services to our clients, as part of our software development
-                            services, we make ...
-                        </p>
-
-                        <p class="more">
-                            <a href="services.php">Read More &raquo;</a>
-                        </p>
-                    </li>
-                </ul>
-            </div>
-            <div class="featured">
-                <ul>
-                    <li>
-                        <h2>Testing Services</h2>
-
-                        <p class="imgholder"><img src="images/demo/testing-services.jpg" alt=""/>
-                        </p>
-
-                        <p>
-                            Our goal is to provide unique software testing services to our customers and we offer
-                            complete end-to-end ...
-                        </p>
-
-                        <p class="more">
-                            <a href="services.php">Read More &raquo;</a>
-                        </p>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div class="clear"></div>
-    </div>
 </div>
 <?php include 'footer.php'; ?>
 </body>
