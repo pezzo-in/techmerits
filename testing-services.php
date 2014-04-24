@@ -6,7 +6,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
     <meta http-equiv="imagetoolbar" content="no"/>
     <meta name="description"
-          content="Learn about the Techmerits’ technology testing services to ensure the safety and efficiency of your databases, mobile apps, SAP and SAS software."/>
+          content="Learn about the Techmerits&#39; technology testing services to ensure the safety and efficiency of your databases, mobile apps, SAP and SAS software."/>
     <link rel="stylesheet" href="styles/layout.css" type="text/css"/>
 </head>
 <body id="top">
@@ -47,7 +47,7 @@
         </p>
 
         <p>
-            Considering our clients’ requirements for quality assurance, we strive to test every technology solution,
+            Considering our clients&#39; requirements for quality assurance, we strive to test every technology solution,
             software, and system according to the most stringent industry standards. Supervised by a team of expert
             analysts, our testing procedures are designed to check every dimension, aspect, and element of the product.
         </p>
@@ -79,7 +79,7 @@
         <h2>Load and Performance Testing</h2>
 
         <p>
-            With this testing service, we can identify any website’s traffic capacity, bottlenecks, and the overall
+            With this testing service, we can identify any website&#39;s traffic capacity, bottlenecks, and the overall
             performance. We evaluate their response and functionality under varied load levels.
         </p>
 
@@ -108,7 +108,7 @@
 
         <p>
             Techmerits makes it convenient for its clients to test their web apps for different devices and browsers.
-            Ensure your users’ web experience by testing your app with Techmerits.
+            Ensure your users&#39; web experience by testing your app with Techmerits.
         </p>
 
         <h2>Database Testing</h2>

@@ -2,7 +2,7 @@
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="EN" lang="EN" dir="ltr">
 <head profile="http://gmpg.org/xfn/11">
-    <title>Technology Consulting Services | Mission and Vission | Techmerits</title>
+    <title>Technology Consulting Services | Mission and vision | Techmerits</title>
     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
     <meta http-equiv="imagetoolbar" content="no"/>
     <meta name="description"
@@ -11,9 +11,29 @@
 </head>
 <body id="top">
 <?php include 'header.php'; ?>
-
+<div class="wrapper col2">
+    <div id="breadcrumb">
+        <ul>
+            <li class="first">
+                You Are Here
+            </li>
+            <li>
+                &#187;
+            </li>
+            <li>
+                <a href="index.php">Home</a>
+            </li>
+            <li>
+                &#187;
+            </li>
+            <li>
+                Mission & Vision
+            </li>
+        </ul>
+    </div>
+</div>
 <div id="gallery">
-    <img src="images/demo/mission-vission.jpg" alt=""/>
+    <img src="images/demo/mission-vision.jpg" alt=""/>
     <div class="clear"></div>
 </div>
 <div class="wrapper col4">
@@ -42,7 +62,7 @@
         <p>
             To facilitate our clients by creating and implementing effective technology solutions that address and
             resolve their business issues. We recruit talented, passionate professionals who make significant
-            contributions to the company’s success.
+            contributions to the company&#39;s success.
         </p>
 
         <h2>Our Values</h2>

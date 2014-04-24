@@ -134,7 +134,7 @@
         <p>
             Our Bespoke development, support, and maintenance services can add cost-efficiency, speed, and value to your
             business operations. Creating stand-alone, customised, or distributed software solutions, we work according
-            to our clients’ specific needs and problems.
+            to our clients&#39; specific needs and problems.
         </p>
 
         <p style="font-weight: bold;">
