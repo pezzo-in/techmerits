@@ -130,6 +130,10 @@ div.wrapper {
     margin: 0 auto 0;
     display: block;
     width: 960px;
+
+}
+#container {
+    padding: 20px 0;
 }
 
 /* ----------------------------------------------Head-------------------------------------*/
@@ -208,20 +212,19 @@ div.wrapper {
 }
  #container h2
  {
-    margin: 0 0 15px 0;
-    padding: 0 0 0 0;
-    line-height: normal;
-    font-weight: bold;
+    color: #999999;
     font-size: 18px;
-    color: #00008B;
-    /*border-bottom: 1px dashed #666666;*/
+    font-weight: bold;
+    line-height: normal;
+    margin: 40px 0 0;
+    padding: 0;
  }
  #container h3
  {
  	margin: 0 0 15px 0;
     padding: 0 0 15px 0;
     line-height: normal;
-    font-weight: bold;
+    font-weight: normal;
     font-size: 25px;
     color: #00008B;
     /*border-bottom: 1px dashed #666666;*/
@@ -456,11 +459,11 @@ div.wrapper {
 
 
 #container #contactform {
+      color: #000000;
     display: block;
     float: right;
-    margin-top: 75px;
+    margin: 20px 0 30px;
     width: 350px;
-    color: #000;
 }
 #container  #contactform h2{
     
@@ -469,11 +472,11 @@ div.wrapper {
 /* ------Company Details------*/
 
 #container #compdetails {
+    color: #000000;
     display: block;
     float: left;
-    margin-top: 75px;
+    margin: 20px 0 30px;
     width: 350px;
-    color: #000;
 }
 #container #compdetails h2{
     color: #000;
