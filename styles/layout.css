@@ -513,10 +513,11 @@ div.wrapper {
     display: block;
     float: left;
     width: 100%;
-    margin: 25px 0 0 0;
-    padding: 20px 0 0 0;
+    margin: 1px 0 25px 0;
+    padding:2px 0 0 0;
     font-size: 12px;
-    border-top: 1px dashed #666666;
+    border-top: 1px dashed #CCCCCC;
+
 }
 
 #copyright p {
