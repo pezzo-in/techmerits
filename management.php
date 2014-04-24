@@ -42,7 +42,7 @@
 <div class="wrapper col4">
     <div id="container">
         <div id="content">
-            <h1>Overview</h1>
+            <h1>Management</h1>
 
             <p>
                 Techmerits, stepping into the technology industry, has a vast experience of working with global

@@ -89,7 +89,46 @@
             <div>
     </div>
 </div>
+
 </div>
+<div id="column">
+            <div class="featured">
+                <ul>
+                    <li>
+                        <h2>Clients </h2>
+
+                        <p class="imgholder"><img src="images/demo/client.jpg" alt=""/>
+                        </p>
+
+                        <p>
+                            With our extensive experience in the technology consulting services, we are equipped with the best...
+                        </p>
+
+                        <p class="more">
+                            <a href="services.php">Read More &raquo;</a>
+                        </p>
+                    </li>
+                </ul>
+            </div>
+            <div class="featured">
+                <ul>
+                    <li>
+                        <h2>Employees</h2>
+
+                        <p class="imgholder"><img src="images/demo/employee.jpg" alt=""/>
+                        </p>
+
+                        <p>
+                           Maintaining a positive, encouraging environment in our organization, we ensure our employees get the maximum opportunities to
+                        </p>
+
+                        <p class="more">
+                            <a href="services.php">Read More &raquo;</a>
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </div>
 </div>
 </div>
 <?php include 'footer.php'; ?>
