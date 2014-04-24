@@ -6,12 +6,10 @@
                     <a href="index.php">HOME</a>
                 </li>
                 <li>
-                    <a href="overview.php">COMPANY</a>
+                    <a href="#">COMPANY</a>
 
                     <ul>
-                        <li>
-                            <a href="overview.php">OVERVIEW</a>
-                        </li>
+                        
                         <li>
                             <a href="management.php">MANAGEMENT</a>
                         </li>

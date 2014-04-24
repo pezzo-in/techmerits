@@ -41,16 +41,14 @@
 </div>
 <div class="wrapper col4">
     <div id="container">
-        <div id="contactform">
-            <h2>Why not contact us today </h2>
+         <div id="contactform">
+            <h2>Why Not Contact Us Today !</h2>
             <?php
-                    // display form if user has not clicked submit
-                    if (!isset($_POST["submit"]))
-                    {
-
-                    ?>
-            <form method="post" action="<?php echo $_SERVER[" PHP_SELF
-            "]; ?>">
+// display form if user has not clicked submit
+if (!isset($_POST["submit"]))
+  {
+  ?>
+          <form method="post" action="<?php echo $_SERVER["PHP_SELF"];?>">
             <fieldset>
                 <legend>
                     Contact Form
