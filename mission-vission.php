@@ -38,7 +38,6 @@
     <div class="clear"></div>
 </div>
 <div class="wrapper col4">
-v
         <div id="content">
         <h1>Mission and Vision </h1>
 
@@ -107,11 +106,7 @@ v
                     Get in touch with Techmerits to explore and avail our technical expertise.
                 </p>
             </div>
-            <div>
-    </div>
-</div>
-
-</div>
+         </div>
 <div id="column">
             <div class="featured">
                 <ul>
@@ -150,7 +145,7 @@ v
                 </ul>
             </div>
         </div>
-</div>
+    </div>
 </div>
 <?php include 'footer.php'; ?>
 </body>
