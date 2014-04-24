@@ -81,7 +81,7 @@
         </p>
 
         <p style="font-weight: bold; ">
-        <ul>
+        <ul style="list-style-type:none;">
             <li>
                 Database designing
             </li>
