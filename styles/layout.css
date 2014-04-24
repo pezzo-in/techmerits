@@ -1,29 +1,21 @@
-/*
-Template Name: Corporation
-File: Layout CSS
-Author: OS Templates
-Author URI: http://www.os-templates.com/
-Licence: <a href="http://www.os-templates.com/template-terms">Website Template Licence</a>
-*/
-@import url(homepage.css);
-@import url(navi.css);
-@import url(forms.css);
-@import url(tables.css);
+@import "homepage.css";
+@import "navi.css";
+@import "forms.css";
+@import "tables.css";
 
-#top{
-    margin:0px;
-    padding: 0;
-    font-size: 13px;
-    font-family: verdana, Arial, Helvetica, sans-serif;
+#top {
     color: #FFFFFF;
+    font-family: verdana, Arial, Helvetica, sans-serif;
+    font-size: 13px;
     height: auto;
-   
+    margin: 0;
+    padding: 0;
 }
 
 img {
-    border: 0;
-    padding: 0;
+    border: 0 none;
     margin: 0;
+    padding: 0;
 }
 
 .justify {
@@ -58,7 +50,7 @@ br.clear {
 }
 
 a {
-    outline: none;
+    outline: medium none;
     text-decoration: none;
 }
 
@@ -71,69 +63,62 @@ a {
 }
 
 .imgl, .imgr {
-    border: 1px solid #CCCCCC;
-    padding: 5px;
-    color: #000000;
     background-color: #F7F7F7;
+    border: 1px solid #CCCCCC;
+    color: #000000;
+    padding: 5px;
 }
 
 .imgl {
+    clear: left;
     float: left;
     margin: 0 8px 8px 0;
-    clear: left;
 }
 
 .imgr {
+    clear: right;
     float: right;
     margin: 0 0 8px 8px;
-    clear: right;
 }
-
-/* ----------------------------------------------Wrapper-------------------------------------*/
 
 div.wrapper {
     display: block;
-    width: 100%;
     margin: 0;
     text-align: left;
+    width: 100%;
 }
 
 .col1 {
+    background-color: #f5f5f5;
     color: #FFFFFF;
-    background-color: #294E79;
 }
 
 .col2 {
-    color: #000000;
     background-color: #F5F5F5;
+    color: #000000;
 }
 
 .col2 a {
-    color: #294E79;
     background-color: #F5F5F5;
+    color: #294E79;
 }
 
 .col3, .col4 {
-    color: #000000;
     background-color: #FFFFFF;
+    color: #000000;
 }
 
 .col5 {
-    color: #000000;
     background-color: #1C3451;
+    color: #000000;
 }
-
-/* ----------------------------------------------Generalise-------------------------------------*/
 
 #head, #gallery, #breadcrumb, #container, #footer {
-    position: relative;
-    margin: 0 auto 0;
     display: block;
+    margin: 0 auto;
+    position: relative;
     width: 960px;
-
 }
-
-/* ----------------------------------------------Head-------------------------------------*/
 
 #head {
     height: 110px;
@@ -141,30 +126,28 @@ div.wrapper {
 }
 
 #head h1, #head p, #head ul, #head a {
+    line-height: normal;
+    list-style: none outside none;
     margin: 0;
     padding: 0;
-    list-style: none;
-    line-height: normal;
+    text-align: center;
 }
 
 #head h1 a {
+    color: #FFFFFF;
     font-size: 38px;
     font-weight: normal;
-    color: #FFFFFF;
-   
 }
 
 #head p {
+    background-color: #294E79;
+    color: #F5F5F5;
     display: block;
+    font-size: 16px;
+    left: 0;
     position: absolute;
     top: 55px;
-    left: 0;
-    color: #F5F5F5;
-    background-color: #294E79;
-    font-size: 16px;
 }
-
-/* ----------------------------------------------Breadcrumb Navigation-------------------------------------*/
 
 #breadcrumb {
     padding: 20px 0;
@@ -175,9 +158,9 @@ div.wrapper {
 }
 
 #breadcrumb ul {
+    list-style: none outside none;
     margin: 0;
     padding: 0;
-    list-style: none;
 }
 
 #breadcrumb ul li {
@@ -192,39 +175,35 @@ div.wrapper {
     text-decoration: underline;
 }
 
-/* ----------------------------------------------Container-------------------------------------*/
-
 #container {
     padding: 20px 0;
 }
 
 #container h1, #container h4, #container h5, #container h6 {
-    margin: 0 0 15px 0;
-    padding: 0 0 0 0;
-    line-height: normal;
-    font-weight: normal;
-    font-size: 32px;
     color: #00008B;
-    /*border-bottom: 1px dashed #666666;*/
+    font-size: 32px;
+    font-weight: normal;
+    line-height: normal;
+    margin: 0 0 15px;
+    padding: 0;
 }
- #container h2
- {
+
+#container h2 {
     color: #999999;
     font-size: 18px;
     font-weight: bold;
     line-height: normal;
     margin: 40px 0 0;
     padding: 0;
- }
- #container h3
- {
- 	margin: 0 0 15px 0;
-    padding: 0 0 15px 0;
-    line-height: normal;
-    font-weight: normal;
-    font-size: 25px;
+}
+
+#container h3 {
     color: #00008B;
-    /*border-bottom: 1px dashed #666666;*/
+    font-size: 25px;
+    font-weight: normal;
+    line-height: normal;
+    margin: 0 0 15px;
+    padding: 0 0 15px;
 }
 
 #container h1 {
@@ -232,19 +211,15 @@ div.wrapper {
 }
 
 #container a {
-    color: #294E79;
     background-color: #FFFFFF;
+    color: #294E79;
 }
-
-/* ----------------------------------------------Content-------------------------------------*/
 
 #content {
     display: block;
     float: left;
     width: 690px;
 }
-
-/* ------Comments-----*/
 
 #comments {
     margin-bottom: 40px;
@@ -256,35 +231,35 @@ div.wrapper {
 }
 
 #comments .commentlist ul {
+    list-style: none outside none;
     margin: 0;
     padding: 0;
-    list-style: none;
 }
 
 #comments .commentlist li.comment_odd, #comments .commentlist li.comment_even {
-    margin: 0 0 10px 0;
+    list-style: none outside none;
+    margin: 0 0 10px;
     padding: 15px;
-    list-style: none;
 }
 
 #comments .commentlist li.comment_odd {
-    color: #666666;
     background-color: #F7F7F7;
+    color: #666666;
 }
 
 #comments .commentlist li.comment_odd a {
-    color: #294E79;
     background-color: #F7F7F7;
+    color: #294E79;
 }
 
 #comments .commentlist li.comment_even {
-    color: #666666;
     background-color: #E8E8E8;
+    color: #666666;
 }
 
 #comments .commentlist li.comment_even a {
-    color: #294E79;
     background-color: #E8E8E8;
+    color: #294E79;
 }
 
 #comments .commentlist .author .name {
@@ -296,19 +271,17 @@ div.wrapper {
 }
 
 #comments .commentlist p {
+    font-weight: normal;
     margin: 10px 5px 10px 0;
     padding: 0;
-    font-weight: normal;
     text-transform: none;
 }
 
 #comments .commentlist li .avatar {
-    float: right;
     border: 1px solid #EEEEEE;
+    float: right;
     margin: 0 0 0 10px;
 }
-
-/* ----------------------------------------------Right Block-------------------------------------*/
 
 #column {
     display: block;
@@ -318,8 +291,8 @@ div.wrapper {
 
 #column .holder, #column #featured {
     display: block;
-    width: 300px;
     margin-bottom: 40px;
+    width: 300px;
 }
 
 #column .holder p {
@@ -327,66 +300,63 @@ div.wrapper {
 }
 
 #column .holder h2.title {
+    background-color: #FFFFFF;
+    color: #000000;
     display: block;
-    width: 100%;
-    height: 65px;
-    margin: 0;
-    padding: 15px 0 8px 0;
     font-size: 20px;
     font-weight: bold;
-    color: #000000;
-    background-color: #FFFFFF;
+    height: 65px;
     line-height: normal;
-    /*border-bottom: 1px dashed #CCCCCC;*/
+    margin: 0;
+    padding: 15px 0 8px;
+    width: 100%;
 }
 
 #column .holder h2.title img {
+    background-color: #F7F7F7;
+    border: 1px solid #CCCCCC;
+    color: #000000;
     float: left;
     margin: -15px 8px 0 0;
     padding: 5px;
-    color: #000000;
-    background-color: #F7F7F7;
-    border: 1px solid #CCCCCC;
 }
 
 #column .holder p.readmore {
     display: block;
-    width: 100%;
     font-weight: bold;
-    text-align: right;
     line-height: normal;
+    text-align: right;
+    width: 100%;
 }
 
 #column div.imgholder {
-    display: block;
-    width: 290px;
-    margin: 0 0 10px 0;
-    padding: 4px;
-    color: #666666;
     background-color: #F7F7F7;
     border: 1px solid #CCCCCC;
+    color: #666666;
+    display: block;
+    margin: 0 0 10px;
+    padding: 4px;
+    width: 290px;
 }
 
-/* Featured Block */
-
 #column #featured a {
-    color: #294E79;
     background-color: #F9F9F9;
+    color: #294E79;
 }
 
 #column #featured ul, #column #featured h2, #column #featured p {
+    list-style: none outside none;
     margin: 0;
     padding: 0;
-    list-style: none;
 }
 
 #column #featured li {
+    background-color: #F9F9F9;
+    color: #2E271D;
     display: block;
-    width: 250px;
     margin: 0;
     padding: 20px 25px;
-    color: #2E271D;
-    background-color: #F9F9F9;
+    width: 250px;
 }
 
 #column #featured li p {
@@ -394,46 +364,42 @@ div.wrapper {
 }
 
 #column #featured li p.imgholder {
-    display: block;
-    width: 240px;
-    height: 90px;
-    margin: 20px 0 15px 0;
-    padding: 4px;
     border: 1px solid #CCCCCC;
+    display: block;
+    height: 90px;
+    margin: 20px 0 15px;
+    padding: 4px;
+    width: 240px;
 }
 
 #column #featured li h2 {
-    margin: 0;
-    padding: 0 0 14px 0;
+    background-color: #F9F9F9;
+    color: #00008B;
     font-size: 20px;
     font-weight: bold;
-    color: #00008B;
-    background-color: #F9F9F9;
     line-height: normal;
-    /*border-bottom: 1px dashed #666666;*/
+    margin: 0;
+    padding: 0 0 14px;
 }
 
 #column #featured li h4 {
-    margin: 0;
-    padding: 0 0 14px 0;
+    background-color: #F9F9F9;
+    color: #00008B;
     font-size: 15px;
     font-weight: bold;
-    color: #00008B;
-    background-color: #F9F9F9;
     line-height: normal;
-    /*border-bottom: 1px dashed #666666;*/
+    margin: 0;
+    padding: 0 0 14px;
 }
 
 #column #featured p.more {
     display: block;
-    width: 100%;
-    margin-top: 15px;
     font-weight: bold;
-    text-align: right;
     line-height: normal;
+    margin-top: 15px;
+    text-align: right;
+    width: 100%;
 }
-
-/* ----------------------------------------------Footer-------------------------------------*/
 
 #footer {
     padding: 20px 0;
@@ -441,32 +407,28 @@ div.wrapper {
 
 #footer a {
     color: #98B7DC;
-   
 }
 
 #footer h2 {
-    margin: 0 0 15px 0;
-    padding: 0 0 8px 0;
+    color: #CCCCCC;
     font-size: 22px;
     font-weight: bold;
-    color: #CCCCCC;
     line-height: normal;
-    /*border-bottom: 1px dashed #CCCCCC; */
+    margin: 0 0 15px;
+    padding: 0 0 8px;
 }
 
-
 #container #contactform {
-      color: #000000;
+    color: #000000;
     display: block;
     float: right;
     margin: 20px 0 30px;
     width: 350px;
 }
-#container  #contactform h2{
-    
-    color: #000;
+
+#container #contactform h2 {
+    color: #000000;
 }
-/* ------Company Details------*/
 
 #container #compdetails {
     color: #000000;
@@ -475,30 +437,31 @@ div.wrapper {
     margin: 20px 0 30px;
     width: 350px;
 }
-#container #compdetails h2{
-    color: #000;
+
+#container #compdetails h2 {
+    color: #000000;
 }
 
 #container #compdetails ul {
+    list-style: none outside none;
     margin: 0;
     padding: 0;
-    list-style: none;
 }
 
 #container #compdetails li {
-    margin: 0 0 12px 0;
+    margin: 0 0 12px;
 }
 
 #container #compdetails li.last {
     margin: 0;
 }
 
-
 .footerfont {
-    color: #000;
+    color: #000000;
 }
+
 #container #compdetails #officialdetails {
-    float: left
+    float: left;
 }
 
 #container #compdetails #officialdetails li.last {
@@ -509,23 +472,19 @@ div.wrapper {
     float: left;
 }
 
-/* ------Copyright------*/
-
 #copyright {
+    background-color: #4F473A;
+    border-top: 1px dashed #CCCCCC;
     display: block;
     float: left;
-    width: 100%;
-    margin: 20px 0 0px 0;
-    padding:20px 0;
     font-size: 12px;
-    border-top: 1px dashed #CCCCCC;
-    background-color: #4F473A;
-
+    margin: 20px 0 0;
+    padding: 20px 0;
+    width: 100%;
 }
 
 #copyright p {
+    color: #FFFFFF;
     margin: 0;
     padding: 0;
-    color: #FFFFFF;
-
 }

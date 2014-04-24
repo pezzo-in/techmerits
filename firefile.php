@@ -14,513 +14,568 @@ class FireFileBase {
     public $code = "";
     public $config = array(
         "user" => "",
-        "pass" => ""
-    );
-    public $newVersionAvailable = false;
-    
-    public function __construct() {
-        
-        // GET OS SETTINGS
-        if(isset($_SERVER["OS"]) && substr($_SERVER["OS"], 0, 3) == "win") {
-        	$this->OS = "WIN";
-            $this->SL = '\\\\';
+"pass" => ""
+);
+public $newVersionAvailable = false;
+
+public function __construct() {
+
+// GET OS SETTINGS
+if(isset($_SERVER["OS"]) && substr($_SERVER["OS"], 0, 3) == "win") {
+$this->OS = "WIN";
+$this->SL = '\\\\';
+}
+
+// Check version
+$currentVersion = trim(file_get_contents("http://www.firefile.at/version/server"));
+if($currentVersion != $this->version) {
+$this->newVersionAvailable = $currentVersion;
+}
+
+// Check write permissions
+if(!is_writable(".")) {
+$this->addError("DIRECTORY '.' IS NOT WRITABLE!
+<div class='code'>set directory permissions to '777'<br/>chmod -R 777 ".getcwd()."</div>");
+}
+if(file_exists("firefile.config.php") && !is_writable("firefile.config.php")) {
+$this->addError("FILE 'firefile.config.php' IS NOT WRITABLE!
+<div class='code'>set file permissions to '666'<br/>chmod 666 ".getcwd()."/firefile.config.php</div>");
+}
+
+// Set error page parameters
+if($this->hasErrors()) {
+$this->loggedIn = false;
+$this->code = "";
+$this->userSet = false;
+$this->passSet = false;
+}
+
+// Read config file
+$this->readConfigValues();
+
+// Check for save request
+$token = $this->get("token");
+if($token) {
+$result = $this->authorizeSaveAction();
+$response = array();
+if($result === true) {
+$saveResult = $this->saveChanges();
+if($saveResult === true) {
+$response["success"] = true;
+$response["message"] = "file(s) successfully saved";
+}else{
+$response["success"] = false;
+$response["message"] = $saveResult;
+}
+}else{
+$response["success"] = false;
+$response["message"] = $result;
+}
+
+// Respond in json
+header('content-type: application/json; charset=utf-8');
+echo json_encode($response);
+}else{
+// Auth handler
+$this->handleAuth();
+
+// Check for config update post actions
+if($this->loggedIn) {
+
+$this->handlePostActions();
+
+if($this->isUserSet() && $this->isPassSet()) {
+$this->code = $this->generateCode();
+$result = $this->createDemoContent();
+if($result === false) {
+$fileperms = substr(sprintf('%o', fileperms('.')), -3);
+$this->addError("The file 'firefile.demo.css' is not writable. FireFile directory needs write permissions (currently: $fileperms)");
+}
+}
+}
+
+$this->render();
+}
+exit(0);
+
+}
+
+private function saveChanges() {
+
+// Get request data
+$contents = $this->get("contents");
+$file = $this->get("file");
+
+// Prepare file information
+if($this->OS == "UNIX") {
+$file_abs_path = str_replace($_SERVER["PHP_SELF"], "", $_SERVER["SCRIPT_FILENAME"]).str_replace("http://".$_SERVER["HTTP_HOST"], "", $file);
+}else if($this->OS == "WIN") {
+$file_abs_path = str_replace(str_replace("/", "\\\\", $_SERVER["PHP_SELF"]), "", $_SERVER["PATH_TRANSLATED"]).str_replace("/", "\\\\", str_replace("http://".$_SERVER["HTTP_HOST"], "", $file));
+}
+
+// Prepare contents
+$contents = (string) $this->prepareCss($contents);
+
+$result = $this->saveFile($file_abs_path, $contents);
+if(!$result) {
+return "The file was not found on the server";
+}
+
+return true;
+}
+
+private function prepareCss($css) {
+
+$filters = array(
+"RemoveComments"                => false,
+"RemoveEmptyRulesets"           => true,
+"RemoveEmptyAtBlocks"           => true,
+"ConvertLevel3AtKeyframes"      => array("RemoveSource" => true),
+"ConvertLevel3Properties"       => true,
+"Variables"                     => false,
+"RemoveLastDelarationSemiColon" => false
+);
+CssMin::setVerbose(true);
+$css = CssMin::minify($css, $filters);
+$tokens = CssMin::parse($css);
+return new CssOtbsFormatter($tokens, "    ", 32);
+
+}
+
+
+private function generateCode() {
+return md5($this->config["user"]."/".$this->config["pass"]);
+}
+
+private function authorizeSaveAction() {
+
+// Check filename
+$file = $this->get("file");
+if(!$file) { return "no file specified"; }
+if(substr($file, -4) != ".css") { return "invalid file type"; }
+
+// Check stylesheet contents
+$contents = $this->get("contents");
+if(!$contents) { return "invalid stylesheet"; }
+if(strlen($contents) < 10 ) { return "stylesheet contents too short"; }
+
+// Check token
+$code = $this->get("token");
+if($code != $this->generateCode()) { return "invalid token code"; }
+
+return true;
+}
+
+private function handleAuth() {
+
+if(!$this->isUserSet() || !$this->isPassSet()) {
+$this->loggedIn = true;
+return true;
+}
+
+if($this->get("user") == $this->config["user"] && $this->get("pass") == $this->config["pass"]) {
+$this->loggedIn = true;
+return true;
+}else{
+$this->loggedIn = false;
+return false;
+}
+
+}
+
+private function handlePostActions() {
+
+// Handle username update
+$userNew = $this->get("user_new");
+if($userNew) {
+if(strlen($userNew) >= 4) {
+$this->config["user"] = $userNew;
+$this->saveConfigFile();
+$_POST["user"] = $userNew;
+$this->addSuccess("The username was successfully changed");
+}else{
+$this->addError("The specified username is too short!");
+}
+}
+
+// Handle password update
+$passNew = $this->get("pass_new");
+$passNewRetype = $this->get("pass_new_retype");
+if($passNew || $passNewRetype) {
+if($passNew == $passNewRetype) {
+$this->config["pass"] = $passNew;
+$this->saveConfigFile();
+$_POST["pass"] = $passNew;
+$this->addSuccess("The password was successfully changed");
+}else{
+$this->addError("Passwords do not match!");
+}
+}
+
+return true;
+}
+
+private function createDemoContent() {
+if(!file_exists("firefile.demo.css")) {
+$cssContents = file_get_contents("http://www.firefile.at/bundles/firefileserver/css/firefile.demo.css");
+return $this->saveFile("firefile.demo.css", $cssContents, true);
+}
+return true;
+}
+
+private function saveFile($file, $contents, $force=false) {
+if(file_exists($file) || $force) {
+$handle = @fopen($file, 'w');
+if($handle === false) {
+return false;
+}
+fwrite($handle, $contents);
+fclose($handle);
+return true;
+}else{
+return false;
+}
+}
+
+private function readConfigValues() {
+// CHECK IF FILE EXISTS
+if(!file_exists("firefile.config.php")) {
+$this->saveConfigFile();
+}
+include("firefile.config.php");
+$this->config = unserialize($configString);
+}
+
+private function saveConfigFile() {
+$configString = serialize($this->config);
+return $this->saveFile("firefile.config.php", "<?php \$configString = '$configString'; ?>", true);
+}
+
+public function isUserSet() {
+return ($this->config["user"] != "");
+}
+
+public function isPassSet() {
+return ($this->config["pass"] != "");
+}
+
+public function get($var) {
+if(isset($_POST[$var])) { return $_POST[$var]; }
+return false;
+}
+
+private function addError($msg) {
+$this->error[] = $msg;
+}
+
+private function addSuccess($msg) {
+$this->success[] = $msg;
+}
+
+private function hasErrors() {
+return (count($this->error) > 0);
+}
+
+public function render() {
+?>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>FireFile Configuration</title>
+
+    <link media="screen" rel="stylesheet" type="text/css"
+          href="http://www.firefile.at/bundles/firefileserver/css/firefile-custom.css"/>
+    <style>
+        body {
+            padding-top: 40px;
         }
-        
-        // Check version
-        $currentVersion = trim(file_get_contents("http://www.firefile.at/version/server"));
-        if($currentVersion != $this->version) {
-            $this->newVersionAvailable = $currentVersion;
+
+        header {
+            margin-bottom: 20px;
         }
 
-        // Check write permissions
-    	if(!is_writable(".")) {
-            $this->addError("DIRECTORY '.' IS NOT WRITABLE!<div class='code'>set directory permissions to '777'<br />chmod -R 777 ".getcwd()."</div>");
-    	}
-    	if(file_exists("firefile.config.php") && !is_writable("firefile.config.php")) {
-    		$this->addError("FILE 'firefile.config.php' IS NOT WRITABLE!<div class='code'>set file permissions to '666'<br />chmod 666 ".getcwd()."/firefile.config.php</div>");
-    	}
-
-        // Set error page parameters
-    	if($this->hasErrors()) {
-    		$this->loggedIn = false;
-    		$this->code = "";
-    		$this->userSet = false;
-    		$this->passSet = false;
-    	}
-        
-        // Read config file
-        $this->readConfigValues();
-        
-        // Check for save request
-        $token = $this->get("token");
-        if($token) {
-            $result = $this->authorizeSaveAction();
-            $response = array();            
-            if($result === true) {
-                $saveResult = $this->saveChanges();
-                if($saveResult === true) {
-                    $response["success"] = true;
-                    $response["message"] = "file(s) successfully saved";
-                }else{
-                    $response["success"] = false;
-                    $response["message"] = $saveResult;
-                }
-            }else{
-                $response["success"] = false;
-                $response["message"] = $result;
-            }
-
-		    // Respond in json
-            header('content-type: application/json; charset=utf-8');
-            echo json_encode($response);
-        }else{
-            // Auth handler
-            $this->handleAuth();
-        
-            // Check for config update post actions
-            if($this->loggedIn) {
-            
-                $this->handlePostActions();
-
-                if($this->isUserSet() && $this->isPassSet()) {
-                    $this->code = $this->generateCode();
-                    $result = $this->createDemoContent();
-                    if($result === false) {
-                        $fileperms = substr(sprintf('%o', fileperms('.')), -3);
-                        $this->addError("The file 'firefile.demo.css' is not writable. FireFile directory needs write permissions (currently: $fileperms)");
-                    }
-                }
-            }
-
-            $this->render();
-        }
-        exit(0);
-
-    }
-    
-    private function saveChanges() {
-
-    	// Get request data
-    	$contents = $this->get("contents");
-    	$file = $this->get("file");
-
-    	// Prepare file information
-    	if($this->OS == "UNIX") {
-    		$file_abs_path = str_replace($_SERVER["PHP_SELF"], "", $_SERVER["SCRIPT_FILENAME"]).str_replace("http://".$_SERVER["HTTP_HOST"], "", $file);
-    	}else if($this->OS == "WIN") {
-    		$file_abs_path = str_replace(str_replace("/", "\\\\", $_SERVER["PHP_SELF"]), "", $_SERVER["PATH_TRANSLATED"]).str_replace("/", "\\\\", str_replace("http://".$_SERVER["HTTP_HOST"], "", $file));
-    	}
-        
-        // Prepare contents
-        $contents = (string) $this->prepareCss($contents);
-
-    	$result = $this->saveFile($file_abs_path, $contents);
-        if(!$result) {
-            return "The file was not found on the server";
+        div.code {
+            border: 1px dotted #CCCCCC;
+            background: #FFEEEE;
+            padding: 2px;
+            font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
+            font-size: 11px;
+            color: #444444;
         }
 
-    	return true;
-    }
-    
-    private function prepareCss($css) {
-
-        $filters = array(
-            "RemoveComments"                => false,
-            "RemoveEmptyRulesets"           => true,
-            "RemoveEmptyAtBlocks"           => true,
-            "ConvertLevel3AtKeyframes"      => array("RemoveSource" => true),
-            "ConvertLevel3Properties"       => true,
-            "Variables"                     => false,
-            "RemoveLastDelarationSemiColon" => false
-        );
-        CssMin::setVerbose(true);
-        $css = CssMin::minify($css, $filters);
-        $tokens = CssMin::parse($css);
-        return new CssOtbsFormatter($tokens, "    ", 32);
-        
-    }
-
-    
-    private function generateCode() {
-        return md5($this->config["user"]."/".$this->config["pass"]);
-    }
-    
-    private function authorizeSaveAction() {
-
-    	// Check filename
-        $file = $this->get("file");
-    	if(!$file) { return "no file specified"; }
-    	if(substr($file, -4) != ".css") { return "invalid file type"; }
-
-    	// Check stylesheet contents
-        $contents = $this->get("contents");
-    	if(!$contents) { return "invalid stylesheet"; }
-    	if(strlen($contents) < 10 ) { return "stylesheet contents too short"; }
-
-    	// Check token
-        $code = $this->get("token");
-    	if($code != $this->generateCode()) { return "invalid token code"; }
-
-    	return true;
-    }
-    
-    private function handleAuth() {
-        
-        if(!$this->isUserSet() || !$this->isPassSet()) {
-            $this->loggedIn = true;
-            return true;
+        span#firefile-version {
+            display: inline-block;
+            margin-left: 20px;
+            color: #AAA;
         }
-        
-    	if($this->get("user") == $this->config["user"] && $this->get("pass") == $this->config["pass"]) {
-            $this->loggedIn = true;
-            return true;
-    	}else{
-    		$this->loggedIn = false;
-            return false;
-    	}
 
-    }
-    
-    private function handlePostActions() {
-        
-        // Handle username update
-        $userNew = $this->get("user_new");
-    	if($userNew) {
-    		if(strlen($userNew) >= 4) {
-                $this->config["user"] = $userNew;
-                $this->saveConfigFile();
-    			$_POST["user"] = $userNew;
-    			$this->addSuccess("The username was successfully changed");
-    		}else{
-                $this->addError("The specified username is too short!");
-    		}
-    	}
-
-        // Handle password update
-        $passNew = $this->get("pass_new");
-        $passNewRetype = $this->get("pass_new_retype");
-    	if($passNew || $passNewRetype) {
-    		if($passNew == $passNewRetype) {
-                $this->config["pass"] = $passNew;
-                $this->saveConfigFile();
-    			$_POST["pass"] = $passNew;
-                $this->addSuccess("The password was successfully changed");
-    		}else{
-    			$this->addError("Passwords do not match!");
-    		}
-    	}
-
-    	return true;
-    }
-    
-    private function createDemoContent() {
-        if(!file_exists("firefile.demo.css")) {
-        	$cssContents = file_get_contents("http://www.firefile.at/bundles/firefileserver/css/firefile.demo.css");
-        	return $this->saveFile("firefile.demo.css", $cssContents, true);
+        span.firefile-key {
+            border: 1px solid #CCCCCC;
+            padding: 2px 4px 0px 4px;
+            text-transform: uppercase;
+            background: #EEEEEE;
         }
-        return true;
-    }
-    
-    private function saveFile($file, $contents, $force=false) {
-    	if(file_exists($file) || $force) {
-    		$handle = @fopen($file, 'w');
-            if($handle === false) {
-                return false;
-            }
-    		fwrite($handle, $contents);
-    		fclose($handle);
-    		return true;
-    	}else{
-    		return false;
-    	}
-    }
-    
-    private function readConfigValues() {
-    	// CHECK IF FILE EXISTS
-    	if(!file_exists("firefile.config.php")) {
-    		$this->saveConfigFile();
-    	}
-        include("firefile.config.php");
-        $this->config = unserialize($configString);
-    }
-    
-    private function saveConfigFile() {
-        $configString = serialize($this->config);
-        return $this->saveFile("firefile.config.php", "<?php \$configString = '$configString'; ?>", true);
-    }
-    
-    public function isUserSet() {
-        return ($this->config["user"] != "");
-    }
-    
-    public function isPassSet() {
-        return ($this->config["pass"] != "");
-    }
-    
-    public function get($var) {
-    	if(isset($_POST[$var])) { return $_POST[$var]; }
-        return false;
-    }
-    
-    private function addError($msg) {
-        $this->error[] = $msg;
-    }
 
-    private function addSuccess($msg) {
-        $this->success[] = $msg;
-    }
-    
-    private function hasErrors() {
-        return (count($this->error) > 0);
-    }
+        div#key-pane {
+            display: none;
+        }
+    </style>
 
-    public function render() {
-        ?>
-        <!DOCTYPE html>
-        <html>
-        	<head>
-                <meta charset="UTF-8">
-                <meta content="width=device-width, initial-scale=1.0" name="viewport">
-        		<title>FireFile Configuration</title>
-		
-                <link media="screen" rel="stylesheet" type="text/css" href="http://www.firefile.at/bundles/firefileserver/css/firefile-custom.css" />
-        		<style>
-        			body {
-        				padding-top: 40px;
-        			}
-                    header {
-                        margin-bottom: 20px;
-                    }
-        			div.code {
-        				border: 1px dotted #CCCCCC;
-        				background: #FFEEEE;
-        				padding: 2px;
-        				font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
-        				font-size: 11px;
-        				color: #444444;
-        			}
-                    span#firefile-version {
-                        display: inline-block;
-                        margin-left: 20px;
-                        color: #AAA;
-                    }
-        			span.firefile-key {
-        				border: 1px solid #CCCCCC;
-        				padding: 2px 4px 0px 4px;
-        				text-transform: uppercase;
-        				background: #EEEEEE;
-        			}
-        			div#key-pane {
-        			    display: none;
-        			}
-        		</style>
+    <?php if(file_exists("firefile.demo.css")) { ?>
+    <link rel="stylesheet" href="firefile.demo.css" type="text/css"/>
+    <?php } ?>
 
-        		<?php if(file_exists("firefile.demo.css")) { ?>
-        			<link rel="stylesheet" href="firefile.demo.css" type="text/css" />
-        		<?php } ?>
-        
-                <link rel="shortcut icon" href="http://www.firefile.at/favicon.ico" type="image/x-icon" />
-        	</head>
-        	<body onload="window.setInterval(detectFirebug, 500);detectFirebug();">
-        
-                <form method="POST">
-        
-                    <div class="navbar navbar-fixed-top">
-                        <div class="navbar-inner">
-                            <div class="container">
-                                <a href="http://www.firefile.at" target="_blank" class="brand">FireFile <span id="firefile-version">v<?php echo $this->version; ?></span></a>
-                                
-                                <?php if($this->newVersionAvailable !== false) { ?>
-                                    <ul class="nav navbar-form">
-                                        <li>
-                                            <div class="input-append input-prepend">
-                                                <span class="add-on">Version <?php echo $this->newVersionAvailable; ?> available:</span>
-                                                <a class="btn btn-success" href="https://github.com/tobiasstrebitzer/FireFile-Server" target="_blank">Update now</a>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                <?php } ?>
-                                
-                                <?php if($this->isUserSet() || $this->isPassSet()){ ?>
-                                    <ul class="nav pull-right navbar-form">
-                                        <li class="input-prepend">
-                                            <span class="add-on">Username:</span>
-                                            <input class="input-small" type="text" tabindex="1" autocomplete="off" value="<?php echo $this->get("user"); ?>" id="username" name="user" placeholder="Username" />
-                                        </li>
-                                        <li class="divider-vertical"></li>
-                                        <li class="input-prepend">
-                                            <span class="add-on"> Password: </span>
-                                            <input class="input-small" type="password" tabindex="2" autocomplete="off" value="<?php echo $this->get("pass"); ?>" id="password" name="pass" placeholder="Password" />
-                                        </li>
-                                        <li class="divider-vertical"></li>
-                                        <li>
-                                            <button class="btn btn-primary" type="submit">Login</button>
-                                        </li>
-                                    </ul>
-                                <?php } ?>
-                            </div>
-                        </div>
+    <link rel="shortcut icon" href="http://www.firefile.at/favicon.ico" type="image/x-icon"/>
+</head>
+<body onload="window.setInterval(detectFirebug, 500);detectFirebug();">
+
+<form method="POST">
+
+<div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <a href="http://www.firefile.at" target="_blank" class="brand">FireFile <span
+                    id="firefile-version">v<?php echo $this->version; ?></span></a>
+
+            <?php if($this->newVersionAvailable !== false) { ?>
+            <ul class="nav navbar-form">
+                <li>
+                    <div class="input-append input-prepend">
+                        <span class="add-on">Version <?php echo $this->newVersionAvailable; ?> available:</span>
+                        <a class="btn btn-success" href="https://github.com/tobiasstrebitzer/FireFile-Server"
+                           target="_blank">Update now</a>
                     </div>
-        
-                    <header id="overview">
-                        <div class="inner">
-                            <div class="container">
-                                <h1>FireFile Standalone Server</h1>
-                                <div class="row show-grid">
-                                    <div class="span8">
-                                        <p class="lead">
-                                            Firefile is a Browser extension that allows saving the CSS- files edited with Firebug or Devtools to a web server.<br>
-                                            That enabled your browser to be the first remote-saving live-preview CSS editor and allows ultra-fast webdesign and prototyping.
-                                        </p>
-                                    </div>
-                                    <div class="span4">
-                                		<div class="well">
-                                    		<?php if(!$this->loggedIn || !$this->isUserSet() || !$this->isPassSet()) { ?>
-                                                <p><b>Log in to proceed:</b>&nbsp;You need to log in with your username and password to activate FireFile</p>
-                                    		<?php }else{ ?>
-                                                <p><b>Firebug Status:</b>&nbsp;<span id="firefile-status" class="label label-warning">Inactive</span><br/><span id="firefile-status-text">Please make sure that Firebug ist activated to successfully register FireFile.</span></p>
-                                            <?php } ?>
-                                		</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </header>
-        
-                    <div class="container">
-                        
-                    	<?php foreach($this->success as $msg) { ?>
-                    		<div class="alert alert-success">
-                                <h4>Success</h4>
-                    			<p><?php echo $msg ?></p>
-                    		</div>
-                    	<?php } ?>
+                </li>
+            </ul>
+            <?php } ?>
 
-                    	<?php foreach($this->error as $msg) { ?>
-                    		<div class="alert alert-error">
-                                <h4>Error</h4>
-                    			<p><?php echo $msg ?></p>
-                    		</div>
-                    	<?php } ?>
+            <?php if($this->isUserSet() || $this->isPassSet()){ ?>
+            <ul class="nav pull-right navbar-form">
+                <li class="input-prepend">
+                    <span class="add-on">Username:</span>
+                    <input class="input-small" type="text" tabindex="1" autocomplete="off"
+                           value="<?php echo $this->get(" user"); ?>" id="username" name="user"
+                    placeholder="Username" />
+                </li>
+                <li class="divider-vertical"></li>
+                <li class="input-prepend">
+                    <span class="add-on"> Password: </span>
+                    <input class="input-small" type="password" tabindex="2" autocomplete="off"
+                           value="<?php echo $this->get(" pass"); ?>" id="password" name="pass"
+                    placeholder="Password" />
+                </li>
+                <li class="divider-vertical"></li>
+                <li>
+                    <button class="btn btn-primary" type="submit">Login</button>
+                </li>
+            </ul>
+            <?php } ?>
+        </div>
+    </div>
+</div>
 
-                        <div style="text-align: center;" class="row">
-                            <div class="span4">
-                                <h2>Get started</h2>
-                                <p>You only need to sign up and install FireFile for your browser to get started in just a minutes.</p>
-                                <p><a href="http://www.firefile.at/register/" class="btn btn-large btn-primary">Sign up now</a></p>
-                            </div>
-                            <div class="span4">
-                                <h2>Cross-browser</h2>
-                                <p>No need to worry about other browsers. FireFile will automatically prepare your css.</p>
-                                <p><img src="http://www.firefile.at/bundles/firefileserver/images/callouts/crossbrowser.png" title="Cross- Browser Transformations"></p>
-                            </div>
-                            <div class="span4">
-                                <h2>Firefox &amp; Chrome</h2>
-                                <p>FireFile currently supports Google Chrome and Firefox. Safari support will be added soon.</p>
-                                <p>
-                                    <a href="/firefile-latest.xpi"><img src="http://www.firefile.at/bundles/firefileserver/images/browser/firefox-32.png" title="Firefox"></a>
-                                    <a target="_blank" href="https://chrome.google.com/webstore/detail/firefile/cmigmoonjefggfmlholmllibgocfalgb"><img src="http://www.firefile.at/bundles/firefileserver/images/browser/chrome-32.png" title="Google Chrome"></a>
-                                    <span><img src="http://www.firefile.at/bundles/firefileserver/images/browser/safari-32-disabled.png"></span>
-                                </p>
-                            </div>
-                        </div>
+<header id="overview">
+    <div class="inner">
+        <div class="container">
+            <h1>FireFile Standalone Server</h1>
 
+            <div class="row show-grid">
+                <div class="span8">
+                    <p class="lead">
+                        Firefile is a Browser extension that allows saving the CSS- files edited with Firebug or
+                        Devtools to a web server.<br>
+                        That enabled your browser to be the first remote-saving live-preview CSS editor and allows
+                        ultra-fast webdesign and prototyping.
+                    </p>
+                </div>
+                <div class="span4">
+                    <div class="well">
+                        <?php if(!$this->loggedIn || !$this->isUserSet() || !$this->isPassSet()) { ?>
+                        <p><b>Log in to proceed:</b>&nbsp;You need to log in with your username and password to
+                            activate FireFile</p>
+                        <?php }else{ ?>
+                        <p><b>Firebug Status:</b>&nbsp;<span id="firefile-status"
+                                                             class="label label-warning">Inactive</span><br/><span
+                                id="firefile-status-text">Please make sure that Firebug ist activated to successfully register FireFile.</span>
+                        </p>
+                        <?php } ?>
                     </div>
-                    <hr />
-                    <div class="container">
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
 
-                    	<?php if($this->loggedIn) { ?>
-                            <?php if($this->isUserSet() && $this->isPassSet()) { ?>
-                                <h2>Change settings</h2>
-                            <?php }else{ ?>
-                                <h2>Create account</h2>
-                            <?php } ?>
-                                        
-                            <div class="row form-horizontal">
-                                <div class="span6">
-                                    <div class="control-group<?php if(!$this->isUserSet()) { ?> info<?php } ?>">
-                                        <label class="control-label" for="username_new">New username:</label>
-                                        <div class="controls">
-                                            <div class="input-append">
-                                                <input type="text" autocomplete="off" value="" id="username_new" name="user_new" placeholder="Enter new username" />
-                                                <button class="btn" type="submit">Save</button>
-                                            </div>
-                                        </div>
-                                    </div>
+<div class="container">
 
-                    
-                                    <div class="control-group<?php if(!$this->isPassSet()) { ?> info<?php } ?>">
-                                        <label class="control-label" for="password_new">New password:</label>
-                                        <div class="controls">
-                                            <input type="password" autocomplete="off" value="" id="password_new" name="pass_new" placeholder="Enter new password" <?php if(!$this->isPassSet()) { ?>class='highlight'<?php } ?> />
-                                        </div>
-                                    </div>
-                    
-                                    <div class="control-group<?php if(!$this->isPassSet()) { ?> info<?php } ?>">
-                                        <label class="control-label" for="password_new_retype">Repeat:</label>
-                                        <div class="controls">
-                                            <div class="input-append">
-                                                <input type="password" autocomplete="off" value="" id="password_new_retype" name="pass_new_retype" placeholder="Repeat new password" <?php if(!$this->isPassSet()) { ?>class='highlight'<?php } ?> />
-                                                <button class="btn" type="submit">Save</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="span6">
-                                    <div class="well">
-                                        <p>You can change your account settings anytime.</p>
-                                        <p>If you change your username or password, please remove this site from the list of registered sites and register this site again</p>
-                                    </div>
-                                </div>
-                        
-                            </div>
-                    
-            				<?php if($this->isUserSet() && $this->isPassSet()) { ?>
-            					<div id="key-pane" class="config-pane">
-            						<label for="username">FIREFILE KEY:</label>
-            						<span id="firefile-key-holder" class="firefile-key"><?php echo $this->code; ?></span>
-            					</div>
-            				<?php } ?>
-                    	<?php } ?>
-                    	<?php if(file_exists("firefile.demo.css")) { ?>
-                    		<h2>Test area</h2>
-                			<p>You can edit this test area with firebug to make sure that firefile is working</p>
-                			<div id="test">
-                				<div class="outer_div">
-                					<div class="inner_div">
-                						<div class="header_div">Test area panel title</div>
-                						<div class="content_div">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
-                						<div class="footer_div">&copy; <a target="_blank" href="http://www.firefile.at">www.firefile.at</a> 2013</div>
-                					</div>
-                				</div>
-                			</div>
-                            <div class="form-actions">
-                                <button class="btn btn-primary" type="submit">Reload this page</button>
-                            </div>
+    <?php foreach($this->success as $msg) { ?>
+    <div class="alert alert-success">
+        <h4>Success</h4>
 
-                    	<?php } ?>
+        <p><?php echo $msg ?></p>
+    </div>
+    <?php } ?>
+
+    <?php foreach($this->error as $msg) { ?>
+    <div class="alert alert-error">
+        <h4>Error</h4>
+
+        <p><?php echo $msg ?></p>
+    </div>
+    <?php } ?>
+
+    <div style="text-align: center;" class="row">
+        <div class="span4">
+            <h2>Get started</h2>
+
+            <p>You only need to sign up and install FireFile for your browser to get started in just a minutes.</p>
+
+            <p><a href="http://www.firefile.at/register/" class="btn btn-large btn-primary">Sign up now</a></p>
+        </div>
+        <div class="span4">
+            <h2>Cross-browser</h2>
+
+            <p>No need to worry about other browsers. FireFile will automatically prepare your css.</p>
+
+            <p><img src="http://www.firefile.at/bundles/firefileserver/images/callouts/crossbrowser.png"
+                    title="Cross- Browser Transformations"></p>
+        </div>
+        <div class="span4">
+            <h2>Firefox &amp; Chrome</h2>
+
+            <p>FireFile currently supports Google Chrome and Firefox. Safari support will be added soon.</p>
+
+            <p>
+                <a href="/firefile-latest.xpi"><img
+                        src="http://www.firefile.at/bundles/firefileserver/images/browser/firefox-32.png"
+                        title="Firefox"></a>
+                <a target="_blank"
+                   href="https://chrome.google.com/webstore/detail/firefile/cmigmoonjefggfmlholmllibgocfalgb"><img
+                        src="http://www.firefile.at/bundles/firefileserver/images/browser/chrome-32.png"
+                        title="Google Chrome"></a>
+                    <span><img
+                            src="http://www.firefile.at/bundles/firefileserver/images/browser/safari-32-disabled.png"></span>
+            </p>
+        </div>
+    </div>
+
+</div>
+<hr/>
+<div class="container">
+
+    <?php if($this->loggedIn) { ?>
+    <?php if($this->isUserSet() && $this->isPassSet()) { ?>
+    <h2>Change settings</h2>
+    <?php }else{ ?>
+    <h2>Create account</h2>
+    <?php } ?>
+
+    <div class="row form-horizontal">
+        <div class="span6">
+            <div class="control-group<?php if(!$this->isUserSet()) { ?> info<?php } ?>">
+                <label class="control-label" for="username_new">New username:</label>
+
+                <div class="controls">
+                    <div class="input-append">
+                        <input type="text" autocomplete="off" value="" id="username_new" name="user_new"
+                               placeholder="Enter new username"/>
+                        <button class="btn" type="submit">Save</button>
                     </div>
-                </form>
-                <script type="text/javascript">
-                    function detectFirebug() {
-                        var status = document.getElementById("firefile-status");
-                        var statusText = document.getElementById("firefile-status-text");
-                        if(status) {
-                            if (window.console && (window.console.firebug || window.console.exception)) {
-                                status.innerHTML = "Active";
-                                statusText.innerHTML = "FireFile is now active and will ask you to register this site.";
-                                status.className = "label label-success";
-                            }else{
-                                status.innerHTML = "Inactive";
-                                statusText.innerHTML = "Please make sure that Firebug ist activated to successfully register FireFile.";
-                                status.className = "label label-warning";
-                            }
-                        }
-                    }
-                </script>
-        	</body>
-        </html>
-        <?php
+                </div>
+            </div>
+
+
+            <div class="control-group<?php if(!$this->isPassSet()) { ?> info<?php } ?>">
+                <label class="control-label" for="password_new">New password:</label>
+
+                <div class="controls">
+                    <input type="password" autocomplete="off" value="" id="password_new" name="pass_new"
+                           placeholder="Enter new password" <?php if(!$this->isPassSet()) {
+                    ?>class='highlight'<?php } ?> />
+                </div>
+            </div>
+
+            <div class="control-group<?php if(!$this->isPassSet()) { ?> info<?php } ?>">
+                <label class="control-label" for="password_new_retype">Repeat:</label>
+
+                <div class="controls">
+                    <div class="input-append">
+                        <input type="password" autocomplete="off" value="" id="password_new_retype"
+                               name="pass_new_retype" placeholder="Repeat new password" <?php if(!$this->
+                        isPassSet()) { ?>class='highlight'<?php } ?> />
+                        <button class="btn" type="submit">Save</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="span6">
+            <div class="well">
+                <p>You can change your account settings anytime.</p>
+
+                <p>If you change your username or password, please remove this site from the list of registered
+                    sites and register this site again</p>
+            </div>
+        </div>
+
+    </div>
+
+    <?php if($this->isUserSet() && $this->isPassSet()) { ?>
+    <div id="key-pane" class="config-pane">
+        <label for="username">FIREFILE KEY:</label>
+        <span id="firefile-key-holder" class="firefile-key"><?php echo $this->code; ?></span>
+    </div>
+    <?php } ?>
+    <?php } ?>
+    <?php if(file_exists("firefile.demo.css")) { ?>
+    <h2>Test area</h2>
+
+    <p>You can edit this test area with firebug to make sure that firefile is working</p>
+
+    <div id="test">
+        <div class="outer_div">
+            <div class="inner_div">
+                <div class="header_div">Test area panel title</div>
+                <div class="content_div">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+                    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                    occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </div>
+                <div class="footer_div">&copy; <a target="_blank" href="http://www.firefile.at">www.firefile.at</a>
+                    2013
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="form-actions">
+        <button class="btn btn-primary" type="submit">Reload this page</button>
+    </div>
+
+    <?php } ?>
+</div>
+</form>
+<script type="text/javascript">
+    function detectFirebug() {
+        var status = document.getElementById("firefile-status");
+        var statusText = document.getElementById("firefile-status-text");
+        if (status) {
+            if (window.console && (window.console.firebug || window.console.exception)) {
+                status.innerHTML = "Active";
+                statusText.innerHTML = "FireFile is now active and will ask you to register this site.";
+                status.className = "label label-success";
+            } else {
+                status.innerHTML = "Inactive";
+                statusText.innerHTML = "Please make sure that Firebug ist activated to successfully register FireFile.";
+                status.className = "label label-warning";
+            }
+        }
+    }
+</script>
+</body>
+</html>
+<?php
     }
     
 }
@@ -615,10 +670,12 @@ class CssRulesetEndToken extends aCssRulesetEndToken { }
 class CssRulesetStartToken extends aCssRulesetStartToken { public $Selectors = array(); public function __construct(array $selectors = array()) { $this->Selectors = $selectors; } public function __toString() { return implode(",", $this->Selectors) . "{"; } }
 
 /* @class CssMin.php */
-class CssMin { private static $classIndex = array(); private static $errors = array(); private static $isVerbose = false; public static function autoload($class) { if (isset(self::$classIndex[$class])) { require(self::$classIndex[$class]); } } public static function getErrors() { return self::$errors; } public static function hasErrors() { return count(self::$errors) > 0; } public static function initialise() { $paths = array(dirname(__FILE__)); while (list($i, $path) = each($paths)) { $subDirectorys = glob($path . "*", GLOB_MARK | GLOB_ONLYDIR | GLOB_NOSORT); if (is_array($subDirectorys)) { foreach ($subDirectorys as $subDirectory) { $paths[] = $subDirectory; } } $files = glob($path . "*.php", 0); if (is_array($files)) { foreach ($files as $file) { $class = substr(basename($file), 0, -4); self::$classIndex[$class] = $file; } } } krsort(self::$classIndex); if (function_exists("spl_autoload_register") && !is_callable("__autoload")) { spl_autoload_register(array(__CLASS__, "autoload")); } else { foreach (self::$classIndex as $class => $file) { if (!class_exists($class)) { require_once($file); } } } } public static function minify($source, array $filters = null, array $plugins = null) { self::$errors = array(); $minifier = new CssMinifier($source, $filters, $plugins); return $minifier->getMinified(); } public static function parse($source, array $plugins = null) { self::$errors = array(); $parser = new CssParser($source, $plugins); return $parser->getTokens(); } public static function setVerbose($to) { self::$isVerbose = (boolean) $to; return self::$isVerbose; } public static function triggerError(CssError $error) { self::$errors[] = $error; echo "<pre>"; var_dump($error); echo "</pre>"; die(); if (self::$isVerbose) { trigger_error((string) $error, E_USER_WARNING); } } } CssMin::initialise();
+class CssMin { private static $classIndex = array(); private static $errors = array(); private static $isVerbose = false; public static function autoload($class) { if (isset(self::$classIndex[$class])) { require(self::$classIndex[$class]); } } public static function getErrors() { return self::$errors; } public static function hasErrors() { return count(self::$errors) > 0; } public static function initialise() { $paths = array(dirname(__FILE__)); while (list($i, $path) = each($paths)) { $subDirectorys = glob($path . "*", GLOB_MARK | GLOB_ONLYDIR | GLOB_NOSORT); if (is_array($subDirectorys)) { foreach ($subDirectorys as $subDirectory) { $paths[] = $subDirectory; } } $files = glob($path . "*.php", 0); if (is_array($files)) { foreach ($files as $file) { $class = substr(basename($file), 0, -4); self::$classIndex[$class] = $file; } } } krsort(self::$classIndex); if (function_exists("spl_autoload_register") && !is_callable("__autoload")) { spl_autoload_register(array(__CLASS__, "autoload")); } else { foreach (self::$classIndex as $class => $file) { if (!class_exists($class)) { require_once($file); } } } } public static function minify($source, array $filters = null, array $plugins = null) { self::$errors = array(); $minifier = new CssMinifier($source, $filters, $plugins); return $minifier->getMinified(); } public static function parse($source, array $plugins = null) { self::$errors = array(); $parser = new CssParser($source, $plugins); return $parser->getTokens(); } public static function setVerbose($to) { self::$isVerbose = (boolean) $to; return self::$isVerbose; } public static function triggerError(CssError $error) { self::$errors[] = $error; echo "
+<pre>"; var_dump($error); echo "</pre>"; die(); if (self::$isVerbose) { trigger_error((string) $error, E_USER_WARNING); } } } CssMin::initialise();
 
 /* @class CssError.php */
-class CssError { public $File = ""; public $Line = 0; public $Message = ""; public $Source = ""; public function __construct($file, $line, $message, $source = "") { $this->File = $file; $this->Line = $line; $this->Message = $message; $this->Source = $source; } public function __toString() { return $this->Message . ($this->Source ? ": <br /><code>" . $this->Source . "</code>": "") . "<br />in file " . $this->File . " at line " . $this->Line; } }
+class CssError { public $File = ""; public $Line = 0; public $Message = ""; public $Source = ""; public function __construct($file, $line, $message, $source = "") { $this->File = $file; $this->Line = $line; $this->Message = $message; $this->Source = $source; } public function __toString() { return $this->Message . ($this->Source ? ":
+<br/><code>" . $this->Source . "</code>": "") . "<br/>in file " . $this->File . " at line " . $this->Line; } }
 
 /* @class aCssFormatter.php */
 abstract class aCssFormatter { protected $indent = "    "; protected $padding = 0; protected $tokens = array(); public function __construct(array $tokens, $indent = null, $padding = null) { $this->tokens = $tokens; $this->indent = !is_null($indent) ? $indent : $this->indent; $this->padding = !is_null($padding) ? $padding : $this->padding; } abstract public function __toString(); }
@@ -627,7 +684,9 @@ abstract class aCssFormatter { protected $indent = "    "; protected $padding = 
 class CssOtbsFormatter extends aCssFormatter { public function __toString() { $r = array(); $level = 0; for ($i = 0, $l = count($this->tokens); $i < $l; $i++) { $token = $this->tokens[$i]; $class = get_class($token); $indent = str_repeat($this->indent, $level); if ($class === "CssCommentToken") { $lines = array_map("trim", explode("\n", $token->Comment)); for ($ii = 0, $ll = count($lines); $ii < $ll; $ii++) { $r[] = $indent . (substr($lines[$ii], 0, 1) == "*" ? " " : "") . $lines[$ii]; } } elseif ($class === "CssAtCharsetToken") { $r[] = $indent . "@charset " . $token->Charset . ";"; } elseif ($class === "CssAtFontFaceStartToken") { $r[] = $indent . "@font-face {"; $level++; } elseif ($class === "CssAtImportToken") { $r[] = $indent . "@import " . $token->Import . " " . implode(", ", $token->MediaTypes) . ";"; } elseif ($class === "CssAtKeyframesStartToken") { $r[] = $indent . "@keyframes \"" . $token->Name . "\" {"; $level++; } elseif ($class === "CssAtMediaStartToken") { $r[] = $indent . "@media " . implode(", ", $token->MediaTypes) . " {"; $level++; } elseif ($class === "CssAtPageStartToken") { $r[] = $indent . "@page {"; $level++; } elseif ($class === "CssAtVariablesStartToken") { $r[] = $indent . "@variables " . implode(", ", $token->MediaTypes) . " {"; $level++; } elseif ($class === "CssRulesetStartToken" || $class === "CssAtKeyframesRulesetStartToken") { $r[] = $indent . implode(", ", $token->Selectors) . " {"; $level++; } elseif ($class == "CssAtFontFaceDeclarationToken" || $class === "CssAtKeyframesRulesetDeclarationToken" || $class === "CssAtPageDeclarationToken" || $class == "CssAtVariablesDeclarationToken" || $class === "CssRulesetDeclarationToken" ) { $declaration = $indent . $token->Property . ": "; if ($this->padding) { $declaration = str_pad($declaration, $this->padding, " ", STR_PAD_RIGHT); } $r[] = $declaration . $token->Value . ($token->IsImportant ? " !important" : "") . ";"; } elseif ($class === "CssAtFontFaceEndToken" || $class === "CssAtMediaEndToken" || $class === "CssAtKeyframesEndToken" || $class === "CssAtKeyframesRulesetEndToken" || $class === "CssAtPageEndToken" || $class === "CssAtVariablesEndToken" || $class === "CssRulesetEndToken" ) { $level--; $r[] = str_repeat($indent, $level) . "}"; } } return implode("\n", $r); } }
 
 /* @class CssParser.php */
-class CssParser { private $buffer = ""; private $plugins = array(); private $source = ""; private $state = "T_DOCUMENT"; private $stateExclusive = false; private $stateMediaTypes = false; private $states = array("T_DOCUMENT"); private $tokens = array(); public function __construct($source = null, array $plugins = null) { $plugins = array_merge(array ( "Comment" => true, "String" => true, "Url" => true, "Expression" => true, "Ruleset" => true, "AtCharset" => true, "AtFontFace" => true, "AtImport" => true, "AtKeyframes" => true, "AtMedia" => true, "AtPage" => true, "AtVariables" => true ), is_array($plugins) ? $plugins : array()); foreach ($plugins as $name => $config) { if ($config !== false) { $class = "Css" . $name . "ParserPlugin"; $config = is_array($config) ? $config : array(); if (class_exists($class)) { $this->plugins[] = new $class($this, $config); } else { CssMin::triggerError(new CssError(__FILE__, __LINE__, __METHOD__ . ": The plugin <code>" . $name . "</code> with the class name <code>" . $class . "</code> was not found")); } } } if (!is_null($source)) { $this->parse($source); } } public function appendToken(aCssToken $token) { $this->tokens[] = $token; } public function clearBuffer() { $this->buffer = ""; } public function getAndClearBuffer($trim = "", $tolower = false) { $r = $this->getBuffer($trim, $tolower); $this->buffer = ""; return $r; } public function getBuffer($trim = "", $tolower = false) { $r = $this->buffer; if ($trim) { $r = trim($r, " \t\n\r\0\x0B" . $trim); } if ($tolower) { $r = strtolower($r); } return $r; } public function getMediaTypes() { return $this->stateMediaTypes; } public function getSource() { return $this->source; } public function getState() { return $this->state; } public function getPlugin($class) { static $index = null; if (is_null($index)) { $index = array(); for ($i = 0, $l = count($this->plugins); $i < $l; $i++) { $index[get_class($this->plugins[$i])] = $i; } } return isset($index[$class]) ? $this->plugins[$index[$class]] : false; } public function getTokens() { return $this->tokens; } public function isState($state) { return ($this->state == $state); } public function parse($source) { $this->source = ""; $this->tokens = array(); $globalTriggerChars = ""; $plugins = $this->plugins; $pluginCount = count($plugins); $pluginIndex = array(); $pluginTriggerStates = array(); $pluginTriggerChars = array(); for ($i = 0, $l = count($plugins); $i < $l; $i++) { $tPluginClassName = get_class($plugins[$i]); $pluginTriggerChars[$i] = implode("", $plugins[$i]->getTriggerChars()); $tPluginTriggerStates = $plugins[$i]->getTriggerStates(); $pluginTriggerStates[$i] = $tPluginTriggerStates === false ? false : "|" . implode("|", $tPluginTriggerStates) . "|"; $pluginIndex[$tPluginClassName] = $i; for ($ii = 0, $ll = strlen($pluginTriggerChars[$i]); $ii < $ll; $ii++) { $c = substr($pluginTriggerChars[$i], $ii, 1); if (strpos($globalTriggerChars, $c) === false) { $globalTriggerChars .= $c; } } } $source = str_replace("\r\n", "\n", $source); $source = str_replace("\r", "\n", $source); $this->source = $source; $buffer = &$this->buffer; $exclusive = &$this->stateExclusive; $state = &$this->state; $c = $p = null; for ($i = 0, $l = strlen($source); $i < $l; $i++) { $c = $source[$i]; if ($exclusive === false) { if ($c === "\n" || $c === "\t") { $c = " "; } if ($c === " " && $p === " ") { continue; } } $buffer .= $c; if (strpos($globalTriggerChars, $c) !== false) { if ($exclusive) { $tPluginIndex = $pluginIndex[$exclusive]; if (strpos($pluginTriggerChars[$tPluginIndex], $c) !== false && ($pluginTriggerStates[$tPluginIndex] === false || strpos($pluginTriggerStates[$tPluginIndex], $state) !== false)) { $r = $plugins[$tPluginIndex]->parse($i, $c, $p, $state); if ($r === true) { continue; } elseif ($r !== false && $r != $i) { $i = $r; continue; } } } else { $triggerState = "|" . $state . "|"; for ($ii = 0, $ll = $pluginCount; $ii < $ll; $ii++) { if (strpos($pluginTriggerChars[$ii], $c) !== false && ($pluginTriggerStates[$ii] === false || strpos($pluginTriggerStates[$ii], $triggerState) !== false)) { $r = $plugins[$ii]->parse($i, $c, $p, $state); if ($r === true) { break; } elseif ($r !== false && $r != $i) { $i = $r; break; } } } } } $p = $c; } return $this->tokens; } public function popState() { $r = array_pop($this->states); $this->state = $this->states[count($this->states) - 1]; return $r; } public function pushState($state) { $r = array_push($this->states, $state); $this->state = $this->states[count($this->states) - 1]; return $r; } public function setBuffer($buffer) { $this->buffer = $buffer; } public function setExclusive($exclusive) { $this->stateExclusive = $exclusive; } public function setMediaTypes(array $mediaTypes) { $this->stateMediaTypes = $mediaTypes; } public function setState($state) { $r = array_pop($this->states); array_push($this->states, $state); $this->state = $this->states[count($this->states) - 1]; return $r; } public function unsetExclusive() { $this->stateExclusive = false; } public function unsetMediaTypes() { $this->stateMediaTypes = false; } }
+class CssParser { private $buffer = ""; private $plugins = array(); private $source = ""; private $state = "T_DOCUMENT"; private $stateExclusive = false; private $stateMediaTypes = false; private $states = array("T_DOCUMENT"); private $tokens = array(); public function __construct($source = null, array $plugins = null) { $plugins = array_merge(array ( "Comment" => true, "String" => true, "Url" => true, "Expression" => true, "Ruleset" => true, "AtCharset" => true, "AtFontFace" => true, "AtImport" => true, "AtKeyframes" => true, "AtMedia" => true, "AtPage" => true, "AtVariables" => true ), is_array($plugins) ? $plugins : array()); foreach ($plugins as $name => $config) { if ($config !== false) { $class = "Css" . $name . "ParserPlugin"; $config = is_array($config) ? $config : array(); if (class_exists($class)) { $this->plugins[] = new $class($this, $config); } else { CssMin::triggerError(new CssError(__FILE__, __LINE__, __METHOD__ . ": The plugin
+<code>" . $name . "</code> with the class name <code>" . $class .
+    "</code> was not found")); } } } if (!is_null($source)) { $this->parse($source); } } public function appendToken(aCssToken $token) { $this->tokens[] = $token; } public function clearBuffer() { $this->buffer = ""; } public function getAndClearBuffer($trim = "", $tolower = false) { $r = $this->getBuffer($trim, $tolower); $this->buffer = ""; return $r; } public function getBuffer($trim = "", $tolower = false) { $r = $this->buffer; if ($trim) { $r = trim($r, " \t\n\r\0\x0B" . $trim); } if ($tolower) { $r = strtolower($r); } return $r; } public function getMediaTypes() { return $this->stateMediaTypes; } public function getSource() { return $this->source; } public function getState() { return $this->state; } public function getPlugin($class) { static $index = null; if (is_null($index)) { $index = array(); for ($i = 0, $l = count($this->plugins); $i < $l; $i++) { $index[get_class($this->plugins[$i])] = $i; } } return isset($index[$class]) ? $this->plugins[$index[$class]] : false; } public function getTokens() { return $this->tokens; } public function isState($state) { return ($this->state == $state); } public function parse($source) { $this->source = ""; $this->tokens = array(); $globalTriggerChars = ""; $plugins = $this->plugins; $pluginCount = count($plugins); $pluginIndex = array(); $pluginTriggerStates = array(); $pluginTriggerChars = array(); for ($i = 0, $l = count($plugins); $i < $l; $i++) { $tPluginClassName = get_class($plugins[$i]); $pluginTriggerChars[$i] = implode("", $plugins[$i]->getTriggerChars()); $tPluginTriggerStates = $plugins[$i]->getTriggerStates(); $pluginTriggerStates[$i] = $tPluginTriggerStates === false ? false : "|" . implode("|", $tPluginTriggerStates) . "|"; $pluginIndex[$tPluginClassName] = $i; for ($ii = 0, $ll = strlen($pluginTriggerChars[$i]); $ii < $ll; $ii++) { $c = substr($pluginTriggerChars[$i], $ii, 1); if (strpos($globalTriggerChars, $c) === false) { $globalTriggerChars .= $c; } } } $source = str_replace("\r\n", "\n", $source); $source = str_replace("\r", "\n", $source); $this->source = $source; $buffer = &$this->buffer; $exclusive = &$this->stateExclusive; $state = &$this->state; $c = $p = null; for ($i = 0, $l = strlen($source); $i < $l; $i++) { $c = $source[$i]; if ($exclusive === false) { if ($c === "\n" || $c === "\t") { $c = " "; } if ($c === " " && $p === " ") { continue; } } $buffer .= $c; if (strpos($globalTriggerChars, $c) !== false) { if ($exclusive) { $tPluginIndex = $pluginIndex[$exclusive]; if (strpos($pluginTriggerChars[$tPluginIndex], $c) !== false && ($pluginTriggerStates[$tPluginIndex] === false || strpos($pluginTriggerStates[$tPluginIndex], $state) !== false)) { $r = $plugins[$tPluginIndex]->parse($i, $c, $p, $state); if ($r === true) { continue; } elseif ($r !== false && $r != $i) { $i = $r; continue; } } } else { $triggerState = "|" . $state . "|"; for ($ii = 0, $ll = $pluginCount; $ii < $ll; $ii++) { if (strpos($pluginTriggerChars[$ii], $c) !== false && ($pluginTriggerStates[$ii] === false || strpos($pluginTriggerStates[$ii], $triggerState) !== false)) { $r = $plugins[$ii]->parse($i, $c, $p, $state); if ($r === true) { break; } elseif ($r !== false && $r != $i) { $i = $r; break; } } } } } $p = $c; } return $this->tokens; } public function popState() { $r = array_pop($this->states); $this->state = $this->states[count($this->states) - 1]; return $r; } public function pushState($state) { $r = array_push($this->states, $state); $this->state = $this->states[count($this->states) - 1]; return $r; } public function setBuffer($buffer) { $this->buffer = $buffer; } public function setExclusive($exclusive) { $this->stateExclusive = $exclusive; } public function setMediaTypes(array $mediaTypes) { $this->stateMediaTypes = $mediaTypes; } public function setState($state) { $r = array_pop($this->states); array_push($this->states, $state); $this->state = $this->states[count($this->states) - 1]; return $r; } public function unsetExclusive() { $this->stateExclusive = false; } public function unsetMediaTypes() { $this->stateMediaTypes = false; } }
 
 /* @class aCssParserPlugin.php */
 abstract class aCssParserPlugin { protected $configuration = array(); protected $parser = null; protected $buffer = ""; public function __construct(CssParser $parser, array $configuration = null) { $this->configuration = $configuration; $this->parser = $parser; } abstract public function getTriggerChars(); abstract public function getTriggerStates(); abstract public function parse($index, $char, $previousChar, $state); }
@@ -669,7 +728,11 @@ class CssStringParserPlugin extends aCssParserPlugin { private $delimiterChar = 
 class CssUrlParserPlugin extends aCssParserPlugin { public function getTriggerChars() { return array("(", ")"); } public function getTriggerStates() { return false; } public function parse($index, $char, $previousChar, $state) { if ($char === "(" && strtolower(substr($this->parser->getSource(), $index - 3, 4)) === "url(" && $state !== "T_URL") { $this->parser->pushState("T_URL"); $this->parser->setExclusive(__CLASS__); } elseif ($char === "\n" && $previousChar === "\\" && $state === "T_URL") { $this->parser->setBuffer(substr($this->parser->getBuffer(), 0, -2)); } elseif ($char === "\n" && $previousChar !== "\\" && $state === "T_URL") { $line = $this->parser->getBuffer(); $this->parser->setBuffer(substr($this->parser->getBuffer(), 0, -1) . ")"); $this->parser->popState(); $this->parser->unsetExclusive(); CssMin::triggerError(new CssError(__FILE__, __LINE__, __METHOD__ . ": Unterminated string literal", $line . "_")); } elseif ($char === ")" && $state === "T_URL") { $this->parser->popState(); $this->parser->unsetExclusive(); } else { return false; } return true; } }
 
 /* @class CssMinifier.php */
-class CssMinifier { private $filters = array(); private $plugins = array(); private $minified = ""; public function __construct($source = null, array $filters = null, array $plugins = null) { $filters = array_merge(array ( "ImportImports" => false, "RemoveComments" => true, "RemoveEmptyRulesets" => true, "RemoveEmptyAtBlocks" => true, "ConvertLevel3Properties" => false, "ConvertLevel3AtKeyframes" => false, "Variables" => true, "RemoveLastDelarationSemiColon" => true ), is_array($filters) ? $filters : array()); $plugins = array_merge(array ( "Variables" => true, "ConvertFontWeight" => false, "ConvertHslColors" => false, "ConvertRgbColors" => false, "ConvertNamedColors" => false, "CompressColorValues" => false, "CompressUnitValues" => false, "CompressExpressionValues" => false ), is_array($plugins) ? $plugins : array()); foreach ($filters as $name => $config) { if ($config !== false) { $class = "Css" . $name . "MinifierFilter"; $config = is_array($config) ? $config : array(); if (class_exists($class)) { $this->filters[] = new $class($this, $config); } else { CssMin::triggerError(new CssError(__FILE__, __LINE__, __METHOD__ . ": The filter <code>" . $name . "</code> with the class name <code>" . $class . "</code> was not found")); } } } foreach ($plugins as $name => $config) { if ($config !== false) { $class = "Css" . $name . "MinifierPlugin"; $config = is_array($config) ? $config : array(); if (class_exists($class)) { $this->plugins[] = new $class($this, $config); } else { CssMin::triggerError(new CssError(__FILE__, __LINE__, __METHOD__ . ": The plugin <code>" . $name . "</code> with the class name <code>" . $class . "</code> was not found")); } } } if (!is_null($source)) { $this->minify($source); } } public function getMinified() { return $this->minified; } public function getPlugin($class) { static $index = null; if (is_null($index)) { $index = array(); for ($i = 0, $l = count($this->plugins); $i < $l; $i++) { $index[get_class($this->plugins[$i])] = $i; } } return isset($index[$class]) ? $this->plugins[$index[$class]] : false; } public function minify($source) { $r = ""; $parser = new CssParser($source); $tokens = $parser->getTokens(); $filters = $this->filters; $filterCount = count($this->filters); $plugins = $this->plugins; $pluginCount = count($plugins); $pluginIndex = array(); $pluginTriggerTokens = array(); $globalTriggerTokens = array(); for ($i = 0, $l = count($plugins); $i < $l; $i++) { $tPluginClassName = get_class($plugins[$i]); $pluginTriggerTokens[$i] = $plugins[$i]->getTriggerTokens(); foreach ($pluginTriggerTokens[$i] as $v) { if (!in_array($v, $globalTriggerTokens)) { $globalTriggerTokens[] = $v; } } $pluginTriggerTokens[$i] = "|" . implode("|", $pluginTriggerTokens[$i]) . "|"; $pluginIndex[$tPluginClassName] = $i; } $globalTriggerTokens = "|" . implode("|", $globalTriggerTokens) . "|"; for($i = 0; $i < $filterCount; $i++) { if ($filters[$i]->apply($tokens) > 0) { $tokens = array_values(array_filter($tokens)); } } $tokenCount = count($tokens); for($i = 0; $i < $tokenCount; $i++) { $triggerToken = "|" . get_class($tokens[$i]) . "|"; if (strpos($globalTriggerTokens, $triggerToken) !== false) { for($ii = 0; $ii < $pluginCount; $ii++) { if (strpos($pluginTriggerTokens[$ii], $triggerToken) !== false || $pluginTriggerTokens[$ii] === false) { if ($plugins[$ii]->apply($tokens[$i]) === true) { continue 2; } } } } } for($i = 0; $i < $tokenCount; $i++) { $r .= (string) $tokens[$i]; } $this->minified = $r; return $r; } }
+class CssMinifier { private $filters = array(); private $plugins = array(); private $minified = ""; public function __construct($source = null, array $filters = null, array $plugins = null) { $filters = array_merge(array ( "ImportImports" => false, "RemoveComments" => true, "RemoveEmptyRulesets" => true, "RemoveEmptyAtBlocks" => true, "ConvertLevel3Properties" => false, "ConvertLevel3AtKeyframes" => false, "Variables" => true, "RemoveLastDelarationSemiColon" => true ), is_array($filters) ? $filters : array()); $plugins = array_merge(array ( "Variables" => true, "ConvertFontWeight" => false, "ConvertHslColors" => false, "ConvertRgbColors" => false, "ConvertNamedColors" => false, "CompressColorValues" => false, "CompressUnitValues" => false, "CompressExpressionValues" => false ), is_array($plugins) ? $plugins : array()); foreach ($filters as $name => $config) { if ($config !== false) { $class = "Css" . $name . "MinifierFilter"; $config = is_array($config) ? $config : array(); if (class_exists($class)) { $this->filters[] = new $class($this, $config); } else { CssMin::triggerError(new CssError(__FILE__, __LINE__, __METHOD__ . ": The filter
+<code>" . $name . "</code> with the class name <code>" . $class .
+    "</code> was not found")); } } } foreach ($plugins as $name => $config) { if ($config !== false) { $class = "Css" . $name . "MinifierPlugin"; $config = is_array($config) ? $config : array(); if (class_exists($class)) { $this->plugins[] = new $class($this, $config); } else { CssMin::triggerError(new CssError(__FILE__, __LINE__, __METHOD__ . ": The plugin
+<code>" . $name . "</code> with the class name <code>" . $class .
+    "</code> was not found")); } } } if (!is_null($source)) { $this->minify($source); } } public function getMinified() { return $this->minified; } public function getPlugin($class) { static $index = null; if (is_null($index)) { $index = array(); for ($i = 0, $l = count($this->plugins); $i < $l; $i++) { $index[get_class($this->plugins[$i])] = $i; } } return isset($index[$class]) ? $this->plugins[$index[$class]] : false; } public function minify($source) { $r = ""; $parser = new CssParser($source); $tokens = $parser->getTokens(); $filters = $this->filters; $filterCount = count($this->filters); $plugins = $this->plugins; $pluginCount = count($plugins); $pluginIndex = array(); $pluginTriggerTokens = array(); $globalTriggerTokens = array(); for ($i = 0, $l = count($plugins); $i < $l; $i++) { $tPluginClassName = get_class($plugins[$i]); $pluginTriggerTokens[$i] = $plugins[$i]->getTriggerTokens(); foreach ($pluginTriggerTokens[$i] as $v) { if (!in_array($v, $globalTriggerTokens)) { $globalTriggerTokens[] = $v; } } $pluginTriggerTokens[$i] = "|" . implode("|", $pluginTriggerTokens[$i]) . "|"; $pluginIndex[$tPluginClassName] = $i; } $globalTriggerTokens = "|" . implode("|", $globalTriggerTokens) . "|"; for($i = 0; $i < $filterCount; $i++) { if ($filters[$i]->apply($tokens) > 0) { $tokens = array_values(array_filter($tokens)); } } $tokenCount = count($tokens); for($i = 0; $i < $tokenCount; $i++) { $triggerToken = "|" . get_class($tokens[$i]) . "|"; if (strpos($globalTriggerTokens, $triggerToken) !== false) { for($ii = 0; $ii < $pluginCount; $ii++) { if (strpos($pluginTriggerTokens[$ii], $triggerToken) !== false || $pluginTriggerTokens[$ii] === false) { if ($plugins[$ii]->apply($tokens[$i]) === true) { continue 2; } } } } } for($i = 0; $i < $tokenCount; $i++) { $r .= (string) $tokens[$i]; } $this->minified = $r; return $r; } }
 
 /* @class aCssMinifierFilter.php */
 abstract class aCssMinifierFilter { protected $configuration = array(); protected $minifier = null; public function __construct(CssMinifier $minifier, array $configuration = array()) { $this->configuration = $configuration; $this->minifier = $minifier; } abstract public function apply(array &$tokens); }
@@ -690,4 +753,6 @@ class CssConvertLevel3PropertiesMinifierFilter extends aCssMinifierFilter { priv
 abstract class aCssMinifierPlugin { protected $configuration = array(); protected $minifier = null; public function __construct(CssMinifier $minifier, array $configuration = array()) { $this->configuration = $configuration; $this->minifier = $minifier; } abstract public function apply(aCssToken &$token); abstract public function getTriggerTokens(); }
 
 /* @class CssVariablesMinifierPlugin.php */
-class CssVariablesMinifierPlugin extends aCssMinifierPlugin { private $reMatch = "/var\((.+)\)/iSU"; private $variables = null; public function getVariables() { return $this->variables; } public function apply(aCssToken &$token) { if (stripos($token->Value, "var") !== false && preg_match_all($this->reMatch, $token->Value, $m)) { $mediaTypes = $token->MediaTypes; if (!in_array("all", $mediaTypes)) { $mediaTypes[] = "all"; } for ($i = 0, $l = count($m[0]); $i < $l; $i++) { $variable = trim($m[1][$i]); foreach ($mediaTypes as $mediaType) { if (isset($this->variables[$mediaType], $this->variables[$mediaType][$variable])) { $token->Value = str_replace($m[0][$i], $this->variables[$mediaType][$variable], $token->Value); continue 2; } } CssMin::triggerError(new CssError(__FILE__, __LINE__, __METHOD__ . ": No value found for variable <code>" . $variable . "</code> in media types <code>" . implode(", ", $mediaTypes) . "</code>", (string) $token)); $token = new CssNullToken(); return true; } } return false; } public function getTriggerTokens() { return array ( "CssAtFontFaceDeclarationToken", "CssAtPageDeclarationToken", "CssRulesetDeclarationToken" ); } public function setVariables(array $variables) { $this->variables = $variables; } }
+class CssVariablesMinifierPlugin extends aCssMinifierPlugin { private $reMatch = "/var\((.+)\)/iSU"; private $variables = null; public function getVariables() { return $this->variables; } public function apply(aCssToken &$token) { if (stripos($token->Value, "var") !== false && preg_match_all($this->reMatch, $token->Value, $m)) { $mediaTypes = $token->MediaTypes; if (!in_array("all", $mediaTypes)) { $mediaTypes[] = "all"; } for ($i = 0, $l = count($m[0]); $i < $l; $i++) { $variable = trim($m[1][$i]); foreach ($mediaTypes as $mediaType) { if (isset($this->variables[$mediaType], $this->variables[$mediaType][$variable])) { $token->Value = str_replace($m[0][$i], $this->variables[$mediaType][$variable], $token->Value); continue 2; } } CssMin::triggerError(new CssError(__FILE__, __LINE__, __METHOD__ . ": No value found for variable
+<code>" . $variable . "</code> in media types <code>" . implode(", ", $mediaTypes) .
+    "</code>", (string) $token)); $token = new CssNullToken(); return true; } } return false; } public function getTriggerTokens() { return array ( "CssAtFontFaceDeclarationToken", "CssAtPageDeclarationToken", "CssRulesetDeclarationToken" ); } public function setVariables(array $variables) { $this->variables = $variables; } }
