@@ -34,13 +34,14 @@
         </ul>
     </div>
 </div>
+<div class="wrapper col4">
+    <div id="container">
 <div id="gallery">
     <img src="images/demo/services.jpg" alt=""/>
 
     <div class="clear"></div>
 </div>
-<div class="wrapper col4">
-    <div id="container">
+
         <div id="contactform">
             <h2>Why Not Contact Us Today !</h2>
             <?php

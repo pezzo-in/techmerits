@@ -11,15 +11,15 @@
 </head>
 <body id="top">
 <?php include 'header.php'; ?>
-<div class="wrapper col2">
+
+<div class="wrapper col4">
+    <div id="container">
     <div id="gallery">
         <img src="images/demo/mission-vission.jpg" alt=""/>
 
         <div class="clear"></div>
     </div>
 </div>
-<div class="wrapper col4">
-    <div id="container">
         <div id="content">
             <h1>Mission and Vision </h1>
 

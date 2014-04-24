@@ -32,13 +32,14 @@
         </ul>
     </div>
 </div>
+<div class="wrapper col4">
+    <div id="container">
 <div id="gallery">
     <img src="images/demo/services.jpg" alt=""/>
 
     <div class="clear"></div>
 </div>
-<div class="wrapper col4">
-    <div id="container">
+
         <h1>Services</h1>
 
         <h3>Software development services</h3>
