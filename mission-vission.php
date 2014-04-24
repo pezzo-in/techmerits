@@ -91,7 +91,7 @@
                 <ul>
         </div>
         <div id="column">
-            <div id="featured">
+            <div class="featured">
 
                 <ul>
                     <li>
