@@ -346,7 +346,7 @@
 					<li class="last">
 					<p class="imgholder"><img src="images/demo/286x100-1.jpg" alt=""/></p>
 
-					<h2>Vission</h2>
+					<h2>vision</h2>
 
 					<p>To serve as the leading and the most trusted technology partner for our clients all over the world.</p>
 

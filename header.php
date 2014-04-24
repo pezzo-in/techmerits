@@ -10,7 +10,7 @@
 
                     <ul>
                     <li>
-                            <a href="mission-vission.php">Mission-Vission</a>
+                            <a href="mission-vision.php">Mission-vision</a>
                         </li>
 
                         <li>
@@ -21,7 +21,7 @@
                     <a href="careers.php">CAREERS</a>
                 </li>
                 <li>
-                    <a href="contactus.php">OFFICE'S</a>
+                    <a href="contactus.php">OFFICE&#39;S</a>
                 </li>
             </ul>
             </li>

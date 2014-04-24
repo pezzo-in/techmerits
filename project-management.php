@@ -70,7 +70,7 @@
         <p>
             Being a value-driven methodology, agile project management enables organizations to deliver high quality
             results. While managing your unique project, we consider your business operations, requirements, priorities,
-            and beyond. Our project managers work closely with our clients to track the project’s progress, issues, and
+            and beyond. Our project managers work closely with our clients to track the project&#39;s progress, issues, and
             results.
         </p>
 
@@ -84,7 +84,7 @@
 
         <p>
             Since waterfall approach is a sequential design procedure, each of its stages has to be completed in order.
-            This methodology doesn’t allow errors or mistakes, so developers have to work carefully while preparing a
+            This methodology doesn&#39;t allow errors or mistakes, so developers have to work carefully while preparing a
             plan. This is where the dedicated, expert managers, developers, and analysts of Techmerits prove their
             value.
         </p>

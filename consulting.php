@@ -59,9 +59,9 @@
         <h2>Turning Opportunities Into Results</h2>
 
         <p>
-            Techmerits won’t let you miss any technology opportunity. Getting the most out of every procedure and
+            Techmerits won&#39;t let you miss any technology opportunity. Getting the most out of every procedure and
             system,
-            we merge technology developments with our clients’ goals to help them stay on the top. Their success is our
+            we merge technology developments with our clients&#39; goals to help them stay on the top. Their success is our
             success. And we make every possible effort to deliver them the results they seek from us. With our
             consulting services, you can redefine the future of your business and workforce.
         </p>
@@ -86,7 +86,7 @@
 
         <p>
             We draw on our experienced staff, valuable resources, flexible strategies, and functional tools to resolve
-            our clients’ complex technology challenges. Capitalize on our competent consultants and managers to
+            our clients&#39; complex technology challenges. Capitalize on our competent consultants and managers to
             optimize, create, and expand your unique technology project.
         </p>
 

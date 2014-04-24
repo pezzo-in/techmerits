@@ -52,7 +52,7 @@
             </p>
 
             <p>
-                We develop, support, and maintain all kinds of software according to our clients’ specific needs. Get
+                We develop, support, and maintain all kinds of software according to our clients&#39; specific needs. Get
                 associated with Techmerits to make our ground-breaking solutions a part of your operations.
             </p>
             <ul>
@@ -102,7 +102,7 @@
                         Having a unique industry-specific focus, Techmerits strives to empower its clients with its
                         distinctive solutions. We design, build, and implement superior solutions based on the
                         Microsoft, Oracle, Java, ERP, and many other technologies. We believe in constant improvements.
-                        And this is why we stay abreast of the latest technologies related to our clients’ and our own
+                        And this is why we stay abreast of the latest technologies related to our clients&#39; and our own
                         services.
                     </p>
 
