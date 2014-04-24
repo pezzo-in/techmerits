@@ -119,7 +119,7 @@
 
         </div>
         <div id="column">
-            <div id="featured">
+            <div class="featured">
                 <ul>
                     <li>
                         <h2>Agile Project Management</h2>
@@ -138,7 +138,7 @@
                     </li>
                 </ul>
             </div>
-            <div id="featured">
+            <div class="featured">
                 <ul>
                     <li>
                         <h2>Waterfall Project Management </h2>

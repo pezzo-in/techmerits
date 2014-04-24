@@ -289,7 +289,7 @@ div.wrapper {
     width: 250px;
 }
 
-#column .holder, #column #featured {
+#column .holder, #column .featured {
     display: block;
     margin-bottom: 40px;
     width: 300px;
@@ -339,18 +339,18 @@ div.wrapper {
     width: 290px;
 }
 
-#column #featured a {
+#column .featured a {
     background-color: #F9F9F9;
     color: #294E79;
 }
 
-#column #featured ul, #column #featured h2, #column #featured p {
+#column .featured ul, #column .featured h2, #column .featured p {
     list-style: none outside none;
     margin: 0;
     padding: 0;
 }
 
-#column #featured li {
+#column .featured li {
     background-color: #F9F9F9;
     color: #2E271D;
     display: block;
@@ -359,11 +359,11 @@ div.wrapper {
     width: 250px;
 }
 
-#column #featured li p {
+#column .featured li p {
     line-height: 1.6em;
 }
 
-#column #featured li p.imgholder {
+#column .featured li p.imgholder {
     border: 1px solid #CCCCCC;
     display: block;
     height: 90px;
@@ -372,7 +372,7 @@ div.wrapper {
     width: 240px;
 }
 
-#column #featured li h2 {
+#column .featured li h2 {
     background-color: #F9F9F9;
     color: #00008B;
     font-size: 20px;
@@ -382,7 +382,7 @@ div.wrapper {
     padding: 0 0 14px;
 }
 
-#column #featured li h4 {
+#column .featured li h4 {
     background-color: #F9F9F9;
     color: #00008B;
     font-size: 15px;
@@ -392,7 +392,7 @@ div.wrapper {
     padding: 0 0 14px;
 }
 
-#column #featured p.more {
+#column .featured p.more {
     display: block;
     font-weight: bold;
     line-height: normal;
