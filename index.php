@@ -314,7 +314,7 @@
 				</div>
 
 				<div id="column">
-					<div id="featured">
+					<div class="featured">
 						<ul>
 							<li>
 								<h4>Project Based Consulting</h4>
@@ -332,7 +332,7 @@
 							</li>
 						</ul>
 					</div>
-					<div id="featured">
+					<div class="featured">
 						<ul>
 							<li>
 								<h4>Product Based Consulting</h4>
