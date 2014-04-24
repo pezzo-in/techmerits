@@ -495,3 +495,11 @@ div.wrapper {
     height: 349px !important;
     margin: 0 auto;
 }
+
+#sliderb_container img {
+    height: 221px !important;
+}
+
+.jssora05l, .jssora05r {
+    top: 96px !important;
+}
