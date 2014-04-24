@@ -243,7 +243,7 @@
 						Techmerits is all about:
 					</p>
 					<p>
-						<ul>
+						<ul style="list-style-type:none;">
 							<li>
 								Innovative ideas
 							</li>
