@@ -56,68 +56,7 @@
                 associated with Techmerits to make our ground-breaking solutions a part of your operations.
             </p>
 
-            <div>
-                <div>
-                    <h2>Delivering Value To...</h2>
-
-                    <div>
-                        <div>
-                            <p style="font-weight: bold">
-                                Clients
-                            </p>
-
-                            <p>
-                                With our extensive experience in the technology consulting services, we are equipped
-                                with the best tools, resources, and information to deliver quality solutions to our
-                                clients. With our unwavering dedication and commitment to quality, we deliver the best
-                                to our clients.
-                            </p>
-                        </div>
-                        <div>
-                            <p style="font-weight: bold">
-                                Employees
-                            </p>
-
-                            <p>
-                                Maintaining a positive, encouraging environment in our organization, we ensure our
-                                employees get the maximum opportunities to learn and improve. We believe happy,
-                                satisfied employees are productive employees. We utilize special motivation and employee
-                                wellness programs to help them refine their abilities.
-                            </p>
-                        </div>
-                    </div>
-                    <p>
-                        With our extensive experience in the technology consulting services, we are equipped with the
-                        best tools, resources, and information to deliver quality solutions to our clients. Maintaining
-                        a positive, encouraging environment in our organization, we ensure our employees get the maximum
-                        opportunities to learn and improve.
-                    </p>
-
-                    <p style="font-weight: bold; font-style:italic;">
-                        Stay connected with Techmerits!
-                    </p>
-                </div>
-                <div>
-                    <h2>Industry Insights</h2>
-
-                    <p>
-                        Having a unique industry-specific focus, Techmerits strives to empower its clients with its
-                        distinctive solutions. We design, build, and implement superior solutions based on the
-                        Microsoft, Oracle, Java, ERP, and many other technologies. We believe in constant improvements.
-                        And this is why we stay abreast of the latest technologies related to our clients&#39; and our own
-                        services.
-                    </p>
-
-                    <p style="font-weight: bold">
-                        We are the platform where performance and results are guaranteed.
-                    </p>
-
-                    <p style="font-weight: bold">
-                        Techmerits is just a call away. Contact us now to learn more about the extraordinary results we
-                        can offer to your business.
-                    </p>
-                </div>
-            </div>
+           
 
         </div>
         <div id="column">

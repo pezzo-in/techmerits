@@ -42,36 +42,22 @@
 <div class="wrapper col4">
     <div id="container">
         <div id="content">
-            <h1>Overview</h1>
+            <h1>Company Overview</h1>
+
+            <p>                 Techmerits is a diversified technology
+consulting company. With our wide-ranging technology related services, we
+empower organizations belonging to varied industries. We offer the Consulting,
+Solution Development, Software Testing, and People Management solutions to
+global organizations. Recognized for our management excellence and development
+capabilities, Techmerits has passionate, skilled employees for every service
+we offer.             </p>
 
             <p>
-                Techmerits, stepping into the technology industry, has a vast experience of working with global
-                organizations. Offering varied consulting services, including solution development, solution
-                implementation, people management, and software testing, the company has everything you need to take
-                your business to the top.
+               With our strategic staffing policies, we are always in search of talented people to become a part of the Techmerits family. Our management team, comprising of dedicated, experienced members, believes in constant support and innovation. At Techmerits, every employee is an asset that holds great value for us.  
             </p>
-
-            <p>
-                We develop, support, and maintain all kinds of software according to our clients&#39; specific needs. Get
-                associated with Techmerits to make our ground-breaking solutions a part of your operations.
-            </p>
-            <ul>
-                <li>
+        
                     <h2>Delivering Value To...</h2>
-                    <ul>
-                        <li>
-                            <p style="font-weight: bold">
-                                Clients
-                            </p>
-
-                            <p>
-                                With our extensive experience in the technology consulting services, we are equipped
-                                with the best tools, resources, and information to deliver quality solutions to our
-                                clients. With our unwavering dedication and commitment to quality, we deliver the best
-                                to our clients.
-                            </p>
-                        </li>
-                        <li>
+                    
                             <p style="font-weight: bold">
                                 Employees
                             </p>
@@ -82,8 +68,17 @@
                                 satisfied employees are productive employees. We utilize special motivation and employee
                                 wellness programs to help them refine their abilities.
                             </p>
-                        </li>
-                    </ul>
+                            <p style="font-weight: bold">
+                                Clients
+                            </p>
+
+                            <p>
+                                With our extensive experience in the technology consulting services, we are equipped
+                                with the best tools, resources, and information to deliver quality solutions to our
+                                clients. With our unwavering dedication and commitment to quality, we deliver the best
+                                to our clients.
+                            </p>
+                        
                     <p>
                         With our extensive experience in the technology consulting services, we are equipped with the
                         best tools, resources, and information to deliver quality solutions to our clients. Maintaining
@@ -94,8 +89,6 @@
                     <p style="font-weight: bold; font-style:italic;">
                         Stay connected with Techmerits!
                     </p>
-                </li>
-                <li>
                     <h2>Industry Insights</h2>
 
                     <p>
@@ -109,14 +102,13 @@
                     <p style="font-weight: bold">
                         We are the platform where performance and results are guaranteed.
                     </p>
+                    <p>Having completed innumerable successful projects for different clients, we have a vast experience in IT projects. Being a team of young, dynamic, and passionate entrepreneurs, we are all set to deliver high quality, lasting solutions to our clients.</p>
 
                     <p style="font-weight: bold">
                         Techmerits is just a call away. Contact us now to learn more about the extraordinary results we
                         can offer to your business.
                     </p>
-                </li>
-            </ul>
-
+                
         </div>
         <div id="column">
             <div class="featured">
@@ -164,4 +156,3 @@
 <?php include 'footer.php'; ?>
 </body>
 </html>
->>>>>>> f1694e1e7e0bfc918aee1af05d90c6dabc4fd3e1

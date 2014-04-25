@@ -37,10 +37,7 @@
     <div class="clear"></div>
 </div>
 <div class="wrapper col4">
-<<<<<<< HEAD:mission-vission.php
-=======
     <div id="container">
->>>>>>> b20eb731a488293ecfc1da4fb204069f4f3a6210:mission-vision.php
         <div id="content">
         <h1>Mission and Vision </h1>
 
@@ -109,6 +106,7 @@
                     Get in touch with Techmerits to explore and avail our technical expertise.
                 </p>
             </div>
+         </div>
          </div>
 <div id="column">
             <div class="featured">

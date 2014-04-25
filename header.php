@@ -6,22 +6,26 @@
                     <a href="index.php">HOME</a>
                 </li>
                 <li>
-                    <a href="#">COMPANY</a>
+                    <a href="company.php">COMPANY</a>
 
                     <ul>
+                     <li>
+                            <a href="mission-vision.php">Mission-Vision</a>
+                        </li>
+
                     <li>
-                            <a href="mission-vision.php">Mission-vision</a>
+                            <a href="overview.php">Overview</a>
                         </li>
 
                         <li>
-                            <a href="management.php">MANAGEMENT</a>
+                            <a href="management.php">Management</a>
                         </li>
                 </li>
                 <li>
-                    <a href="careers.php">CAREERS</a>
+                    <a href="contactus.php">Office&#39;s</a>
                 </li>
                 <li>
-                    <a href="contactus.php">OFFICE&#39;S</a>
+                    <a href="careers.php">Careers</a>
                 </li>
             </ul>
             </li>
@@ -32,22 +36,22 @@
                 <a href="services.php">SERVICES</a>
                 <ul>
                     <li>
-                        <a href="consulting.php">Consulting</a>
+                        <a href="software-development-services.php">Development Services</a>
                     </li>
                     <li>
                         <a href="testing-services.php">Testing Services</a>
                     </li>
                     <li>
-                        <a href="software-development-services.php">Development Services</a>
+                        <a href="project-management.php">Project Management</a>
                     </li>
                     <li>
-                        <a href="project-management.php">Project Management</a>
+                        <a href="consulting.php">IT Consulting</a>
                     </li>
 
                 </ul>
             </li>
             <li>
-                <a href="contactus.php">CONTACT</a>
+                <a href="contactus.php">CONTACT US</a>
             </li>
             </ul>
         </div>
