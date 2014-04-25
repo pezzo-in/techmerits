@@ -6,6 +6,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
     <meta http-equiv="imagetoolbar" content="no"/>
     <link rel="stylesheet" href="styles/layout.css" type="text/css"/>
+    <script src="js/validate.js" type="text/javascript"></script>
 </head>
 <body id="top">
     <?php include 'header.php'; ?>
@@ -42,13 +43,8 @@
             <div id="contactform" style="float:left;">
 
 
-                <?php
-                    // display form if user has not clicked submit
-                if (!isset($_POST["submit"]))
-                {
-
-                    ?>
-                    <form method="post" action="<?php echo $_SERVER["PHP_SELF"]; ?>">
+                
+                    <form enctype="multipart/form-data" name="Form" method="post" action="mailer.php" onsubmit="return ValidateForm()">
                         <fieldset>
                             <legend>
                                 Contact Form
@@ -81,27 +77,7 @@
                                 </p>
                             </fieldset>
                         </form>
-                        <?php
-                    }
-                    else
-                    // the user has submitted the form
-                    {
-                    // Check if the "from" input field is filled out
-                        if (isset($_POST["emailaddress"]))
-                        {
-                            $fullname=$_POST["fullname"];
-                    $from = $_POST["emailaddress"]; // sender
-                    $phone=$_POST["phone"];
-                    $subject = $_POST["subject"];
-                    $message = $_POST["message"];
-                    // message lines should not exceed 70 characters (PHP rule), so wrap it
-                    $message = wordwrap($message, 70);
-                    // send mail
-                    mail("harikrishna1989k@gmail.com",$subject,$message,"From: $from\n");
-                    echo "Your Message send successfully";
-                }
-            }
-            ?>
+                        
         </div>
 
     </div>
