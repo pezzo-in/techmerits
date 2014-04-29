@@ -39,6 +39,7 @@
 </div>
 <div class="wrapper col4">
     <div id="container">
+    <div id="content">
 
         <h1>Testing Services</h1>
 
@@ -121,6 +122,45 @@
         <p style="font-weight: bold; ">
             Techmerits will never let you compromise on the security or efficiency of your technology systems.
         </p>
+        </div>
+         <div id="column">
+            <div class="featured">
+                <ul>
+                    <li>
+                        <h4>ERP</h4>
+
+                        <p class="imgholder"><img src="images/demo/erp.jpg" alt=""/>
+                        </p>
+
+                        <p>
+                            Techmerits can bring flexibility, value, and efficiency to any business with its ERP development services....
+                        </p>
+
+                        <p class="more">
+                            <a href="consulting.php">Read More &raquo;</a>
+                        </p>
+                    </li>
+                </ul>
+            </div>
+            <div class="featured">
+                <ul>
+                    <li>
+                        <h4>Sharepoint</h4>
+
+                        <p class="imgholder"><img src="images/demo/sharepoint.jpg" alt=""/>
+                        </p>
+
+                        <p>
+                            Manage your business data and applications with ease, speed, and efficiency. Rely on our technology development...
+                        </p>
+
+                        <p class="more">
+                            <a href="consulting.php">Read More &raquo;</a>
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </div>
 
     </div>
 </div>

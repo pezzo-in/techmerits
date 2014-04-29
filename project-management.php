@@ -39,6 +39,7 @@
     </div>
     <div class="wrapper col4">
         <div id="container">
+         <div id="content">
 
             <h1>Project Management</h1>
 
@@ -96,6 +97,45 @@
     <p style="font-weight: bold;">
         Consult Techmerits today to look into our proven project management approaches.
     </p>
+    </div>
+      <div id="column">
+            <div class="featured">
+                <ul>
+                    <li>
+                        <h4>Bespoke Development</h4>
+
+                        <p class="imgholder"><img src="images/demo/bespoke.jpg" alt=""/>
+                        </p>
+
+                        <p>
+                            Our Bespoke development, support, and maintenance services can add cost-efficiency, speed, and value to your business operations...
+                        </p>
+
+                        <p class="more">
+                            <a href="consulting.php">Read More &raquo;</a>
+                        </p>
+                    </li>
+                </ul>
+            </div>
+            <div class="featured">
+                <ul>
+                    <li>
+                        <h4>Java Development</h4>
+
+                        <p class="imgholder"><img src="images/demo/java.jpg" alt=""/>
+                        </p>
+
+                        <p>
+                            Making use of the Java platform, our experienced Java developers excel in resource management, debugging...
+                        </p>
+
+                        <p class="more">
+                            <a href="consulting.php">Read More &raquo;</a>
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </div>
 </div>
 </div>
 <?php include 'footer.php'; ?>

@@ -5,14 +5,11 @@
                 <li>
                     <a href="index.php">HOME</a>
                 </li>
-                <li>
-                    <a href="company.php">COMPANY</a>
+                <li class="non-active">
+                COMPANY
 
                     <ul>
-                     <li>
-                            <a href="mission-vision.php">Mission-Vision</a>
-                        </li>
-
+                     
                     <li>
                             <a href="overview.php">Overview</a>
                         </li>
@@ -22,7 +19,7 @@
                         </li>
                 </li>
                 <li>
-                    <a href="contactus.php">Office&#39;s</a>
+                    <a href="contactus.php">Offices</a>
                 </li>
                 <li>
                     <a href="careers.php">Careers</a>
@@ -32,8 +29,8 @@
             <li class="logo">
                 <a href="index.php"><img src="images/demo/logo-bluebg.png" width="230"></a>
             </li>
-            <li>
-                <a href="services.php">SERVICES</a>
+            <li  class="non-active">
+                SERVICES
                 <ul>
                     <li>
                         <a href="software-development-services.php">Development Services</a>

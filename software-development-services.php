@@ -39,6 +39,7 @@
 </div>
 <div class="wrapper col4">
     <div id="container">
+    <div id="content">
 
         <h1>Software Devleopment Services</h1>
 
@@ -140,6 +141,45 @@
         <p style="font-weight: bold;">
             Gain control of your business with our technology development services.
         </p>
+        </div>
+         <div id="column">
+            <div class="featured">
+                <ul>
+                    <li>
+                        <h4>Automated Testing</h4>
+
+                        <p class="imgholder"><img src="images/demo/automated-test.jpg" alt=""/>
+                        </p>
+
+                        <p>
+                            Techmerits can design and create comprehensive test automation frameworks for its clients. With automated testing facilities...
+                        </p>
+
+                        <p class="more">
+                            <a href="consulting.php">Read More &raquo;</a>
+                        </p>
+                    </li>
+                </ul>
+            </div>
+            <div class="featured">
+                <ul>
+                    <li>
+                        <h4>Mobile Testing</h4>
+
+                        <p class="imgholder"><img src="images/demo/mobile-test.jpg" alt=""/>
+                        </p>
+
+                        <p>
+                            Techmerits brings top of the line testing services for mobile applications. Our analysts invest their time and expertise to help...
+                        </p>
+
+                        <p class="more">
+                            <a href="consulting.php">Read More &raquo;</a>
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </div>
 </div>
 <?php include 'footer.php'; ?>

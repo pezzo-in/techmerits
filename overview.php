@@ -114,14 +114,15 @@ we offer.             </p>
             <div class="featured">
                 <ul>
                     <li>
-                        <h2>Agile Project Management</h2>
+                        <h2>Mission</h2>
 
-                        <p class="imgholder"><img src="images/demo/agile.jpg" alt=""/>
+                        <p class="imgholder"><img src="images/demo/mission.jpg" alt=""/>
                         </p>
 
                         <p>
-                            Being a value-driven methodology, agile project management enables organizations to deliver
-                            high quality results...
+                            
+            To facilitate our clients by creating and implementing effective technology solutions that address and
+            resolve their business issues...
                         </p>
 
                         <p class="more">
@@ -133,14 +134,13 @@ we offer.             </p>
             <div class="featured">
                 <ul>
                     <li>
-                        <h2>Waterfall Project Management </h2>
+                        <h2>Vision</h2>
 
-                        <p class="imgholder"><img src="images/demo/waterfall.jpg" alt=""/>
+                        <p class="imgholder"><img src="images/demo/vision.jpg" alt=""/>
                         </p>
 
                         <p>
-                            Since waterfall approach is a sequential design procedure, each of its stages has to be
-                            completed in order...
+                           To serve as the leading and the most trusted technology partner for our clients all over the world...
                         </p>
 
                         <p class="more">
