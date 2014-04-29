@@ -126,7 +126,7 @@ we offer.             </p>
                         </p>
 
                         <p class="more">
-                            <a href="services.php">Read More &raquo;</a>
+                            <a href="#">Read More &raquo;</a>
                         </p>
                     </li>
                 </ul>
@@ -144,7 +144,7 @@ we offer.             </p>
                         </p>
 
                         <p class="more">
-                            <a href="services.php">Read More &raquo;</a>
+                            <a href="#">Read More &raquo;</a>
                         </p>
                     </li>
                 </ul>
