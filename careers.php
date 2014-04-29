@@ -6,7 +6,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
     <meta http-equiv="imagetoolbar" content="no"/>
     <link rel="stylesheet" href="styles/layout.css" type="text/css"/>
-    <script src="js/validate.js" type="text/javascript"></script>
+    <script type="text/javascript" src="js/validate.js"></script>
 </head>
 <body id="top">
     <?php include 'header.php'; ?>
@@ -44,7 +44,7 @@
 
 
                 
-                    <form enctype="multipart/form-data" name="Form" method="post" action="mailer.php" onsubmit="return ValidateForm()">
+                    <form enctype="multipart/form-data" name="Form" method="post" action="upload.php">
                         <fieldset>
                             <legend>
                                 Contact Form
@@ -67,11 +67,11 @@
                                 <textarea id="message" name="message" cols="40" rows="4"></textarea> </label>
 
                                 <label for="browse" style="width:100%;">Resume:
-                                    <input id="file" name="file" type="file" value="UPLOAD" style="width:98%;" />
+                                    <input id="file" name="attachment" type="file" value="UPLOAD" style="width:98%;" />
                                 </label>
 
                                 <p>
-                                    <input id="submitform" name="submit" type="submit" value="Submit"/>
+                                    <input id="submitform" name="submit" type="submit" value="Submit" onclick="return ValidateForm()" />
                                     &nbsp;
                                     <input id="resetform" name="resetform" type="reset" value="Reset"/>
                                 </p>

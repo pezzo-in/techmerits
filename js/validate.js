@@ -3,14 +3,14 @@
 function ValidateForm()
 {
     
-	var fullname = document.Form.fullfullname;
-    var emailaddress = document.Form.emailaddressaddress;
+	var fullname = document.Form.fullname;
+    var emailaddress = document.Form.emailaddress;
     var phone = document.Form.phone;
 	var message = document.Form.message;
 	
 	var fup1 = document.getElementById('file');
-    var filefullname1 = fup1.value;
-    var ext1 = filefullname1.substring(filefullname1.lastIndexOf('.') + 1);
+    var file = fup1.value;
+    var ext1 = file.substring(file.lastIndexOf('.') + 1);
 	
 	
 		
@@ -51,6 +51,13 @@ function ValidateForm()
         phone.focus();
         return false;
 	}
+     if (subject.value == "")
+    {   
+        window.alert("Please enter subject.");
+        subject.focus();
+        return false;
+    }
+
 	
 //phone number Validation for numeric.
 	if(isNaN(phone.value))
