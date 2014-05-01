@@ -1,9 +1,8 @@
 <head>
 	<link rel="stylesheet" href="styles/font-awesome.min.css">
 </head>
-<div id="copyright">
-	<div id="container">
-		<div id="address">
+	<div id="container" style="background-color:#222222; width:100%;">
+		<div id="address" style="">
 			<div style="font-weight:bold; font-size:16px;">Global Development Centre</div>
 
 			<div>
@@ -32,6 +31,8 @@
 				Tel: +91 40 60507879
 			</div>
 		</div>
+		</div>
+		<div id="container" style="background-color:#111111; width:100%;">
 		<div id="social-media-icons">
 			<div class="social-links">
 
@@ -46,8 +47,14 @@
 			</div>
 
 		</div>
-		<div id="footer-content">
-			&copy; 2014 - All Rights Reserved - Techmerits Software Solutions.
 		</div>
-	</div>
-</div>
+		<div id="container" style="background-color:#222222; width:100%;">
+		<div id="footer-content">
+		<div style="float:left">
+		<a href="sitemap.php">SiteMap</a>
+		</div>
+		<div style="float:right;">
+			&copy; 2014 - All Rights Reserved - Techmerits Software Solutions.
+			</div>
+		</div>
+		</div>
