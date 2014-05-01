@@ -3,16 +3,20 @@
     background: none repeat scroll 0 0 #F5F5F5;
     text-align: center;
     width: 100% !important;
+    clear: both;
 }
+
 #gallery h1, #gallery p, #gallery ul, #gallery a {
     line-height: normal;
     list-style: none outside none;
     margin: 0;
     padding: 0;
 }
+
 #gallery li {
     display: inline;
 }
+
 #gallery .placeholder img {
     background-color: #F5F5F5;
     border: 1px solid #DADADA;
@@ -24,6 +28,7 @@
     text-indent: -9999px;
     width: 950px;
 }
+
 #gallery a.swap:link, #gallery a.swap:visited, #gallery a.swap:hover {
     background-color: #F5F5F5;
     border: 1px solid #DADADA;
@@ -36,18 +41,23 @@
     padding: 4px;
     width: 290px;
 }
+
 #gallery li.placeholder, #gallery a.swap {
     background: none no-repeat scroll 4px 4px rgba(0, 0, 0, 0);
 }
+
 #gallery li.last a.swap {
     margin-bottom: 0;
 }
+
 a.swap:hover {
     white-space: normal;
 }
+
 a.swap:link strong, a.swap:visited strong, a.swap:active strong {
     display: none;
 }
+
 a.swap:link span, a.swap:visited span, a.swap:active span {
     height: 349px;
     left: 5px;
@@ -56,24 +66,29 @@ a.swap:link span, a.swap:visited span, a.swap:active span {
     visibility: hidden;
     width: 640px;
 }
+
 a.swap:active span, a.swap:hover span, a.swap:focus span {
     visibility: visible;
 }
+
 a.swap:active img, a.swap:focus img {
     position: relative;
     z-index: 50;
 }
+
 #content .homecontent {
     display: block;
     margin: 20px 0 0;
     padding: 0;
     width: 630px;
 }
+
 #content .homecontent ul {
     list-style: none outside none;
     margin: 0;
     padding: 0;
 }
+
 #content .homecontent li {
     display: block;
     float: left;
@@ -81,9 +96,11 @@ a.swap:active img, a.swap:focus img {
     padding: 0;
     width: 300px;
 }
+
 #content .homecontent li.last {
     margin-right: 0;
 }
+
 #content .homecontent li p.imgholder {
     background-color: #F7F7F7;
     border: 1px solid #CCCCCC;
@@ -94,6 +111,7 @@ a.swap:active img, a.swap:focus img {
     padding: 6px;
     width: 286px;
 }
+
 #content .homecontent li h2 {
     background-color: #FFFFFF;
     border-bottom: 1px dashed #CCCCCC;
@@ -104,6 +122,7 @@ a.swap:active img, a.swap:focus img {
     margin: 0;
     padding: 0 0 8px;
 }
+
 #content .homecontent p.readmore {
     display: block;
     font-weight: bold;

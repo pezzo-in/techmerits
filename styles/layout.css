@@ -1,127 +1,106 @@
+
 @import "homepage.css";
 @import "navi.css";
 @import "forms.css";
 @import "tables.css";
-
 #top {
     color: #FFFFFF;
-    font-family: verdana, Arial, Helvetica, sans-serif;
+    font-family: verdana,Arial,Helvetica,sans-serif;
     font-size: 13px;
     height: auto;
     margin: 0;
     padding: 0;
 }
-
 img {
     border: 0 none;
     margin: 0;
     padding: 0;
 }
-
 .justify {
     text-align: justify;
 }
-
 .bold {
     font-weight: bold;
 }
-
 .center {
     text-align: center;
 }
-
 .right {
     text-align: right;
 }
-
 .nostart {
     list-style-type: none;
     margin: 0;
     padding: 0;
 }
-
 .clear {
     clear: both;
 }
-
 br.clear {
     clear: both;
     margin-top: -15px;
 }
-
 a {
     outline: medium none;
     text-decoration: none;
 }
-
 .fl_left {
     float: left;
 }
-
 .fl_right {
     float: right;
 }
-
 .imgl, .imgr {
     background-color: #F7F7F7;
     border: 1px solid #CCCCCC;
     color: #000000;
     padding: 5px;
 }
-
 .imgl {
     clear: left;
     float: left;
     margin: 0 8px 8px 0;
 }
-
 .imgr {
     clear: right;
     float: right;
     margin: 0 0 8px 8px;
 }
-
 div.wrapper {
+    clear: both;
     display: block;
+    float: left;
     margin: 0;
     text-align: left;
     width: 100%;
 }
-
 .col1 {
-    background: #F4F2F2;
-    background: linear-gradient(#F4F2F2, #C9C9C9);
+    background: linear-gradient(#F4F2F2, #C9C9C9) repeat scroll 0 0 rgba(0, 0, 0, 0);
     box-shadow: 0 -3px 3px #999999 inset;
     color: #FFFFFF;
 }
-
 .col2 {
     background-color: #3F4077;
     color: #FFFFFF;
 }
-
 .col3, .col4 {
     background-color: #FFFFFF;
     color: #000000;
 }
-
 .col5 {
     background-color: #1C3451;
     color: #000000;
 }
-
 #head, #gallery, #breadcrumb, #container, #footer {
     display: block;
     margin: 0 auto;
     position: relative;
     width: 960px;
 }
-
 #head {
     height: 110px;
     z-index: 1000;
 }
-
 #head h1, #head p, #head ul, #head a {
     line-height: normal;
     list-style: none outside none;
@@ -129,13 +108,11 @@ div.wrapper {
     padding: 0;
     text-align: center;
 }
-
 #head h1 a {
     color: #FFFFFF;
     font-size: 38px;
     font-weight: normal;
 }
-
 #head p {
     background-color: #294E79;
     color: #F5F5F5;
@@ -145,38 +122,30 @@ div.wrapper {
     position: absolute;
     top: 55px;
 }
-
 #breadcrumb {
     padding: 10px 0;
 }
-
 #breadcrumb a {
     color: #FFFFFF;
     font-weight: bold;
 }
-
 #breadcrumb ul {
     list-style: none outside none;
     margin: 0;
     padding: 0;
 }
-
 #breadcrumb ul li {
     display: inline;
 }
-
 #breadcrumb ul li.first {
     font-weight: bold;
 }
-
 #breadcrumb ul li.current a {
     text-decoration: underline;
 }
-
 #container {
     padding: 20px 0;
 }
-
 #container h1, #container h4, #container h5, #container h6 {
     color: #03219D;
     font-size: 32px;
@@ -185,7 +154,6 @@ div.wrapper {
     margin: 0 0 15px;
     padding: 0;
 }
-
 #container h2 {
     color: #999999;
     font-size: 18px;
@@ -194,7 +162,6 @@ div.wrapper {
     margin: 40px 0 0;
     padding: 0;
 }
-
 #container h3 {
     color: #999999;
     font-size: 25px;
@@ -202,99 +169,80 @@ div.wrapper {
     line-height: normal;
     margin: 20px 0 0;
 }
-
 #container h1 {
     margin: 40px 0 12px !important;
 }
-
 #container a {
     color: #FFFFFF;
 }
-
 #content {
     display: block;
     float: left;
     width: 690px;
 }
-
 #comments {
     margin-bottom: 40px;
 }
-
 #comments .commentlist {
     margin: 0;
     padding: 0;
 }
-
 #comments .commentlist ul {
     list-style: none outside none;
     margin: 0;
     padding: 0;
 }
-
 #comments .commentlist li.comment_odd, #comments .commentlist li.comment_even {
     list-style: none outside none;
     margin: 0 0 10px;
     padding: 15px;
 }
-
 #comments .commentlist li.comment_odd {
     background-color: #F7F7F7;
     color: #666666;
 }
-
 #comments .commentlist li.comment_odd a {
     background-color: #F7F7F7;
     color: #294E79;
 }
-
 #comments .commentlist li.comment_even {
     background-color: #E8E8E8;
     color: #666666;
 }
-
 #comments .commentlist li.comment_even a {
     background-color: #E8E8E8;
     color: #294E79;
 }
-
 #comments .commentlist .author .name {
     font-weight: bold;
 }
-
 #comments .commentlist .submitdate {
     font-size: smaller;
 }
-
 #comments .commentlist p {
     font-weight: normal;
     margin: 10px 5px 10px 0;
     padding: 0;
     text-transform: none;
 }
-
 #comments .commentlist li .avatar {
     border: 1px solid #EEEEEE;
     float: right;
     margin: 0 0 0 10px;
 }
-
 #column {
     display: block;
     float: right;
     width: 250px;
 }
-
 #column .holder, #column .featured {
     display: block;
     margin-bottom: 40px;
     width: 300px;
 }
-
 #column .holder p {
     line-height: 1.6em;
 }
-
 #column .holder h2.title {
     background-color: #FFFFFF;
     color: #000000;
@@ -307,7 +255,6 @@ div.wrapper {
     padding: 15px 0 8px;
     width: 100%;
 }
-
 #column .holder h2.title img {
     background-color: #F7F7F7;
     border: 1px solid #CCCCCC;
@@ -316,7 +263,6 @@ div.wrapper {
     margin: -15px 8px 0 0;
     padding: 5px;
 }
-
 #column .holder p.readmore {
     display: block;
     font-weight: bold;
@@ -324,7 +270,6 @@ div.wrapper {
     text-align: right;
     width: 100%;
 }
-
 #column div.imgholder {
     background-color: #F7F7F7;
     border: 1px solid #CCCCCC;
@@ -334,18 +279,15 @@ div.wrapper {
     padding: 4px;
     width: 290px;
 }
-
 #column .featured a {
     background-color: #F9F9F9;
     color: #294E79;
 }
-
 #column .featured ul, #column .featured h2, #column .featured p {
     list-style: none outside none;
     margin: 0;
     padding: 0;
 }
-
 #column .featured li {
     background-color: #F9F9F9;
     color: #2E271D;
@@ -354,11 +296,9 @@ div.wrapper {
     padding: 20px 25px;
     width: 250px;
 }
-
 #column .featured li p {
     line-height: 1.6em;
 }
-
 #column .featured li p.imgholder {
     border: 1px solid #CCCCCC;
     display: block;
@@ -367,7 +307,6 @@ div.wrapper {
     padding: 4px;
     width: 240px;
 }
-
 #column .featured li h2 {
     color: #333333;
     font-size: 14px;
@@ -375,7 +314,6 @@ div.wrapper {
     line-height: normal;
     margin: 0;
 }
-
 #column .featured li h4 {
     background-color: #F9F9F9;
     color: #00008B;
@@ -385,7 +323,6 @@ div.wrapper {
     margin: 0;
     padding: 0 0 14px;
 }
-
 #column .featured p.more {
     display: block;
     font-weight: bold;
@@ -394,15 +331,14 @@ div.wrapper {
     text-align: right;
     width: 100%;
 }
-
 #footer {
-    padding: 20px 0;
+    clear: both;
+    float: left;
+    width: 100%;
 }
-
 #footer a {
-    color: #98B7DC;
+    color: #525252;
 }
-
 #footer h2 {
     color: #CCCCCC;
     font-size: 22px;
@@ -411,7 +347,6 @@ div.wrapper {
     margin: 0 0 15px;
     padding: 0 0 8px;
 }
-
 #container #contactform {
     color: #000000;
     display: block;
@@ -419,11 +354,9 @@ div.wrapper {
     margin: 20px 0 30px;
     width: 350px;
 }
-
 #container #contactform h2 {
     color: #000000;
 }
-
 #container #compdetails {
     color: #000000;
     display: block;
@@ -431,41 +364,32 @@ div.wrapper {
     margin: 20px 0 30px;
     width: 350px;
 }
-
 #container #compdetails h2 {
     color: #000000;
 }
-
 #container #compdetails ul {
     list-style: none outside none;
     margin: 0;
     padding: 0;
 }
-
 #container #compdetails li {
     margin: 0 0 12px;
 }
-
 #container #compdetails li.last {
     margin: 0;
 }
-
 .footerfont {
     color: #000000;
 }
-
 #container #compdetails #officialdetails {
     float: left;
 }
-
 #container #compdetails #officialdetails li.last {
     margin-bottom: 20px;
 }
-
 #container #compdetails #contactdetails {
     float: left;
 }
-
 #copyright {
     background-color: #222222;
     border-top: 1px dashed #FFFFFF;
@@ -476,90 +400,101 @@ div.wrapper {
     padding: 20px 0 0;
     width: 100%;
 }
-
 #copyright p {
     color: #FFFFFF;
-    margin: 0;
+    margin: 200px 0 0;
     padding: 0;
     position: relative;
-    margin-top: 200px;
 }
-
 #gallery > img {
     background: none repeat scroll 0 0 #FFFFFF;
     border: 2px solid #EEEEEE;
     margin: 10px 0;
     padding: 5px;
 }
-
 #sliderb_container {
     height: 349px !important;
     margin: 0 auto;
 }
-
 #sliderb_container img {
     height: 210px !important;
 }
-
 .jssora05l, .jssora05r, .jssora05ldn, .jssora05rdn {
     top: 96px !important;
 }
-#address
-{
-    position:relative;
-    float:left; 
-    width:40%; 
-    height: auto; 
-}
-#social-media-icons
-{
-    position:relative;
-    float:right; 
-    width:59%; 
+#address {
+    float: left;
     height: auto;
-    text-align: right;
+    position: relative;
+    width: 40%;
 }
-#footer-content
-{
+.footer-content {
     color: #FFFFFF;
-    margin: 0;
+    margin: 10px auto;
+    overflow: hidden;
     padding: 0;
     position: relative;
-    margin-top: 180px;
     text-align: center;
-    background-color: #FFFFFF;
+    width: 960px;
 }
-
-.social-links li{
-    visibility: visible;
-    opacity: 1;
-    -webkit-transform: translate(0px) rotate(0deg) scale(1);
-    -moz-transform: translate(0px) rotate(0deg) scale(1);
-    -o-transform: translate(0px) rotate(0deg) scale(1);
-    -ms-transform: translate(0px) rotate(0deg) scale(1);
-    transform: translate(0px) rotate(0deg) scale(1);
+.social-links ul {
+    float: right;
+    margin: 0;
+    padding: 0;
 }
-
-.social-links {
-    padding-bottom: 52px;
-}
-
 .social-links li {
-    display: inline-block;
-    width: 50px;
-    height: 50px;
-    margin: 10px;
+    opacity: 1;
+    transform: translate(0px) rotate(0deg) scale(1);
+    visibility: visible;
 }
-
+.social-links {
+    float: right;
+}
+.social-links li {
+    float: left;
+    list-style: none outside none;
+    margin: 0 10px;
+}
 .social-links li a {
+    color: #FFFFFF;
     display: block;
     float: right;
-    font-size: 18px;
-    padding: 25px 25px;
+    font-size: 10px;
     position: relative;
-    color: #fff;
 }
 .social-links li a i {
-    float:left;
+    float: left;
 }
-
+.address {
+    color: #999999;
+    float: left;
+    text-align: left;
+}
+.footer-content ul {
+    color: #999999;
+    float: left;
+    margin: 0;
+    padding: 0;
+}
+.footer-content .nav {
+    float: right;
+    margin: 10px 0;
+}
+.footer-content .nav li {
+    color: #999999;
+    float: left;
+    list-style: none outside none;
+    padding: 0 30px 0 0;
+    text-align: left;
+}
+.footer-content li a {
+    color: #999999 !important;
+}
+.nav li li {
+    clear: both;
+    float: left;
+    padding: 0 0 10px !important;
+}
+.footer-content .copy-rights {
+    margin-bottom: 10px;
+}
