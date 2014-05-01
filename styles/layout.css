@@ -467,13 +467,13 @@ div.wrapper {
 }
 
 #copyright {
-    background-color: #4F473A;
-    border-top: 1px dashed #CCCCCC;
+    background-color: #222222;
+    border-top: 1px dashed #FFFFFF;
     display: block;
     float: left;
     font-size: 12px;
     margin: 20px 0 0;
-    padding: 20px 0;
+    padding: 20px 0 0;
     width: 100%;
 }
 
