@@ -144,7 +144,7 @@ div.wrapper {
     padding: 20px 0;
 }
 #container h1, #container h4, #container h5, #container h6 {
-    color: #666666;
+    color: #03219D;
     font-size: 32px;
     font-weight: normal;
     line-height: normal;
@@ -413,7 +413,7 @@ div.wrapper {
     margin: 0 auto;
 }
 #sliderb_container img {
-    height: 221px !important;
+    height: 210px !important;
 }
 .jssora05l, .jssora05r, .jssora05ldn, .jssora05rdn {
     top: 96px !important;

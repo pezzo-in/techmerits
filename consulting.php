@@ -42,7 +42,7 @@
     <div id="content">
         <h3>Consulting</h3>
 
-        <p style="font-weight: bold; font-style:italic;">
+        <p style="font-weight: bold;">
             Helping Organizations Develop Confidence on Their Technology Solutions
         </p>
 
