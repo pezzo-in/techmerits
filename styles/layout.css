@@ -170,8 +170,7 @@ div.wrapper {
     margin: 40px 0 12px !important;
 }
 #container a {
-    background-color: #FFFFFF;
-    color: #294E79;
+    color: #FFFFFF;
 }
 #content {
     display: block;
@@ -400,6 +399,8 @@ div.wrapper {
     color: #FFFFFF;
     margin: 0;
     padding: 0;
+    position: relative;
+    margin-top: 200px;
 }
 #gallery > img {
     background: none repeat scroll 0 0 #FFFFFF;
@@ -417,3 +418,61 @@ div.wrapper {
 .jssora05l, .jssora05r, .jssora05ldn, .jssora05rdn {
     top: 96px !important;
 }
+#address
+{
+    position:relative;
+    float:left; 
+    width:40%; 
+    height: auto; 
+}
+#social-media-icons
+{
+    position:relative;
+    float:right; 
+    width:59%; 
+    height: auto;
+    text-align: right;
+}
+#footer-content
+{
+    color: #FFFFFF;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    margin-top: 180px;
+    text-align: center;
+}
+
+.social-links li{
+    visibility: visible;
+    opacity: 1;
+    -webkit-transform: translate(0px) rotate(0deg) scale(1);
+    -moz-transform: translate(0px) rotate(0deg) scale(1);
+    -o-transform: translate(0px) rotate(0deg) scale(1);
+    -ms-transform: translate(0px) rotate(0deg) scale(1);
+    transform: translate(0px) rotate(0deg) scale(1);
+}
+
+.social-links {
+    padding-bottom: 52px;
+}
+
+.social-links li {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+}
+
+.social-links li a {
+    display: block;
+    float: right;
+    font-size: 18px;
+    padding: 25px 25px;
+    position: relative;
+    color: #fff;
+}
+.social-links li a i {
+    float:left;
+}
+
