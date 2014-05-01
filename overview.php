@@ -86,7 +86,7 @@ we offer.             </p>
                         opportunities to learn and improve.
                     </p>
 
-                    <p style="font-weight: bold; font-style:italic;">
+                    <p style="font-weight: bold;">
                         Stay connected with Techmerits!
                     </p>
                     <h2>Industry Insights</h2>

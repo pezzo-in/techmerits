@@ -43,7 +43,7 @@
 
             <h1>Project Management</h1>
 
-            <p style="font-weight: bold; font-style:italic;">
+            <p style="font-weight: bold;">
                 Managing Technology, Optimizing Solutions
             </p>
 

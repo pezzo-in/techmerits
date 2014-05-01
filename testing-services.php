@@ -43,7 +43,7 @@
 
         <h1>Testing Services</h1>
 
-        <p style="font-weight: bold; font-style:italic;">
+        <p style="font-weight: bold;">
             Developing Fully Tested, Perfectly Implemented Technology Solutions
         </p>
 

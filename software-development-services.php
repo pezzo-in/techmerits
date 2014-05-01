@@ -43,7 +43,7 @@
 
         <h1>Software Devleopment Services</h1>
 
-        <p style="font-weight: bold; font-style:italic;">
+        <p style="font-weight: bold;">
             Constantly Innovating for Your Development Edge!
         </p>
 
