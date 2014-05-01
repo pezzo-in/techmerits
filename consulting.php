@@ -83,7 +83,7 @@
             The core elements of our technology consulting services are:
         </p>
 
-        <h2>Project Based Consulting</h2>
+        <h2 id="project-based">Project Based Consulting</h2>
 
         <p>
             We draw on our experienced staff, valuable resources, flexible strategies, and functional tools to resolve
@@ -99,7 +99,7 @@
             value.
         </p>
 
-        <h2>Testing Consulting</h2>
+        <h2 id="product-based">Testing Consulting</h2>
 
         <p>
             At Techmerits, we harness new technologies, implement advanced solutions, and ensure outcomes. We strive to
@@ -127,7 +127,7 @@
                         </p>
 
                         <p class="more">
-                            <a href="#">Read More &raquo;</a>
+                            <a href="overview.php#clients">Read More &raquo;</a>
                         </p>
                     </li>
                 </ul>
@@ -145,7 +145,7 @@
                         </p>
 
                         <p class="more">
-                            <a href="#">Read More &raquo;</a>
+                            <a href="overview.php#employees">Read More &raquo;</a>
                         </p>
                     </li>
                 </ul>

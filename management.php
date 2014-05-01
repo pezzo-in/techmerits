@@ -74,7 +74,7 @@
                         </p>
 
                         <p class="more">
-                            <a href="#">Read More &raquo;</a>
+                            <a href="project-management.php#agile">Read More &raquo;</a>
                         </p>
                     </li>
                 </ul>
@@ -93,7 +93,7 @@
                         </p>
 
                         <p class="more">
-                            <a href="#">Read More &raquo;</a>
+                            <a href="project-management.php#waterfall">Read More &raquo;</a>
                         </p>
                     </li>
                 </ul>

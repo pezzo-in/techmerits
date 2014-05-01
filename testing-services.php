@@ -70,7 +70,7 @@
             compliance testing, product testing, lifecycle testing, and maintenance testing.
         </p>
 
-        <h2>Automated Testing</h2>
+        <h2 id="automated-testing">Automated Testing</h2>
 
         <p>
             Techmerits can design and create comprehensive test automation frameworks for its clients. With automated
@@ -84,7 +84,7 @@
             performance. We evaluate their response and functionality under varied load levels.
         </p>
 
-        <h2>Mobile Application Testing </h2>
+        <h2 id="mobile-testing">Mobile Application Testing </h2>
 
         <p>
             Techmerits brings top of the line testing services for mobile applications. Our analysts invest their time
@@ -137,7 +137,7 @@
                         </p>
 
                         <p class="more">
-                            <a href="#">Read More &raquo;</a>
+                            <a href="software-development-services.php#erp">Read More &raquo;</a>
                         </p>
                     </li>
                 </ul>
@@ -155,7 +155,7 @@
                         </p>
 
                         <p class="more">
-                            <a href="#">Read More &raquo;</a>
+                            <a href="software-development-services.php#sharepoint">Read More &raquo;</a>
                         </p>
                     </li>
                 </ul>

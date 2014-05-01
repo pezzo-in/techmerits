@@ -373,7 +373,7 @@
                         </p>
 
                         <p class="more">
-                            <a href="#">Read More &raquo;</a>
+                            <a href="consulting.php#project-based">Read More &raquo;</a>
                         </p>
                     </li>
                 </ul>
@@ -392,7 +392,7 @@
                         </p>
 
                         <p class="more">
-                            <a href="#">Read More &raquo;</a>
+                            <a href="consulting.php#product-based">Read More &raquo;</a>
                         </p>
                     </li>
                 </ul>

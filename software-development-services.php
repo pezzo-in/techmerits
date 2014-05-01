@@ -109,28 +109,28 @@
             tools.
         </p>
 
-        <h2>ERP</h2>
+        <h2 id="erp">ERP</h2>
 
         <p>
             Techmerits can bring flexibility, value, and efficiency to any business with its ERP development services.
             We can help you make the most of your ERP investments.
         </p>
 
-        <h2>Sharepoint</h2>
+        <h2 id="sharepoint">Sharepoint</h2>
 
         <p>
             Manage your business data and applications with ease, speed, and efficiency. Rely on our technology
             development services to avail smart Sharepoint solutions.
         </p>
 
-        <h2>Java Technologies</h2>
+        <h2 id="java">Java Technologies</h2>
 
         <p>
             Making use of the Java platform, our experienced Java developers excel in resource management, debugging,
             testing, performance tuning, user interface strategies, and more.
         </p>
 
-        <h2>Bespoke Development</h2>
+        <h2 id="bespoke">Bespoke Development</h2>
 
         <p>
             Our Bespoke development, support, and maintenance services can add cost-efficiency, speed, and value to your
@@ -156,7 +156,7 @@
                         </p>
 
                         <p class="more">
-                            <a href="#">Read More &raquo;</a>
+                            <a href="testing-services.php#automated-testing">Read More &raquo;</a>
                         </p>
                     </li>
                 </ul>
@@ -174,7 +174,7 @@
                         </p>
 
                         <p class="more">
-                            <a href="#">Read More &raquo;</a>
+                            <a href="testing-services.php#mobile-testing">Read More &raquo;</a>
                         </p>
                     </li>
                 </ul>

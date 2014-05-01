@@ -58,7 +58,7 @@ we offer.             </p>
         
                     <h2>Delivering Value To...</h2>
                     
-                            <p style="font-weight: bold">
+                            <p style="font-weight: bold" id="employees">
                                 Employees
                             </p>
 
@@ -68,7 +68,7 @@ we offer.             </p>
                                 satisfied employees are productive employees. We utilize special motivation and employee
                                 wellness programs to help them refine their abilities.
                             </p>
-                            <p style="font-weight: bold">
+                            <p style="font-weight: bold" id="clients">
                                 Clients
                             </p>
 
@@ -125,9 +125,6 @@ we offer.             </p>
             resolve their business issues...
                         </p>
 
-                        <p class="more">
-                            <a href="#">Read More &raquo;</a>
-                        </p>
                     </li>
                 </ul>
             </div>
@@ -141,10 +138,6 @@ we offer.             </p>
 
                         <p>
                            To serve as the leading and the most trusted technology partner for our clients all over the world...
-                        </p>
-
-                        <p class="more">
-                            <a href="#">Read More &raquo;</a>
                         </p>
                     </li>
                 </ul>

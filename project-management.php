@@ -66,7 +66,7 @@
                 The core elements of our technology project management services are:
             </p>
 
-            <h2>Agile Project Management</h2>
+            <h2 id="agile">Agile Project Management</h2>
 
             <p>
              Being a value-driven methodology, agile project management enables organizations to deliver high quality results. While managing your unique project, we consider your business operations, requirements, priorities, and beyond. Our project managers work closely with our clients to track the project’s progress, issues, and results. 
@@ -78,7 +78,7 @@
       </p>
       <p><b>Time & Materials Solutions:</b> While availing these solutions, our clients make payments for their projects in terms of the utilized resources. These solutions are perfect for agile projects as they recognize the challenges of software development. </p>
 
-      <h2>Waterfall Project Management </h2>
+      <h2 id="waterfall">Waterfall Project Management </h2>
 
       <p>
         Since waterfall approach is a sequential design procedure, each of its stages has to be completed in order.
@@ -112,7 +112,7 @@
                         </p>
 
                         <p class="more">
-                            <a href="#">Read More &raquo;</a>
+                            <a href="software-development-services.php#bespoke">Read More &raquo;</a>
                         </p>
                     </li>
                 </ul>
@@ -130,7 +130,7 @@
                         </p>
 
                         <p class="more">
-                            <a href="#">Read More &raquo;</a>
+                            <a href="software-development-services.php#java">Read More &raquo;</a>
                         </p>
                     </li>
                 </ul>
