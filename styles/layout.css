@@ -512,12 +512,20 @@ ul .nav a{
 .footer-content .copy-rights  {
     margin-bottom: 10px;
     color: #FFFFFF !important;
+    position: relative;
     float: left;
 }
 .nav li a strong{
     color: #999999 !important;
 }
-
+#sitemap span a{
+    float:left;
+    display: inline-block;
+    color:#3ad !important; 
+    font-weight:bold;
+    position: relative;
+    left:400px;
+}
 
 p {
     font-family: "Trebuchet MS",Arial,Helvetica,sans-serif;
@@ -529,12 +537,4 @@ p {
     color: #222222;
     font-family: "Trebuchet MS",Arial,Helvetica,sans-serif;
     line-height: 1.5;
-}
-#sitemap span a{
-    float:left;
-    display: inline-block;
-    color:#3ad !important; 
-    font-weight:bold;
-    position: relative;
-    left:400px;
 }
