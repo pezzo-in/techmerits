@@ -124,10 +124,11 @@ div.wrapper {
 }
 #breadcrumb {
     padding: 10px 0;
+    color: #FFFFFF !important;
 }
 #breadcrumb a {
-    color: #FFFFFF;
-    font-weight: bold;
+    color: #FFFFFF !important;
+    font-weight: normal;
 }
 #breadcrumb ul {
     list-style: none outside none;
@@ -135,13 +136,18 @@ div.wrapper {
     padding: 0;
 }
 #breadcrumb ul li {
+    color: #FFFFFF !important;
     display: inline;
 }
 #breadcrumb ul li.first {
+    font-weight: normal;
+}
+#breadcrumb ul li.actpage {
     font-weight: bold;
 }
 #breadcrumb ul li.current a {
     text-decoration: underline;
+    color:#FFFFFF !important;
 }
 #container {
     padding: 0;
@@ -474,7 +480,7 @@ div.wrapper {
     float: left;
     text-align: left;
 }
-.address p ,h3{
+.address p, h3 {
     color: #999999 !important;
 }
 .footer-content ul {
@@ -482,16 +488,16 @@ div.wrapper {
     margin: 0;
     padding: 0;
 }
-.nav ul li strong{
+.nav ul li strong {
     color: #999999 !important;
 }
-ul .nav a{
+ul .nav a {
     color: #999999 !important;
 }
 .footer-content .nav {
+    color: #999999 !important;
     float: right;
     margin: 10px 0;
-     color: #999999 !important;
 }
 .footer-content .nav li {
     float: left;
@@ -502,31 +508,19 @@ ul .nav a{
 .footer-content li a {
     color: #999999 !important;
 }
-
 .nav li li {
     clear: both;
     float: left;
     padding: 0 0 10px !important;
-
 }
-.footer-content .copy-rights  {
-    margin-bottom: 10px;
+.footer-content .copy-rights {
     color: #FFFFFF !important;
-    position: relative;
-    float: left;
+    margin-bottom: 10px;
+    float:left;
 }
-.nav li a strong{
+.nav li a strong {
     color: #999999 !important;
 }
-#sitemap span a{
-    float:left;
-    display: inline-block;
-    color:#3ad !important; 
-    font-weight:bold;
-    position: relative;
-    left:400px;
-}
-
 p {
     font-family: "Trebuchet MS",Arial,Helvetica,sans-serif;
     font-size: 12px;
@@ -537,4 +531,12 @@ p {
     color: #222222;
     font-family: "Trebuchet MS",Arial,Helvetica,sans-serif;
     line-height: 1.5;
+}
+#sitemap span a 
+{
+ color:#3de;
+ float:left;
+ position: relative;
+ left:400px;
+ font-weight: bold;   
 }

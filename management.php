@@ -21,13 +21,14 @@
             <li>
                 &#187;
             </li>
+           </li>
             <li>
                 <a href="index.php">Home</a>
             </li>
             <li>
                 &#187;
             </li>
-            <li>
+            <li class="actpage">
                 Management
             </li>
         </ul>

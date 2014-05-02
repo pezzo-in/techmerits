@@ -15,7 +15,6 @@
     <div class="wrapper" style="background: #000000">
         <div class="footer-content">
             <div class="address"><h3>Global Development Centre</h3>
-
                 <p>Techmerits Software Solutions,
                     Regus Business centre, 4th Floor, 
                     1-10-39 to 44, Gumidelli Towers, 
