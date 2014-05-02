@@ -16,45 +16,27 @@
         <div class="footer-content">
             <div class="address"><h3>Global Development Centre</h3>
 
-                <p>Techmerits Software Solutions <br/>
-                    Regus Business centre, 4th Floor, <br/>
-                    1-10-39 to 44, Gumidelli Towers, <br/>
-                    Old Airport road, Begumpet <br/>
-                    Hyderabad - 500016 <br/>
-                    India <br/>
-                    Email: info@techmerits.com <br/>
-                    Tel: +91 40 60507879</p>
+                <p>Techmerits Software Solutions,
+                    Regus Business centre, 4th Floor, 
+                    1-10-39 to 44, Gumidelli Towers, 
+                    Old Airport road,<br/> Begumpet 
+                    Hyderabad - 500016 ,
+                    India,
+                    Email: info@techmerits.com,
+                    Tel: +91 40 60507879.</p>
             </div>
-            <ul class="nav">
-                <li>
-                    <a href="index.php"><strong>HOME</strong></a>
-                </li>
-                <li>
-                    <ul>
-                        <li><strong>COMPANY</strong></li>
-                        <li><a href="overview.php">Overview</a></li>
-                        <li><a href="management.php">Management</a></li>
-                        <li><a href="contactus.php">Offices</a></li>
-                        <li><a href="careers.php">Careers</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <ul>
-                        <li><strong>SERVICES</strong></li>
-                        <li><a href="software-development-services.php">Development Services</a></li>
-                        <li><a href="testing-services.php">Testing Services</a></li>
-                        <li><a href="project-management.php">Project Management</a></li>
-                        <li><a href="consulting.php">IT Consulting</a></li>
-                    </ul>
-                </li>
-                <li><a href="contactus.php"><strong>CONTACT US</strong></a></li>
-            </ul>
+           
         </div>
     </div>
     <div class="wrapper" style="background: #333333">
         <div class="footer-content">
             <div class="copy-rights">
                 &copy; 2014 - All Rights Reserved - Techmerits Software Solutions.
+            </div>
+            <div id="sitemap" >
+                <span><a href="sitemap.php">SiteMap |</a></span>
+                <span><a href="#">Legal |</a></span>
+                <span><a href="#">Privacy Policy</a></span>
             </div>
         </div>
     </div>

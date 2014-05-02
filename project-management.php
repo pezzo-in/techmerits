@@ -41,7 +41,7 @@
         <div id="container">
          <div id="content">
 
-            <h1>Project Management</h1>
+            <h2>Project Management</h2>
 
             <p style="font-weight: bold;">
                 Managing Technology, Optimizing Solutions

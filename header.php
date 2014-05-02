@@ -13,7 +13,7 @@
                         <li><a href="careers.php">Careers</a></li>
                     </ul>
                 </li>
-                <li class="logo"><a href="index.php"><img src="images/demo/logo-bluebg.png" width="230"></a></li>
+                <li class="logo"><a href="index.php"><img src="images/demo/logo-bluebg.png" width="227"></a></li>
                 <li class="non-active">SERVICES
                     <ul>
                         <li><a href="software-development-services.php">Development Services</a></li>

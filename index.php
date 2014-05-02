@@ -273,8 +273,6 @@
             <p style="font-weight: bold">
                 Techmerits is all about:
             </p>
-
-            <p>
             <ul style="list-style-type:none;">
                 <li>
                     Innovative ideas
@@ -292,6 +290,7 @@
                     Client service
                 </li>
             </ul>
+            <p>
             Bringing years of experience at the same platform, our dedicated employees invest their time, effort, and
             energy to provide you with the technological solutions you need to maximize your success.
             </p>

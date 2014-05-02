@@ -41,7 +41,7 @@
     <div id="container">
     <div id="content">
 
-        <h1>Software Devleopment Services</h1>
+        <h2>Software Devleopment Services</h2>
 
         <p style="font-weight: bold;">
             Constantly Innovating for Your Development Edge!

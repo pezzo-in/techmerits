@@ -76,7 +76,7 @@ div.wrapper {
 }
 .col1 {
     background: linear-gradient(#F4F2F2, #C9C9C9) repeat scroll 0 0 rgba(0, 0, 0, 0);
-    box-shadow: 0 -3px 3px #999999 inset;
+    box-shadow: 0 1px 3px #999999 inset;
     color: #FFFFFF;
 }
 .col2 {
@@ -144,7 +144,7 @@ div.wrapper {
     text-decoration: underline;
 }
 #container {
-    padding: 20px 0;
+    padding: 0;
 }
 #container h1, #container h4, #container h5, #container h6 {
     color: #03219D;
@@ -159,7 +159,7 @@ div.wrapper {
     font-size: 18px;
     font-weight: bold;
     line-height: normal;
-    margin: 40px 0 0;
+    margin: 5px;
     padding: 0;
 }
 #container h3 {
@@ -418,6 +418,7 @@ div.wrapper {
 }
 #sliderb_container img {
     height: 210px !important;
+    margin-top: 1px;
 }
 .jssora05l, .jssora05r, .jssora05ldn, .jssora05rdn {
     top: 96px !important;
@@ -465,23 +466,34 @@ div.wrapper {
 .social-links li a i {
     float: left;
 }
+.social-links li a i:hover {
+    color: #FFFFFF;
+}
 .address {
-    color: #999999;
+    color: #999999 !important;
     float: left;
     text-align: left;
 }
+.address p ,h3{
+    color: #999999 !important;
+}
 .footer-content ul {
-    color: #999999;
     float: left;
     margin: 0;
     padding: 0;
 }
+.nav ul li strong{
+    color: #999999 !important;
+}
+ul .nav a{
+    color: #999999 !important;
+}
 .footer-content .nav {
     float: right;
     margin: 10px 0;
+     color: #999999 !important;
 }
 .footer-content .nav li {
-    color: #999999;
     float: left;
     list-style: none outside none;
     padding: 0 30px 0 0;
@@ -490,11 +502,39 @@ div.wrapper {
 .footer-content li a {
     color: #999999 !important;
 }
+
 .nav li li {
     clear: both;
     float: left;
     padding: 0 0 10px !important;
+
 }
-.footer-content .copy-rights {
+.footer-content .copy-rights  {
     margin-bottom: 10px;
+    color: #FFFFFF !important;
+    float: left;
+}
+.nav li a strong{
+    color: #999999 !important;
+}
+
+
+p {
+    font-family: "Trebuchet MS",Arial,Helvetica,sans-serif;
+    font-size: 12px;
+    margin: 0;
+    padding: 12px 0 0 !important;
+}
+* {
+    color: #222222;
+    font-family: "Trebuchet MS",Arial,Helvetica,sans-serif;
+    line-height: 1.5;
+}
+#sitemap span a{
+    float:left;
+    display: inline-block;
+    color:#3ad !important; 
+    font-weight:bold;
+    position: relative;
+    left:400px;
 }

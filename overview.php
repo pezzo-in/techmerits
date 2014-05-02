@@ -42,7 +42,7 @@
 <div class="wrapper col4">
     <div id="container">
         <div id="content">
-            <h1>Company Overview</h1>
+            <h2>Company Overview</h2>
 
             <p>                 Techmerits is a diversified technology
 consulting company. With our wide-ranging technology related services, we

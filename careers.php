@@ -37,7 +37,7 @@
         <div class="clear"></div>
     </div>
     <div class="wrapper col4">
-        <div id="container"><h1>Careers</h1>
+        <div id="container"><h2>Careers</h2>
 
             <h2>Apply below for an amazing career</h2>
             <div id="contactform" style="float:left;">
