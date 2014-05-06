@@ -67,7 +67,6 @@ a {
     margin: 0 0 8px 8px;
 }
 div.wrapper {
-    clear: both;
     display: block;
     float: left;
     margin: 0;
@@ -98,15 +97,16 @@ div.wrapper {
     width: 960px;
 }
 #head {
-    height: 110px;
+    height: 10px;
     z-index: 1000;
 }
-#head h1, #head p, #head ul, #head a {
+#head h1, #head p, #head ul, #head a,#head img{
     line-height: normal;
     list-style: none outside none;
     margin: 0;
     padding: 0;
     text-align: center;
+    margin:30px 10px;
 }
 #head h1 a {
     color: #FFFFFF;

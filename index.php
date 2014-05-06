@@ -362,13 +362,13 @@
             <div class="featured">
                 <ul>
                     <li>
-                        <h4>Project Based Consulting</h4>
+                        <h4>Development Services</h4>
 
                         <p class="imgholder"><img src="images/demo/project-based-consulting.jpg" alt=""/>
                         </p>
 
                         <p>
-                            We draw on our experienced staff, valuable resources, flexible strategies, and functional...
+                            Techmerits is your ultimate partner for innovative, advanced, and functional technological solutions. With our experienced, multi-disciplinary experts, we work closely...
                         </p>
 
                         <p class="more">
@@ -380,14 +380,13 @@
             <div class="featured">
                 <ul>
                     <li>
-                        <h4>Product Based Consulting</h4>
+                        <h4>Testing Services</h4>
 
                         <p class="imgholder"><img src="images/demo/product-based-consulting.jpg" alt=""/>
                         </p>
 
                         <p>
-                            Our consulting services can optimize your specific business products and solutions
-                            according...
+                            Considering our clients' requirements for quality assurance, we strive to test every technology solution, software, and system according to the most stringent industry standards...
                         </p>
 
                         <p class="more">

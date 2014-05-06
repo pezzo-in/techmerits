@@ -1,6 +1,8 @@
 <div class="wrapper col1 header-master">
-    <div id="head">
-        <div id="topnav">
+    <div id="head">   
+     <a href="index.php"><img src="images/demo/logo-bluebg.png" width="227"></a>     
+    
+    <div id="topnav" >
             <ul>
                 <li>
                     <a href="index.php">HOME</a>
@@ -13,7 +15,6 @@
                         <li><a href="careers.php">Careers</a></li>
                     </ul>
                 </li>
-                <li class="logo"><a href="index.php"><img src="images/demo/logo-bluebg.png" width="227"></a></li>
                 <li class="non-active">SERVICES
                     <ul>
                         <li><a href="software-development-services.php">Development Services</a></li>
@@ -25,5 +26,5 @@
                 <li><a href="contactus.php">CONTACT US</a></li>
             </ul>
         </div>
-    </div>
+        </div>
 </div>
