@@ -79,7 +79,7 @@ div.wrapper {
     color: #FFFFFF;
 }
 .col2 {
-    background-color: #3F4077;
+    background-color: #0B2F45;
     color: #FFFFFF;
 }
 .col3, .col4 {
@@ -100,13 +100,12 @@ div.wrapper {
     height: 10px;
     z-index: 1000;
 }
-#head h1, #head p, #head ul, #head a,#head img{
+#head h1, #head p, #head ul, #head a, #head img {
     line-height: normal;
     list-style: none outside none;
-    margin: 0;
+    margin: 30px 10px;
     padding: 0;
     text-align: center;
-    margin:30px 10px;
 }
 #head h1 a {
     color: #FFFFFF;
@@ -123,8 +122,8 @@ div.wrapper {
     top: 55px;
 }
 #breadcrumb {
-    padding: 10px 0;
     color: #FFFFFF !important;
+    padding: 10px 0;
 }
 #breadcrumb a {
     color: #FFFFFF !important;
@@ -146,8 +145,8 @@ div.wrapper {
     font-weight: bold;
 }
 #breadcrumb ul li.current a {
+    color: #FFFFFF !important;
     text-decoration: underline;
-    color:#FFFFFF !important;
 }
 #container {
     padding: 0;
@@ -161,12 +160,13 @@ div.wrapper {
     padding: 0;
 }
 #container h2 {
-    color: #999999;
-    font-size: 18px;
+    background-color: #F9F9F9;
+    color: #00008B;
+    font-size: 15px;
     font-weight: bold;
     line-height: normal;
-    margin: 5px;
-    padding: 0;
+    margin: 0;
+    padding: 14px 0;
 }
 #container h3 {
     color: #999999;
@@ -314,11 +314,13 @@ div.wrapper {
     width: 240px;
 }
 #column .featured li h2 {
-    color: #333333;
-    font-size: 14px;
+    background-color: #F9F9F9;
+    color: #00008B;
+    font-size: 15px;
     font-weight: bold;
     line-height: normal;
     margin: 0;
+    padding: 0 0 14px;
 }
 #column .featured li h4 {
     background-color: #F9F9F9;
@@ -360,18 +362,12 @@ div.wrapper {
     margin: 20px 0 30px;
     width: 350px;
 }
-#container #contactform h2 {
-    color: #000000;
-}
 #container #compdetails {
     color: #000000;
     display: block;
     float: left;
     margin: 20px 0 30px;
     width: 350px;
-}
-#container #compdetails h2 {
-    color: #000000;
 }
 #container #compdetails ul {
     list-style: none outside none;
@@ -515,8 +511,8 @@ ul .nav a {
 }
 .footer-content .copy-rights {
     color: #FFFFFF !important;
+    float: left;
     margin-bottom: 10px;
-    float:left;
 }
 .nav li a strong {
     color: #999999 !important;
@@ -532,11 +528,10 @@ p {
     font-family: "Trebuchet MS",Arial,Helvetica,sans-serif;
     line-height: 1.5;
 }
-#sitemap span a 
-{
- color:#c3c3c3;
- float:left;
- position: relative;
- left:400px;
- font-weight: bold;   
+#sitemap span a {
+    color: #C3C3C3;
+    float: left;
+    font-weight: bold;
+    left: 400px;
+    position: relative;
 }
