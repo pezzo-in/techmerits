@@ -1,8 +1,9 @@
 <div class="wrapper col1 header-master">
     <div id="head">   
      <a href="index.php"><img src="images/demo/logo-bluebg.png" width="227"></a>     
-    
-    <div id="topnav" >
+    </div>
+    <div id="topnav">
+    <div id="topnav-inner">
             <ul>
                 <li>
                     <a href="index.php">HOME</a>
@@ -25,6 +26,6 @@
                 </li>
                 <li><a href="contactus.php">CONTACT US</a></li>
             </ul>
-        </div>
+            </div>
         </div>
 </div>
