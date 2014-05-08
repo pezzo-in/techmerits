@@ -21,7 +21,7 @@
                         <li><a href="software-development-services.php">Development Services</a></li>
                         <li><a href="testing-services.php">Testing Services</a></li>
                         <li><a href="project-management.php">Project Management</a></li>
-                        <li><a href="consulting.php">IT Consulting</a></li>
+                        <li><a href="consulting.php">Business Consulting</a></li>
                     </ul>
                 </li>
                 <li><a href="contactus.php">CONTACT US</a></li>

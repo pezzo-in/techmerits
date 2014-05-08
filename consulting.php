@@ -21,7 +21,7 @@
                 &#187;
             </li>
             <li class="actpage">
-                Consulting
+                Business Consulting
             </li>
         </ul>
     </div>
@@ -33,81 +33,73 @@
 </div>
 <div class="wrapper col4">
     <div id="container">
-    <div id="content">
-        <h2>Consulting</h2>
+        <div id="content"><br/>
+            <i>Helping Organizations Develop Confidence on Their Technology Solutions</i>
 
-        <p style="font-weight: bold;">
-            Helping Organizations Develop Confidence on Their Technology Solutions
-        </p>
+            <h2>Turning Opportunities Into Results</h2>
 
-        <p>
-            At Techmerits, we excel in technology development, testing, management, and consulting services to equip
-            organizations with the tools, solutions, and systems they need to ensure their success. Helping them make
-            lasting improvements in their operations and procedures, we focus persistently on the benefits associated
-            with business transformation.
-        </p>
+            <p>Improving the business performance of our clients, our strategic IT consulting services simply streamline
+                their operations, leverage their organizational model, and minimize potential risks. With our value-
+                added consulting services, we are always ready to facilitate our clients serving in varied industries to
+                stand out of the lot as the best performance-driven organization.</p>
 
-        <p style="font-weight: bold;">
-            Step into the spotlight with our technology consulting services!
-        </p>
+            <p>At Techmerits, we design, develop, and implement custom solutions exclusive to our clients? technology
+                and business challenges. </p>
 
-        <h2>Turning Opportunities Into Results</h2>
+            <h2>The primary aspects of our business consulting services are:</h2>
 
-        <p>
-            Techmerits won&#39;t let you miss any technology opportunity. Getting the most out of every procedure and
-            system,
-            we merge technology developments with our clients&#39; goals to help them stay on the top. Their success is our
-            success. And we make every possible effort to deliver them the results they seek from us. With our
-            consulting services, you can redefine the future of your business and workforce.
-        </p>
+            <h2>Process Enhancement and Execution</h2>
 
-        <p>
-            To help our clients keep pace with industry trends and developments, Techmerits uses a mix of revolutionary
-            thinking and useful advice. Marking the evolution of a technology revolution, Techmerits is here to
-            accelerate your growth.
-        </p>
+            <p>We implement the ideal analytical tools to identify and make use of every process improvement
+                opportunity. Working closely with our clients, we transform their business procedures to ensure better
+                results.</p>
 
-        <p style="font-weight: bold;">
-            We transform possibilities into products. Grow with Techmerits.
-        </p>
+            <h2>Productivity Enhancement</h2>
 
-        <h2>Our Key Services</h2>
+            <p>Bringing efficiency and design improvements to our clients? processes, we systematize their production
+                operations.</p>
 
-        <p>
-            The core elements of our technology consulting services are:
-        </p>
+            <h2>Application Optimization</h2>
 
-        <h2 id="project-based">Project Based Consulting</h2>
+            <p>At Techmerits, we create a functional business strategy, map out work requests, and update internal
+                resources to optimize our clients? applications and workload.</p>
 
-        <p>
-            We draw on our experienced staff, valuable resources, flexible strategies, and functional tools to resolve
-            our clients&#39; complex technology challenges. Capitalize on our competent consultants and managers to
-            optimize, create, and expand your unique technology project.
-        </p>
+            <h2>Operative Outsourcing</h2>
 
-        <h2>Product Based Consulting</h2>
+            <p>Our proficient consulting team strives to assess the infrastructure and competency of every application.
+                From creating governance structure to managing/resolving relationship challenges, our global outsourcing
+                solutions involve the best possible initiatives to bring lasting results to every organization we work
+                with.</p>
 
-        <p>
-            Our consulting services can optimize your specific business products and solutions according to your needs.
-            While working with us, you can enhance your business success, strengthen your confidence, and build
-            value.
-        </p>
+            <h2>We transform possibilities into products. Grow with Techmerits.What Techmerits Offers</h2>
 
-        <h2 id="product-based">Testing Consulting</h2>
+            <p>Our consulting solutions are designed to offer risk management facilities, operational efficiency, and
+                proper governance mechanism. We handle and resolve all possible risks and help you comply with industry
+                regulations.</p>
 
-        <p>
-            At Techmerits, we harness new technologies, implement advanced solutions, and ensure outcomes. We strive to
-            redesign how businesses excel, how systems are implemented, and how industries evolve. With our testing
-            consulting services, you not only get the benefit of future thinking, but we also help you realize your
-            technology dreams.
-        </p>
+            <h2> The core elements of our technology consulting services are:</h2>
 
-        <p style="font-weight: bold;">
-            Looking to think ahead? Expedite your success with the expert team of
-            Techmerits.
-        </p>
+            <h2> Project Based Consulting</h2>
+
+            <p>We draw on our experienced staff, valuable resources, flexible strategies, and functional tools to
+                resolve our clients? complex technology challenges. Capitalize on our competent consultants and managers
+                to optimize, create, and expand your unique technology project.</p>
+
+            <h2> Product Based Consulting</h2>
+
+            <p> Our consulting services can optimize your specific business products and solutions according to your
+                needs. While working with us, you can enhance your business success, strengthen your confidence, and
+                build value.</p>
+
+            <h2> Testing Consulting</h2>
+
+            <p> At Techmerits, we harness new technologies, implement advanced solutions, and ensure outcomes. We strive
+                to redesign how businesses excel, how systems are implemented, and how industries evolve. With our
+                testing consulting services, you not only get the benefit of future thinking, but we also help you
+                realize your technology dreams.</p><br/>
+            <strong>Looking to think ahead? Expedite your success with the expert team of Techmerits.</strong><br/>
         </div>
-         <div id="column">
+        <div id="column">
             <div class="featured">
                 <ul>
                     <li>
@@ -117,7 +109,8 @@
                         </p>
 
                         <p>
-                            With our extensive experience in the technology consulting services, we are equipped with the best...
+                            With our extensive experience in the technology consulting services, we are equipped with
+                            the best...
                         </p>
 
                         <p class="more">
@@ -135,7 +128,8 @@
                         </p>
 
                         <p>
-                           Maintaining a positive, encouraging environment in our organization, we ensure our employees get the maximum opportunities to
+                            Maintaining a positive, encouraging environment in our organization, we ensure our employees
+                            get the maximum opportunities to
                         </p>
 
                         <p class="more">
