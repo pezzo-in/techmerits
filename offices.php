@@ -17,13 +17,20 @@
         <div id="breadcrumb">
             <ul>
                 <li>
-                    <a href="index.php">Contact Us</a>
+                    <a href="index.php">Company</a>
+                </li>
+                <li>
+                    &#187;
+                </li>
+                <li>
+                    Offices
                 </li>
             </ul>
         </div>
     </div>
     <div id="gallery">
         <img src="images/demo/services.jpg" alt=""/>
+
         <div class="clear"></div>
     </div>
     <div class="wrapper col4">

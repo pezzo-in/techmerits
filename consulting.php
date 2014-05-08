@@ -2,7 +2,7 @@
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="EN" lang="EN" dir="ltr">
 <head profile="http://gmpg.org/xfn/11">
-    <title>Technology Consulting Services | Consulting Services | Techmerits</title>
+    <title>Techmerits</title>
     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
     <meta http-equiv="imagetoolbar" content="no"/>
     <meta name="description"
@@ -14,14 +14,8 @@
 <div class="wrapper col2">
     <div id="breadcrumb">
         <ul>
-            <li class="first">
-                You Are Here
-            </li>
             <li>
-                &#187;
-            </li>
-            <li>
-                <a href="index.php">Home</a>
+                <a href="index.php">Services</a>
             </li>
             <li>
                 &#187;
@@ -40,7 +34,7 @@
 <div class="wrapper col4">
     <div id="container">
     <div id="content">
-        <h3>Consulting</h3>
+        <h2>Consulting</h2>
 
         <p style="font-weight: bold;">
             Helping Organizations Develop Confidence on Their Technology Solutions
@@ -77,7 +71,7 @@
             We transform possibilities into products. Grow with Techmerits.
         </p>
 
-        <h3>Our Key Services</h3>
+        <h2>Our Key Services</h2>
 
         <p>
             The core elements of our technology consulting services are:

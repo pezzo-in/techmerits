@@ -5,7 +5,6 @@
             <div class="social-links">
                 <ul>
                     <li><a href="#"><i class="fa fa-facebook-square fa-3x"></i></a></li>
-                    <li><a href="#"><i class="fa fa-youtube fa-3x"></i></a></li>
                     <li><a href="#"><i class="fa fa-google-plus-square fa-3x"></i></a></li>
                     <li><a href="#"><i class="fa fa-twitter fa-3x"></i></a></li>
                 </ul>
@@ -14,7 +13,7 @@
     </div>
     <div class="wrapper" style="background: #000000">
         <div class="footer-content">
-            <div class="address"><h3>Global Development Centre</h3>
+            <div class="address"><strong style="color:#ffffff">Global Development Centre</strong>
                 <p>Techmerits Software Solutions,
                     Regus Business centre, 4th Floor, 
                     1-10-39 to 44, Gumidelli Towers, 
@@ -33,9 +32,9 @@
                 &copy; 2014 - All Rights Reserved - Techmerits Software Solutions.
             </div>
             <div id="sitemap" >
-                <span><a href="sitemap.php">SiteMap |</a></span>
-                <span><a href="#">Legal |</a></span>
-                <span><a href="#">Privacy Policy</a></span>
+                <a href="sitemap.php">SiteMap</a>
+                <!--<span><a href="#">Legal |</a></span>
+                <span><a href="#">Privacy Policy</a></span>-->
             </div>
         </div>
     </div>

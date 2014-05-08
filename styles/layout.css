@@ -433,7 +433,7 @@ div.wrapper {
 }
 .footer-content {
     color: #FFFFFF;
-    margin: 10px auto;
+    margin: 6px auto;
     overflow: hidden;
     padding: 0;
     position: relative;
@@ -462,7 +462,7 @@ div.wrapper {
     color: #FFFFFF;
     display: block;
     float: right;
-    font-size: 10px;
+    font-size: 7px;
     position: relative;
 }
 .social-links li a i {
@@ -512,7 +512,6 @@ ul .nav a {
 .footer-content .copy-rights {
     color: #FFFFFF !important;
     float: left;
-    margin-bottom: 10px;
 }
 .nav li a strong {
     color: #999999 !important;
@@ -534,4 +533,18 @@ p {
     font-weight: bold;
     left: 400px;
     position: relative;
+}
+#xsg ul {
+    list-style: none outside none;
+    padding: 0;
+}
+#xsg li {
+    font-size: 14px;
+    padding: 5px 0;
+}
+#sitemap {
+    float: right;
+}
+#sitemap a {
+    color: #CCCCCC;
 }

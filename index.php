@@ -2,7 +2,7 @@
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="EN" lang="EN" dir="ltr">
 <head profile="http://gmpg.org/xfn/11">
-    <title>Technology Services Consulting | Home | Techmerits </title>
+    <title>Techmerits</title>
     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
     <meta http-equiv="imagetoolbar" content="no"/>
     <meta name="description"
@@ -257,7 +257,7 @@
 <div class="wrapper col4">
     <div id="container">
         <div id="content">
-            <h2>ABOUT TECHMERITS</h2>
+            <h2>About Techmerits</h2>
 
             <p style="font-weight: bold;">
                 Making technology solutions a reality - From creation to implementation!
@@ -295,7 +295,7 @@
             energy to provide you with the technological solutions you need to maximize your success.
             </p>
 
-            <h2>PROGRESSING WITH THE CHANGING TECHNOLOGY</h2>
+            <h2>Progressing with the changing technology</h2>
 
             <p style="font-weight: bold">
                 We are moving forward with the ever-changing technology. Are you?
@@ -308,7 +308,7 @@
                 make us a trustworthy, experienced technology partner.
             </p>
 
-            <h2>TECHMERITS-INSPIRING LIVES WITH INNOVATIVE IDEAS</h2>
+            <h2>Techmerits - Inspiring lives with innovative ideas</h2>
 
             <p>
                 At Techmerits, we have merged advanced technology with management strategies. We deliver functional
