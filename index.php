@@ -3,6 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="EN" lang="EN" dir="ltr">
 <head profile="http://gmpg.org/xfn/11">
     <title>Techmerits</title>
+    <meta name="viewport" content="initial-scale=1.2, user-scalabel=yes">
     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
     <meta http-equiv="imagetoolbar" content="no"/>
     <meta name="description"
@@ -144,7 +145,7 @@
         <div style="filter: alpha(opacity=70); opacity:0.7; position: absolute; display: block;
                 background-color: #000; top: 0px; left: 0px;width: 100%;height:100%;">
         </div>
-        <div style="position: absolute; display: block; background: url(img/loading.gif) no-repeat center center;
+        <div style="position: absolute; display: block; background: url(images/loading.gif) no-repeat center center;
                 top: 0px; left: 0px;width: 100%;height:100%;">
         </div>
     </div>
@@ -153,13 +154,13 @@
     <div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 600px; height: 300px;
             overflow: hidden;">
         <div>
-            <img u=image src="images/demo/gallery_11.jpg"/>
+            <img u=image src="images/gallery_11.jpg"/>
         </div>
         <div>
-            <img u=image src="images/demo/gallery_22.jpg"/>
+            <img u=image src="images/gallery_22.jpg"/>
         </div>
         <div>
-            <img u=image src="images/demo/gallery_33.jpg"/>
+            <img u=image src="images/gallery_33.jpg"/>
         </div>
     </div>
 
@@ -212,7 +213,7 @@
             position: absolute;
             cursor: pointer;
             display: block;
-            background: url(img/a17.png) no-repeat;
+            background: url(images/a17.png) no-repeat;
             overflow: hidden;
         }
 
@@ -259,40 +260,32 @@
         <div id="content">
             <h2>About Techmerits</h2>
 
-            <p style="font-weight: bold;">
-                Making technology solutions a reality - From creation to implementation!
+            <p> Techmerits is all about innovative ideas, solid performance, exceptional workforce, guaranteed results
+                and outstanding client service. We have the infrastructure, expertise, and know-how to build a product
+                quickly and economically, clearing the hurdles you may face in its development. Specialized in
+                professional consulting, technology solution development, software testing and people management,
+                Techmerits help organizations streamline their operations, add value to their offerings and facilitate
+                their workforce.
+            </p>
+
+            <p> Bringing years of experience at the same platform, our dedicated employees invest their time, effort,
+                and energy to provide you with the technological solutions you need to maximize your success. A singular
+                focus on technology, an agile approach, and a culture of innovation have enabled us to create highly
+                scalable software products for our clients. In this way, we enable our clients to address the changing
+                needs of their customers, and build loyalty by delivering value.
+            </p>
+
+            <p> While you focus on creating your product market strategy, we will take care of the rest! Our
+                collaborative approach will allow you to concentrate on your core business, while we build a product
+                that offers you a competitive advantage. We will manage all product development activities and
+                seamlessly integrate them with your operations. Our partnership ensures that your product gets to market
+                faster and more cost-effectively
             </p>
 
             <p>
-                Techmerits, a name associated with reliable technology consultation services, is the choice of
-                performance-driven organizations all over the world. Specialized in professional consulting, technology
-                solution development, software testing, and people management, Techmerits help organizations streamline
-                their operations, add value to their offerings, and facilitate their workforce.
-            </p>
-
-            <p style="font-weight: bold">
-                Techmerits is all about:
-            </p>
-            <ul style="list-style-type:none;">
-                <li>
-                    Innovative ideas
-                </li>
-                <li>
-                    Solid performance
-                </li>
-                <li>
-                    Exceptional workforce
-                </li>
-                <li>
-                    Guaranteed results
-                </li>
-                <li>
-                    Client service
-                </li>
-            </ul>
-            <p>
-            Bringing years of experience at the same platform, our dedicated employees invest their time, effort, and
-            energy to provide you with the technological solutions you need to maximize your success.
+                Bringing years of experience at the same platform, our dedicated employees invest their time, effort,
+                and
+                energy to provide you with the technological solutions you need to maximize your success.
             </p>
 
             <h2>Progressing with the changing technology</h2>
@@ -364,11 +357,12 @@
                     <li>
                         <h4>Development Services</h4>
 
-                        <p class="imgholder"><img src="images/demo/project-based-consulting.jpg" alt=""/>
+                        <p class="imgholder"><img src="images/project-based-consulting.jpg" alt=""/>
                         </p>
 
                         <p>
-                            Techmerits is your ultimate partner for innovative, advanced, and functional technological solutions. With our experienced, multi-disciplinary experts, we work closely...
+                            Techmerits is your ultimate partner for innovative, advanced, and functional technological
+                            solutions. With our experienced, multi-disciplinary experts, we work closely...
                         </p>
 
                         <p class="more">
@@ -382,11 +376,13 @@
                     <li>
                         <h4>Testing Services</h4>
 
-                        <p class="imgholder"><img src="images/demo/product-based-consulting.jpg" alt=""/>
+                        <p class="imgholder"><img src="images/product-based-consulting.jpg" alt=""/>
                         </p>
 
                         <p>
-                            Considering our clients' requirements for quality assurance, we strive to test every technology solution, software, and system according to the most stringent industry standards...
+                            Considering our clients' requirements for quality assurance, we strive to test every
+                            technology solution, software, and system according to the most stringent industry
+                            standards...
                         </p>
 
                         <p class="more">

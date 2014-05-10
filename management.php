@@ -30,7 +30,7 @@
 </div>
 
 <div id="gallery">
-    <img src="images/demo/management.jpg" alt=""/>
+    <img src="images/management.jpg" alt=""/>
 
     <div class="clear"></div>
 </div>
@@ -60,7 +60,7 @@
                     <li>
                         <h2>Agile Project Management</h2>
 
-                        <p class="imgholder"><img src="images/demo/agile.jpg" alt=""/>
+                        <p class="imgholder"><img src="images/agile.jpg" alt=""/>
                         </p>
 
                         <p>
@@ -79,7 +79,7 @@
                     <li>
                         <h2>Waterfall Project Management </h2>
 
-                        <p class="imgholder"><img src="images/demo/waterfall.jpg" alt=""/>
+                        <p class="imgholder"><img src="images/waterfall.jpg" alt=""/>
                         </p>
 
                         <p>

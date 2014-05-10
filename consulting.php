@@ -27,15 +27,13 @@
     </div>
 </div>
 <div id="gallery">
-    <img src="images/demo/consulting.jpg" alt=""/>
+    <img src="images/consulting.jpg" alt=""/>
 
     <div class="clear"></div>
 </div>
 <div class="wrapper col4">
     <div id="container">
-        <div id="content"><br/>
-            <i>Helping Organizations Develop Confidence on Their Technology Solutions</i>
-
+        <div id="content">
             <h2>Turning Opportunities Into Results</h2>
 
             <p>Improving the business performance of our clients, our strategic IT consulting services simply streamline
@@ -48,55 +46,34 @@
 
             <h2>The primary aspects of our business consulting services are:</h2>
 
-            <h2>Process Enhancement and Execution</h2>
+            <strong>Process Enhancement and Execution</strong>
 
             <p>We implement the ideal analytical tools to identify and make use of every process improvement
                 opportunity. Working closely with our clients, we transform their business procedures to ensure better
                 results.</p>
 
-            <h2>Productivity Enhancement</h2>
+            <strong>Productivity Enhancement</strong>
 
             <p>Bringing efficiency and design improvements to our clients? processes, we systematize their production
                 operations.</p>
 
-            <h2>Application Optimization</h2>
+            <strong>Application Optimization</strong>
 
             <p>At Techmerits, we create a functional business strategy, map out work requests, and update internal
                 resources to optimize our clients? applications and workload.</p>
 
-            <h2>Operative Outsourcing</h2>
+            <strong>Operative Outsourcing</strong>
 
             <p>Our proficient consulting team strives to assess the infrastructure and competency of every application.
                 From creating governance structure to managing/resolving relationship challenges, our global outsourcing
                 solutions involve the best possible initiatives to bring lasting results to every organization we work
                 with.</p>
 
-            <h2>We transform possibilities into products. Grow with Techmerits.What Techmerits Offers</h2>
+            <strong>We transform possibilities into products. Grow with Techmerits.What Techmerits Offers</strong>
 
             <p>Our consulting solutions are designed to offer risk management facilities, operational efficiency, and
                 proper governance mechanism. We handle and resolve all possible risks and help you comply with industry
-                regulations.</p>
-
-            <h2> The core elements of our technology consulting services are:</h2>
-
-            <h2> Project Based Consulting</h2>
-
-            <p>We draw on our experienced staff, valuable resources, flexible strategies, and functional tools to
-                resolve our clients? complex technology challenges. Capitalize on our competent consultants and managers
-                to optimize, create, and expand your unique technology project.</p>
-
-            <h2> Product Based Consulting</h2>
-
-            <p> Our consulting services can optimize your specific business products and solutions according to your
-                needs. While working with us, you can enhance your business success, strengthen your confidence, and
-                build value.</p>
-
-            <h2> Testing Consulting</h2>
-
-            <p> At Techmerits, we harness new technologies, implement advanced solutions, and ensure outcomes. We strive
-                to redesign how businesses excel, how systems are implemented, and how industries evolve. With our
-                testing consulting services, you not only get the benefit of future thinking, but we also help you
-                realize your technology dreams.</p><br/>
+                regulations.</p><br/>
             <strong>Looking to think ahead? Expedite your success with the expert team of Techmerits.</strong><br/>
         </div>
         <div id="column">
@@ -105,7 +82,7 @@
                     <li>
                         <h2>Clients </h2>
 
-                        <p class="imgholder"><img src="images/demo/client.jpg" alt=""/>
+                        <p class="imgholder"><img src="images/client.jpg" alt=""/>
                         </p>
 
                         <p>
@@ -124,7 +101,7 @@
                     <li>
                         <h2>Employees</h2>
 
-                        <p class="imgholder"><img src="images/demo/employee.jpg" alt=""/>
+                        <p class="imgholder"><img src="images/employee.jpg" alt=""/>
                         </p>
 
                         <p>

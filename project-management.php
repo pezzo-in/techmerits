@@ -27,7 +27,7 @@
         </div>
     </div>
     <div id="gallery">
-        <img src="images/demo/project-management.jpg" alt=""/>
+        <img src="images/project-management.jpg" alt=""/>
 
         <div class="clear"></div>
     </div>
@@ -63,14 +63,14 @@
             <h2 id="agile">Agile Project Management</h2>
 
             <p>
-             Being a value-driven methodology, agile project management enables organizations to deliver high quality results. While managing your unique project, we consider your business operations, requirements, priorities, and beyond. Our project managers work closely with our clients to track the project’s progress, issues, and results. 
+             Being a value-driven methodology, agile project management enables organizations to deliver high quality results. While managing your unique project, we consider your business operations, requirements, priorities, and beyond. Our project managers work closely with our clients to track the project&#39;s progress, issues, and results.
          </p>
-         <p>While using the agile management approach, we divide responsibility among different team members. And this is how we combine individual efforts to get you what you expect from our side – successful technology solutions.</p>
+         <p>While using the agile management approach, we divide responsibility among different team members. And this is how we combine individual efforts to get you what you expect from our side &#45; successful technology solutions.</p>
 
          <p>
-          <b> Fixed-Bid Solutions: </b>These solutions involve a contractual agreement where we offer project management services to our clients at a particular price. 
+          <strong> Fixed-Bid Solutions: </strong>These solutions involve a contractual agreement where we offer project management services to our clients at a particular price. 
       </p>
-      <p><b>Time & Materials Solutions:</b> While availing these solutions, our clients make payments for their projects in terms of the utilized resources. These solutions are perfect for agile projects as they recognize the challenges of software development. </p>
+      <p><strong>Time & Materials Solutions:</strong> While availing these solutions, our clients make payments for their projects in terms of the utilized resources. These solutions are perfect for agile projects as they recognize the challenges of software development. </p>
 
       <h2 id="waterfall">Waterfall Project Management </h2>
 
@@ -98,7 +98,7 @@
                     <li>
                         <h4>Bespoke Development</h4>
 
-                        <p class="imgholder"><img src="images/demo/bespoke.jpg" alt=""/>
+                        <p class="imgholder"><img src="images/bespoke.jpg" alt=""/>
                         </p>
 
                         <p>
@@ -116,7 +116,7 @@
                     <li>
                         <h4>Java Development</h4>
 
-                        <p class="imgholder"><img src="images/demo/java.jpg" alt=""/>
+                        <p class="imgholder"><img src="images/java.jpg" alt=""/>
                         </p>
 
                         <p>

@@ -27,126 +27,139 @@
     </div>
 </div>
 <div id="gallery">
-    <img src="images/demo/development-services.jpg" alt=""/>
+    <img src="images/development-services.jpg" alt=""/>
 
     <div class="clear"></div>
 </div>
 <div class="wrapper col4">
     <div id="container">
-    <div id="content">
+        <div id="content">
 
-        <h2>Software Devleopment Services</h2>
+            <h2>Software Devleopment Services</h2>
 
-        <p style="font-weight: bold;">
-            Constantly Innovating for Your Development Edge!
-        </p>
+            <p style="font-weight: bold;">
+                Constantly Innovating for Your Development Edge!
+            </p>
 
-        <p>
-            Techmerits is your ultimate partner for innovative, advanced, and functional technological solutions. With
-            our experienced, multi-disciplinary experts, we work closely with our clients to design, develop, and
-            implement customized solutions. Having access to the best technologies, resources, and tools, we utilize the
-            latest strategies and practices to meet individual requirements and deliver the best possible services.
-        </p>
+            <p>
+                Techmerits is your ultimate partner for innovative, advanced, and functional technological solutions.
+                With
+                our experienced, multi-disciplinary experts, we work closely with our clients to design, develop, and
+                implement customized solutions. Having access to the best technologies, resources, and tools, we utilize
+                the
+                latest strategies and practices to meet individual requirements and deliver the best possible services.
+            </p>
 
-        <p style="font-weight: bold; ">
-            Revolutionary technology solutions for performance-driven organizations!
-        </p>
+            <p style="font-weight: bold; ">
+                Revolutionary technology solutions for performance-driven organizations!
+            </p>
 
-        <h2>Our Focus Areas</h2>
+            <h2>Our Focus Areas</h2>
 
-        <p>
-            The core elements of our technology development services are:
-        </p>
+            <p>
+                The core elements of our technology development services are:
+            </p>
 
-        <h2>Microsoft.NET</h2>
+            <strong>Microsoft.NET</strong>
 
-        <p>
-            We are specialized in the existing and emerging trends of the Microsoft technology. Techmerits provides
-            businesses with comprehensive roadmaps and strategies, thus helping them align their business targets with
-            the latest technological developments.
-        </p>
+            <p>
+                We are specialized in the existing and emerging trends of the Microsoft technology. Techmerits provides
+                businesses with comprehensive roadmaps and strategies, thus helping them align their business targets
+                with
+                the latest technological developments.
+            </p>
 
-        <p>
-            Our cost-effective, scalable development solutions can make any.NET project a means to achieve great results
-            and minimize development costs and time. Our dedicated developers excel in C#, ASP.NET, VB.NET, and more.
-        </p>
+            <p>
+                Our cost-effective, scalable development solutions can make any.NET project a means to achieve great
+                results
+                and minimize development costs and time. Our dedicated developers excel in C#, ASP.NET, VB.NET, and
+                more.
+            </p>
 
-        <h2>SQL Server</h2>
+            <strong>SQL Server</strong>
 
-        <p>
-            Techmerits offers database development solutions for the SQL Server platform. Bringing structure and value
-            to your business data, our technology development experts plan, design, create, and test databases. Our
-            offered services include:
-        </p>
+            <p>
+                Techmerits offers database development solutions for the SQL Server platform. Bringing structure and
+                value
+                to your business data, our technology development experts plan, design, create, and test databases. Our
+                offered services include:
+            </p>
 
-        <p style="font-weight: bold; ">
-        <ul style="list-style-type:none;">
-            <li>
-                Database designing
-            </li>
-            <li>
-                Query development
-            </li>
-            <li>
-                Query optimization
-            </li>
-            <li>
-                Database testing services
-            </li>
-        </ul>
-        </p>
-        <h2>Oracle</h2>
+            <p style="font-weight: bold; ">
 
-        <p>
-            Our Oracle development solutions can develop and implement your Oracle software on time and on budget. We
-            are equipped with adequate knowledge to solve diverse business challenges with Oracle methodologies and
-            tools.
-        </p>
+            <ul style="list-style-type:none;">
+                <li>
+                    Database designing
+                </li>
+                <li>
+                    Query development
+                </li>
+                <li>
+                    Query optimization
+                </li>
+                <li>
+                    Database testing services
+                </li>
+            </ul>
+            </p>
+            <strong>Oracle</strong>
 
-        <h2 id="erp">ERP</h2>
+            <p>
+                Our Oracle development solutions can develop and implement your Oracle software on time and on budget.
+                We
+                are equipped with adequate knowledge to solve diverse business challenges with Oracle methodologies and
+                tools.
+            </p>
 
-        <p>
-            Techmerits can bring flexibility, value, and efficiency to any business with its ERP development services.
-            We can help you make the most of your ERP investments.
-        </p>
+            <strong id="erp">ERP</strong>
 
-        <h2 id="sharepoint">Sharepoint</h2>
+            <p>
+                Techmerits can bring flexibility, value, and efficiency to any business with its ERP development
+                services.
+                We can help you make the most of your ERP investments.
+            </p>
 
-        <p>
-            Manage your business data and applications with ease, speed, and efficiency. Rely on our technology
-            development services to avail smart Sharepoint solutions.
-        </p>
+            <strong id="sharepoint">Sharepoint</strong>
 
-        <h2 id="java">Java Technologies</h2>
+            <p>
+                Manage your business data and applications with ease, speed, and efficiency. Rely on our technology
+                development services to avail smart Sharepoint solutions.
+            </p>
 
-        <p>
-            Making use of the Java platform, our experienced Java developers excel in resource management, debugging,
-            testing, performance tuning, user interface strategies, and more.
-        </p>
+            <strong id="java">Java Technologies</strong>
 
-        <h2 id="bespoke">Bespoke Development</h2>
+            <p>
+                Making use of the Java platform, our experienced Java developers excel in resource management,
+                debugging,
+                testing, performance tuning, user interface strategies, and more.
+            </p>
 
-        <p>
-            Our Bespoke development, support, and maintenance services can add cost-efficiency, speed, and value to your
-            business operations. Creating stand-alone, customised, or distributed software solutions, we work according
-            to our clients&#39; specific needs and problems.
-        </p>
+            <strong id="bespoke">Bespoke Development</strong>
 
-        <p style="font-weight: bold;">
-            Gain control of your business with our technology development services.
-        </p>
+            <p>
+                Our Bespoke development, support, and maintenance services can add cost-efficiency, speed, and value to
+                your
+                business operations. Creating stand-alone, customised, or distributed software solutions, we work
+                according
+                to our clients&#39; specific needs and problems.
+            </p>
+
+            <p style="font-weight: bold;">
+                Gain control of your business with our technology development services.
+            </p>
         </div>
-         <div id="column">
+        <div id="column">
             <div class="featured">
                 <ul>
                     <li>
                         <h4>Automated Testing</h4>
 
-                        <p class="imgholder"><img src="images/demo/automated-test.jpg" alt=""/>
+                        <p class="imgholder"><img src="images/automated-test.jpg" alt=""/>
                         </p>
 
                         <p>
-                            Techmerits can design and create comprehensive test automation frameworks for its clients. With automated testing facilities...
+                            Techmerits can design and create comprehensive test automation frameworks for its clients.
+                            With automated testing facilities...
                         </p>
 
                         <p class="more">
@@ -160,11 +173,12 @@
                     <li>
                         <h4>Mobile Testing</h4>
 
-                        <p class="imgholder"><img src="images/demo/mobile-test.jpg" alt=""/>
+                        <p class="imgholder"><img src="images/mobile-test.jpg" alt=""/>
                         </p>
 
                         <p>
-                            Techmerits brings top of the line testing services for mobile applications. Our analysts invest their time and expertise to help...
+                            Techmerits brings top of the line testing services for mobile applications. Our analysts
+                            invest their time and expertise to help...
                         </p>
 
                         <p class="more">

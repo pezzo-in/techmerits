@@ -27,7 +27,7 @@
     </div>
 </div>
 <div id="gallery">
-    <img src="images/demo/testing.jpg" alt=""/>
+    <img src="images/testing.jpg" alt=""/>
 
     <div class="clear"></div>
 </div>
@@ -57,28 +57,28 @@
             The core elements of our technology testing services are:
         </p>
 
-        <h2>Functional, Regression and End-to-End Testing</h2>
+        <strong>Functional, Regression and End-to-End Testing</strong>
 
         <p>
             Including a combination of performance, financial, and quality metrics, these services are used for
             compliance testing, product testing, lifecycle testing, and maintenance testing.
         </p>
 
-        <h2 id="automated-testing">Automated Testing</h2>
+        <strong id="automated-testing">Automated Testing</strong>
 
         <p>
             Techmerits can design and create comprehensive test automation frameworks for its clients. With automated
             testing facilities, we minimize manual testing and help organizations save on time and money.
         </p>
 
-        <h2>Load and Performance Testing</h2>
+        <strong>Load and Performance Testing</strong>
 
         <p>
             With this testing service, we can identify any website&#39;s traffic capacity, bottlenecks, and the overall
             performance. We evaluate their response and functionality under varied load levels.
         </p>
 
-        <h2 id="mobile-testing">Mobile Application Testing </h2>
+        <strong id="mobile-testing">Mobile Application Testing </strong>
 
         <p>
             Techmerits brings top of the line testing services for mobile applications. Our analysts invest their time
@@ -86,27 +86,27 @@
             your mobile apps with Techmerits to launch a successful product.
         </p>
 
-        <h2>Browser Compatibility Testing</h2>
+        <strong>Browser Compatibility Testing</strong>
 
         <p>
             With our testing tools, we ensure your website is compatible with the browsers commonly used.
         </p>
 
-        <h2>SAP, Siebel and SAS Testing</h2>
+        <strong>SAP, Siebel and SAS Testing</strong>
 
         <p>
             Testing SAP, Siebel, and SAS solutions, we help you reduce development and testing expenses. While working
             with us, you can comply with quality assurance standards with ease.
         </p>
 
-        <h2>Web Testing </h2>
+        <strong>Web Testing </strong>
 
         <p>
             Techmerits makes it convenient for its clients to test their web apps for different devices and browsers.
             Ensure your users&#39; web experience by testing your app with Techmerits.
         </p>
 
-        <h2>Database Testing</h2>
+        <strong>Database Testing</strong>
 
         <p>
             The dedicated analysts of Techmerits can validate the consistency, integrity, performance, and security of
@@ -123,7 +123,7 @@
                     <li>
                         <h4>ERP</h4>
 
-                        <p class="imgholder"><img src="images/demo/erp.jpg" alt=""/>
+                        <p class="imgholder"><img src="images/erp.jpg" alt=""/>
                         </p>
 
                         <p>
@@ -141,7 +141,7 @@
                     <li>
                         <h4>Sharepoint</h4>
 
-                        <p class="imgholder"><img src="images/demo/sharepoint.jpg" alt=""/>
+                        <p class="imgholder"><img src="images/sharepoint.jpg" alt=""/>
                         </p>
 
                         <p>

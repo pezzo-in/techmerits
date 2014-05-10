@@ -1,6 +1,6 @@
 <div class="wrapper col1 header-master">
     <div id="head">   
-     <a href="index.php"><img src="images/demo/logo-bluebg.png" width="227"></a>     
+     <a href="index.php"><img src="images/logo-bluebg.png" width="227"></a>
     </div>
     <div id="topnav">
     <div id="topnav-inner">

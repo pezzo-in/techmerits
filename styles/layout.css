@@ -160,13 +160,11 @@ div.wrapper {
     padding: 0;
 }
 #container h2 {
-    background-color: #F9F9F9;
     color: #00008B;
     font-size: 15px;
     font-weight: bold;
     line-height: normal;
-    margin: 0;
-    padding: 14px 0;
+    margin: 20px 0 0;
 }
 #container h3 {
     color: #999999;
@@ -184,6 +182,7 @@ div.wrapper {
 #content {
     display: block;
     float: left;
+    padding: 20px 0;
     width: 690px;
 }
 #comments {
@@ -239,6 +238,7 @@ div.wrapper {
 #column {
     display: block;
     float: right;
+    margin: 20px 0 0;
     width: 250px;
 }
 #column .holder, #column .featured {
@@ -310,7 +310,7 @@ div.wrapper {
     display: block;
     height: 90px;
     margin: 20px 0 15px;
-    padding: 4px;
+    padding: 0 !important;
     width: 240px;
 }
 #column .featured li h2 {
@@ -359,7 +359,7 @@ div.wrapper {
     color: #000000;
     display: block;
     float: right;
-    margin: 20px 0 30px;
+    margin: 0 0 30px;
     width: 350px;
 }
 #container #compdetails {
@@ -432,7 +432,6 @@ div.wrapper {
     width: 40%;
 }
 .footer-content {
-    color: #FFFFFF;
     margin: 6px auto;
     overflow: hidden;
     padding: 0;
@@ -472,12 +471,8 @@ div.wrapper {
     color: #FFFFFF;
 }
 .address {
-    color: #999999 !important;
     float: left;
     text-align: left;
-}
-.address p, h3 {
-    color: #999999 !important;
 }
 .footer-content ul {
     float: left;
@@ -520,7 +515,7 @@ p {
     font-family: "Trebuchet MS",Arial,Helvetica,sans-serif;
     font-size: 12px;
     margin: 0;
-    padding: 12px 0 0 !important;
+    padding: 5px 0 10px !important;
 }
 * {
     color: #222222;
