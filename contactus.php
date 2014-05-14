@@ -2,7 +2,8 @@
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="EN" lang="EN" dir="ltr">
 <head profile="http://gmpg.org/xfn/11">
-    <title>Techmerits</title>
+    <title>Techmerits software solutions</title>
+    <link rel="icon" href="images/favicon.png" type="image/gif" sizes="16x16">
     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
     <meta http-equiv="imagetoolbar" content="no"/>
     <meta name="description"
@@ -90,8 +91,11 @@
             ?>
         </div>
         <!-- End Contact Form -->
-        <div class="footerfont" id="contactdetails">
-            <h2>Global Development Centre</h2>
+
+        <div class="footerfont"
+             style="border-right: 1px solid #CCCCCC;float: left;margin-right: 50px;padding-right: 40px;">
+            <h2>India</h2>
+            <strong>Global Development Centre</strong>
 
             <p>
                 Techmerits Software Solutions <br/>
@@ -105,6 +109,18 @@
                 Fax: +91 40 6704 3999
 
             </p>
+        </div>
+        <div class="footerfont" style="float:left;">
+
+            <h2>United Kingdom</h2>
+
+            <p>
+                Techmerits Software Solutions <br/> 16 Laxton Close <br/>
+                Luton, Bedfordshire <br/>
+                LU2 8SJ, UK <br/>
+                Email: info@techmerits.com<br/>
+                Tel:+ 44 - 2070961068
+            </p>
 
             <div class="clear"></div>
         </div>
@@ -112,6 +128,7 @@
     <?php
 include 'footer.php';
 ?>
+</div>
 </body>
 </html>
 

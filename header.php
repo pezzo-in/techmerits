@@ -12,7 +12,6 @@
                     <ul>
                         <li><a href="overview.php">Overview</a></li>
                         <li><a href="management.php">Management</a></li>
-                        <li><a href="offices.php">Offices</a></li>
                         <li><a href="careers.php">Careers</a></li>
                     </ul>
                 </li>
