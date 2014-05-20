@@ -34,91 +34,118 @@
 </div>
 <div class="wrapper col4">
     <div id="container">
-    <div id="content">
+        <div id="content">
 
-        <h2>Testing Services</h2>
+            <h2>Testing Services</h2>
 
-        <p style="font-weight: bold;">
-            Developing Fully Tested, Perfectly Implemented Technology Solutions
-        </p>
+            <strong> Developing Fully Tested, Perfectly Implemented Technology Solutions
+            </strong>
 
-        <p>
-            Considering our clients&#39; requirements for quality assurance, we strive to test every technology solution,
-            software, and system according to the most stringent industry standards. Supervised by a team of expert
-            analysts, our testing procedures are designed to check every dimension, aspect, and element of the product.
-        </p>
+            <p>Considering our clients' requirements for quality assurance, we strive to test every technology solution,
+                software, and systems
 
-        <p style="font-weight: bold; ">
-            Techmerits-Ready to become your centralize technology testing resource.
-        </p>
+                according to the most stringent industry standards.</p>
 
-        <h2>Our Key Services</h2>
+            <p>Supervised by a team of expert analysts, our testing procedures are designed to check every dimension,
+                aspect, and element of
 
-        <p>
-            The core elements of our technology testing services are:
-        </p>
+                the product. With well-equipped toolset and abilities, we can roll-out fully validated and verified
+                products in a timely manner.</p>
 
-        <strong>Functional, Regression and End-to-End Testing</strong>
+            <p>Techmerits will never let you compromise on the security or efficiency of your technology systems.</p>
 
-        <p>
-            Including a combination of performance, financial, and quality metrics, these services are used for
-            compliance testing, product testing, lifecycle testing, and maintenance testing.
-        </p>
+            <h2>Our Key Testing Services</h2>
 
-        <strong id="automated-testing">Automated Testing</strong>
+            <strong>Various core areas of our testing services include:</strong>
 
-        <p>
-            Techmerits can design and create comprehensive test automation frameworks for its clients. With automated
-            testing facilities, we minimize manual testing and help organizations save on time and money.
-        </p>
+            <strong>Functional, Regression and End-to-End Testing</strong>
 
-        <strong>Load and Performance Testing</strong>
+            <p>Including a combination of performance, financial and quality metrics, we use these services for
+                compliance testing, product
 
-        <p>
-            With this testing service, we can identify any website&#39;s traffic capacity, bottlenecks, and the overall
-            performance. We evaluate their response and functionality under varied load levels.
-        </p>
+                testing, lifecycle testing, and maintenance testing.</p>
 
-        <strong id="mobile-testing">Mobile Application Testing </strong>
+            <strong>Automated Testing</strong>
 
-        <p>
-            Techmerits brings top of the line testing services for mobile applications. Our analysts invest their time
-            and expertise to help you identify the defects and issues that are likely to affect your mobile apps. Test
-            your mobile apps with Techmerits to launch a successful product.
-        </p>
+            <p> We can design and create comprehensive test automation frameworks for our clients. With automated
+                testing facilities, we
 
-        <strong>Browser Compatibility Testing</strong>
+                minimize and eliminate manual testing and help organizations build more robust and reliable systems that
+                do not fail.</p>
 
-        <p>
-            With our testing tools, we ensure your website is compatible with the browsers commonly used.
-        </p>
+            <strong> Load and Performance Testing</strong>
 
-        <strong>SAP, Siebel and SAS Testing</strong>
+            <p>With this testing service, we ensure the product is scalable and is free of bottlenecks. We evaluate and
+                test different
 
-        <p>
-            Testing SAP, Siebel, and SAS solutions, we help you reduce development and testing expenses. While working
-            with us, you can comply with quality assurance standards with ease.
-        </p>
+                functionality under varied load levels.</p>
 
-        <strong>Web Testing </strong>
+            <strong>Mobile Application Testing</strong>
 
-        <p>
-            Techmerits makes it convenient for its clients to test their web apps for different devices and browsers.
-            Ensure your users&#39; web experience by testing your app with Techmerits.
-        </p>
+            <p>The world is heading towards mobile space, and so is Techmerits bringing top of the line testing services
+                for mobile applications.
 
-        <strong>Database Testing</strong>
+                Our analysts invest their time and expertise to help you identify the defects and design issues that are
+                likely to affect your
 
-        <p>
-            The dedicated analysts of Techmerits can validate the consistency, integrity, performance, and security of
-            your database.
-        </p>
+                mobile apps store. Test your mobile apps with Techmerits to launch a well-tested, scalable and
+                successful product.</p>
 
-        <p style="font-weight: bold; ">
-            Techmerits will never let you compromise on the security or efficiency of your technology systems.
-        </p>
+            <strong>Browser Compatibility Testing</strong>
+
+            <p> Making use of the testing toolset, we ensure your product is fully compatible with the most popular web
+                browsers.</p>
+
+            <strong>SAP, Siebel and SAS Testing</strong>
+
+            <p>Testing SAP, Siebel, and SAS solutions, we help you reduce development and testing expenses. When working
+                with us, you can
+
+                comply with quality assurance standards with minimal efforts.</p>
+
+            <strong>Web Testing</strong>
+
+            <p>Techmerits makes it convenient for its clients to test their web apps. Ensure your users' web experience
+                by testing your app with
+
+                Techmerits.</p>
+
+            <strong>Database Testing</strong>
+
+            <p> The dedicated analysts of Techmerits can validate the consistency, integrity, performance, and security
+                of your database.</p>
+
+            <strong> Beta Testing</strong>
+
+            <p>Techmetrics always makes sure our clients BETA product becomes popular in its industry through beta
+                testing, thus eliminating
+
+                unexpected errors in the final product.</p>
+
+            <p>Some more Testing services offered by Techmerits:</p>
+            <ul>
+                <li>
+                    Unit Testing
+                </li>
+                Integration Testing
+                <li>
+                    System Testing
+                </li>
+                <li>
+
+                    Stress Testing
+                </li>
+                <li>
+
+                    Usability Testing
+                </li>
+                <li>
+
+                    Acceptance Testing
+                </li>
+            </ul>
         </div>
-         <div id="column">
+        <div id="column">
             <div class="featured">
                 <ul>
                     <li>
@@ -128,7 +155,8 @@
                         </p>
 
                         <p>
-                            Techmerits can bring flexibility, value, and efficiency to any business with its ERP development services....
+                            Techmerits can bring flexibility, value, and efficiency to any business with its ERP
+                            development services....
                         </p>
 
                         <p class="more">
@@ -146,7 +174,8 @@
                         </p>
 
                         <p>
-                            Manage your business data and applications with ease, speed, and efficiency. Rely on our technology development...
+                            Manage your business data and applications with ease, speed, and efficiency. Rely on our
+                            technology development...
                         </p>
 
                         <p class="more">
