@@ -4,9 +4,11 @@
         <div id="social-media-icons" class="footer-content">
             <div class="social-links">
                 <ul>
-                    <li><a href="https://www.facebook.com/techmerits" target="_blank"><i class="fa fa-facebook-square fa-3x"></i></a></li>
-                    <li><a href="https://plus.google.com/u/0/b/108403709797555716512/108403709797555716512/about" target="_blank"><i class="fa fa-google-plus-square fa-3x"></i></a></li>
-                    <li><a href="#"><i class="fa fa-twitter fa-3x"></i></a></li>
+                    <li><a href="https://www.facebook.com/techmerits" target="_blank"><i
+                            class="fa fa-facebook-square fa-3x"></i></a></li>
+                    <li><a href="https://plus.google.com/u/0/b/108403709797555716512/108403709797555716512/about"
+                           target="_blank"><i class="fa fa-google-plus-square fa-3x"></i></a></li>
+                    <li><a href="https://twitter.com/Techmerits"><i class="fa fa-twitter fa-3x"></i></a></li>
                 </ul>
             </div>
         </div>

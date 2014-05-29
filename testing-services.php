@@ -117,7 +117,7 @@
 
             <strong> Beta Testing</strong>
 
-            <p>Techmetrics always makes sure our clients BETA product becomes popular in its industry through beta
+            <p>Techmerits always makes sure our clients BETA product becomes popular in its industry through beta
                 testing, thus eliminating
 
                 unexpected errors in the final product.</p>

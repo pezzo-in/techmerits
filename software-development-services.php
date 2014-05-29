@@ -216,7 +216,7 @@
 
     <strong>Software Practices</strong>
 
-    <p>When it comes to project handling, firms cannot afford to see a project fail. So here at Techmetrics, right from
+    <p>When it comes to project handling, firms cannot afford to see a project fail. So here at Techmerits, right from
         the beginning,
 
         we make sure we adopt a Life-Cycle Model that bests suits our client business applications.</p>

@@ -4,11 +4,10 @@
 <head profile="http://gmpg.org/xfn/11">
     <title>Techmerits software solutions</title>
     <link rel="icon" href="images/favicon.png" type="image/gif" sizes="16x16">
-    <meta name="viewport" content="initial-scale=1.2, user-scalabel=yes">
+    <meta content="width=device-width, maximum-scale=1.0, initial-scale=0.4" name="viewport">
     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
     <meta http-equiv="imagetoolbar" content="no"/>
-    <meta name="description"
-          content="Looking to partner up with expert technology consultants? Techmerits, a leading technology consulting company, offers specialized software solutions."/>
+    <meta name="description"  content="Looking to partner up with expert technology consultants? Techmerits, a leading technology consulting company, offers specialized software solutions."/>
     <link rel="stylesheet" href="styles/layout.css" type="text/css"/>
 </head>
 <body id="top">
