@@ -194,12 +194,12 @@
         reap maximum ROI off their ERP investments and lower TCO. Our expertise spans the following ERP platforms:</p>
     <ul>
         <li>
-            SAP BI.
+            SAP BI
         </li>
 
         <li> SAP HANA(Big Data)</li>
 
-        <li>Cognos.</li>
+        <li>Cognos</li>
 
         <li> Microsoft Dynamics</li>
     </ul>
@@ -222,7 +222,6 @@
         we make sure we adopt a Life-Cycle Model that bests suits our client business applications.</p>
 
     <ul>
-        <li>
         <li> Waterfall</li>
 
         <li> Iterative</li>
