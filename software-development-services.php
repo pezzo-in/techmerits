@@ -40,7 +40,7 @@
 
     <strong>Revolutionary technology solutions for performance-driven organizations!</strong>
 
-    <p>Techmerits’s constant endevour, is to provide innovative and cost-effective software solutions that address
+    <p>Techmerits's constant endevour, is to provide innovative and cost-effective software solutions that address
 
         our client business needs and enhance productivity and performance. Having access to the best technologies,
 
@@ -57,7 +57,7 @@
         <li>Scalable/Customized Enterprise Solutions and Practices</li>
     </ul>
 
-    <strong><i>So, make Techmerits your Technology Partner for innovative, advanced technology solutions.</i></strong>
+    <strong>So, make Techmerits your Technology Partner for innovative, advanced technology solutions.</strong>
 
     <h2>Techmerits Technology Offerings</h2>
 
@@ -222,13 +222,13 @@
         we make sure we adopt a Life-Cycle Model that bests suits our client business applications.</p>
 
     <ul>
-        <li> Waterfall</li>
+        <li>Waterfall</li>
 
-        <li> Iterative</li>
+        <li>Iterative</li>
 
-        <li> Agile (Including Scrum, Test-Driven, Model-Driven).</li>
+        <li>Agile (Including Scrum, Test-Driven, Model-Driven).</li>
 
-        <li> MSF (Microsoft Solutions Framework)</li>
+        <li>MSF (Microsoft Solutions Framework)</li>
     </ul>
 
     <strong><i>Gain control of your business with our technology development services.</i></strong>

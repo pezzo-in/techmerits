@@ -127,20 +127,19 @@
                 <li>
                     Unit Testing
                 </li>
-                Integration Testing
+                <li>
+                    Integration Testing
+                </li>
                 <li>
                     System Testing
                 </li>
                 <li>
-
                     Stress Testing
                 </li>
                 <li>
-
                     Usability Testing
                 </li>
                 <li>
-
                     Acceptance Testing
                 </li>
             </ul>
@@ -185,7 +184,6 @@
                 </ul>
             </div>
         </div>
-
     </div>
 </div>
 <?php include 'footer.php'; ?>
