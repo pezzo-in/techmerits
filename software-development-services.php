@@ -177,7 +177,7 @@
 
     <h2>Scalable/Customized Enterprise Solutions and Practices</h2>
 
-    <strong><i>Are you looking for a Tech Partner with experience to build scalable solutions, for your enterprise ?</i></strong>
+    <strong>Are you looking for a Tech Partner with experience to build scalable solutions, for your enterprise ?</strong>
 
     <strong>ERP</strong>
 
@@ -231,7 +231,7 @@
         <li>MSF (Microsoft Solutions Framework)</li>
     </ul>
 
-    <strong><i>Gain control of your business with our technology development services.</i></strong>
+    <strong>Gain control of your business with our technology development services.</strong>
 </div>
 <div id="column">
     <div class="featured">

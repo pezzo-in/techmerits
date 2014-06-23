@@ -366,7 +366,7 @@
                         </p>
 
                         <p class="more">
-                            <a href="consulting.php#project-based">Read More &raquo;</a>
+                            <a href="software-development-services.php">Read More &raquo;</a>
                         </p>
                     </li>
                 </ul>

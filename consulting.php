@@ -42,7 +42,7 @@
                 added consulting services, we are always ready to facilitate our clients serving in varied industries to
                 stand out of the lot as the best performance-driven organization.</p>
 
-            <p>At Techmerits, we design, develop, and implement custom solutions exclusive to our clients? technology
+            <p>At Techmerits, we design, develop, and implement custom solutions exclusive to our clients technology
                 and business challenges. </p>
 
             <h2>The primary aspects of our business consulting services are:</h2>
@@ -55,13 +55,13 @@
 
             <strong>Productivity Enhancement</strong>
 
-            <p>Bringing efficiency and design improvements to our clients? processes, we systematize their production
+            <p>Bringing efficiency and design improvements to our clients processes, we systematize their production
                 operations.</p>
 
             <strong>Application Optimization</strong>
 
             <p>At Techmerits, we create a functional business strategy, map out work requests, and update internal
-                resources to optimize our clients? applications and workload.</p>
+                resources to optimize our clients applications and workload.</p>
 
             <strong>Operative Outsourcing</strong>
 
